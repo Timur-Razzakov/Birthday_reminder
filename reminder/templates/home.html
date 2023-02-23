@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col"><h2 class=" text-center my-3">Какой-то текст</h2>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-8 mx-auto my-2">
+        <div class="container px-4">
+            <form method="Post" action="#">{% csrf_token %}
+                <div class="form-group">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-primary">Найти</button>
+                <p> <a href="{% url 'add_mailing' %} ">Mailing.</a></p>
+                <p> <a href="{% url 'add_client' %} ">Client.</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
