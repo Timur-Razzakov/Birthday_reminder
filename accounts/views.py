@@ -42,15 +42,6 @@ def add_client_birth_view(request):
         if check_client.exists():
             messages.error(request, 'Клиент уже существует в системе!!')
         else:
-            # new_client.first_name = data['first_name']
-            # new_client.last_name = data['last_name']
-            # new_client.chart_id = data['chart_id']
-            # new_client.user_name = data['user_name']
-            # new_client.date_of_birth = data['date_of_birth']
-            # new_client.gender = data['gender']
-            # new_client.email = data['email']
-            # new_client.phone_number = data['phone_number']
-            # new_client.text = data['text']
             new_client.save()
             messages.success(request, 'Клиент добавлен в систему.')
             return redirect('add')
