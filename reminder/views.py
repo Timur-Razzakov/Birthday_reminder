@@ -5,7 +5,7 @@ from django.contrib import messages
 from icecream import ic
 
 from .forms import MailingCommerceOfferFrom
-from accounts.models import Client
+from accounts.models import Client, CompanyDetail
 
 
 # Create your views here.
@@ -36,3 +36,7 @@ def add_mailing_view(request):
             messages.success(request, 'Коммерческое предложение сохранено.')
             return render(request, 'home.html', {'new_mailing': new_mailing})
     return render(request, 'add_mailing.html', {'form': form})
+
+
+def add_holiday(request):
+    pass

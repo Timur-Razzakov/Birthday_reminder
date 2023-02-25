@@ -1,6 +1,26 @@
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.db import models
-from django.core.validators import RegexValidator
+from django.core.validators import RegexValidator, EmailValidator, URLValidator
+
+from reminder_service import custom_validators
+from reminder_service.custom_validators import GENDER
+
+
+class City(models.Model):
+    """Модель для всех городов Узбекистана"""
+    name = models.CharField(verbose_name='City_name', max_length=255)
+
+    def __str__(self):
+        return self.name
+
+
+class Channel(models.Model):
+    """Модель для каналов отправки сообщений и рассылок"""
+
+    name = models.CharField(verbose_name='channel_name', max_length=255)
+
+    def __str__(self):
+        return self.name
 
 
 class CompanyDetail(models.Model):
@@ -9,36 +29,43 @@ class CompanyDetail(models.Model):
     name = models.CharField(max_length=100, verbose_name='company_name')
     address = models.CharField(max_length=255, verbose_name='address')
     phone_number = models.CharField(max_length=13, verbose_name='phone_number',
-                                    null=True, blank=True)
+                                    validators=[custom_validators.phone_validator])
     email = models.CharField(max_length=200, verbose_name='email',
-                             null=True, unique=True, blank=True)
+                             unique=True,
+                             validators=[EmailValidator(message='Почта неверного формата!!')],
+                             null=True, blank=True)
+    web_site = models.URLField(max_length=200, verbose_name='url', unique=True,
+                               null=True, blank=True)
+    company_motto = models.CharField(max_length=255, verbose_name='company_motto',
+                                     null=True, blank=True)
+    logo = models.ImageField(verbose_name='logo', upload_to='logo/%Y/%m/%d ', blank=True)
 
     def __str__(self):
-        return "%i, %s %s" % (self.pk, self.name, self.phone_number)
+        return "%i, %s " % (self.pk, self.name)
 
 
 class Client(models.Model):
     """Модель о Клиентах"""
-
-    phone_number_validator = RegexValidator(
-        regex=r'^(\+998|998)?[\s\-]?[0-9]{2}[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$',
-        message="""Телефон передается в стандартном формате 
-                                           +998|998 xx xxx xx xx (X - от 0 до 10)""")
-    email_validator = RegexValidator(
-        regex=r"^[-\w\.]+@([-\w]+\.)+[-\w]{2,4}$",
-        message="Почта неверного формата")
-
-    chart_id = models.CharField(max_length=10, verbose_name='chart_id', blank=True, null=True)
-    user_name = models.CharField(max_length=100, verbose_name='user_name', blank=True, null=True)
-    email = models.CharField(max_length=200, verbose_name='email', unique=True,
-                             validators=[email_validator], null=True, blank=True)
-    phone_number = models.CharField(max_length=13, verbose_name='phone_number',
-                                    validators=[phone_number_validator], null=True, blank=True)
     first_name = models.CharField(max_length=100, verbose_name='first_name')
     last_name = models.CharField(max_length=100, verbose_name='last_name')
+    father_name = models.CharField(max_length=255, verbose_name='father_name')
+
+    email = models.CharField(max_length=200, verbose_name='email',
+                             unique=True,
+                             validators=[EmailValidator(message='Почта неверного формата')],
+                             null=True, blank=True)
+    phone_number = models.CharField(max_length=13, verbose_name='phone_number',
+                                    validators=[custom_validators.phone_validator], null=True, blank=True)
+    chart_id = models.CharField(max_length=10, verbose_name='chart_id', blank=True, null=True)
     date_of_birth = models.DateField(verbose_name='date_of_birth')
-    gender = models.CharField(max_length=6)
+    # inter_passport = models.CharField(max_length=9, verbose_name='international passport')
+    # passport = models.CharField(max_length=9, verbose_name='national passport')
+    gender = models.CharField(choices=GENDER, verbose_name='GENDER', max_length=9)
     address = models.CharField(max_length=255, verbose_name='address')
+    city = models.ForeignKey(City, verbose_name='City', on_delete=models.CASCADE, null=True,
+                             blank=True)
+    channel = models.ForeignKey(Channel, verbose_name='channel', on_delete=models.CASCADE, null=True,
+                                blank=True)
     traveled = models.TextField(verbose_name='Текст', blank=True, null=True)
 
     def __str__(self):

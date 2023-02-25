@@ -5,7 +5,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from icecream import ic
 
-from .forms import UserLoginForm, UserRegistrationForm, ClientForm
+from .forms import UserLoginForm, ClientForm, CompanyDetailForm
 from .models import Client
 
 User = get_user_model()
@@ -38,38 +38,28 @@ def add_client_birth_view(request):
     if form.is_valid():
         new_client = form.save(commit=False)
         data = form.cleaned_data
-        check_client = Client.objects.filter(chart_id=data['chart_id'], first_name=data['first_name'])
+        check_client = Client.objects.filter(phone_number=data['phone_number'], first_name=data['first_name'])
         if check_client.exists():
             messages.error(request, 'Клиент уже существует в системе!!')
         else:
             new_client.save()
             messages.success(request, 'Клиент добавлен в систему.')
-            return redirect('add')
-    return render(request, 'add_birthday.html', {'form': form})
+            return redirect('add_client')
+    return render(request, 'accounts/add_birthday.html', {'form': form})
 
 
-def register_view(request):
-    """ Функция для создания нового пользователя """
-
-    form = UserRegistrationForm(request.POST or None)
+def add_company_info_view(request):
+    """Сохраняем данные о компании"""
+    form = CompanyDetailForm(request.POST or None)
     if form.is_valid():
-        new_user = form.save(commit=False)  # instans) commit=False-->исп для полного соединения с базой
+        company = form.save(commit=False)
         data = form.cleaned_data
-        new_user.set_password(form.cleaned_data['password'])  # ЗАШИФРОВЫВАЕТ пароль
-        new_user.save()
-        messages.success(request, 'Пользователь добавлен в систему.')
-        return render(request, 'accounts/registered.html',
-                      {'new_user': new_user})
-    return render(request, 'accounts/registration.html', {'form': form})
+        check_company = Client.objects.filter(name=data['name'])
+        if check_company.exists():
+            messages.error(request, 'Информация об этой компании уже существует!!')
+        else:
+            company.save()
+            messages.success(request, 'Информация о компании  добавлена в систему.')
+            return redirect('accounts/add_company')
+    return render(request, 'accounts/company_detail.html', {'form': form})
 
-
-def delete_view(request):
-    """Функция для удаления пользователя"""
-
-    if request.user.is_authenticated:
-        user = request.user
-        if request.method == 'POST':
-            qs = User.objects.get(pk=user.pk)
-            qs.delete()
-            messages.error(request, 'Пользователь удалён :(')
-    return redirect('home')
