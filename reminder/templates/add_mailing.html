@@ -11,10 +11,11 @@
             <div class="col-md-8 mx-auto">
                 <h4 class="my-2">Add new mailing</h4>
                 <form method="POST" action="">{% csrf_token %}
-                    <div class="form-group">
+                    <div class="form-outline">
                         {{ form.as_p }}
+                        <br>
                     </div>
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">Разослать</button>
                 </form>
             </div>
         </div>

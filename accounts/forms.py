@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth import get_user_model, authenticate
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
+from django.forms import NumberInput
+
 from .models import Client, CompanyDetail, City
 from reminder_service.custom_validators import GENDER
 
@@ -56,8 +58,7 @@ class ClientForm(forms.ModelForm):
         label='Отчество',
     )
     date_of_birth = forms.DateField(label='Дата рождения',
-                                    input_formats=['%d.%m.%Y', '%Y.%m.%d'],
-                                    widget=forms.DateInput(attrs={'class': 'form-control'}),
+                                    widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
                                     )
     gender = forms.CharField(
         widget=forms.Select(choices=GENDER, attrs={'class': 'form-control'}),
@@ -71,11 +72,30 @@ class ClientForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Номер телефона',
     )
+    international_passport = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Загран паспорт',
+    )
+    national_passport = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Местный паспорт',
+    )
+    address = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Адрес проживания',
+    )
+    city = forms.ModelChoiceField(
+        queryset=City.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите город проживания',
+    )
 
     class Meta:
         model = Client
         fields = (
-            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender', 'email', 'phone_number')
+            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender',
+            'international_passport', 'national_passport', 'email', 'address',
+            'phone_number')
 
 
 class CompanyDetailForm(forms.ModelForm):
@@ -84,7 +104,7 @@ class CompanyDetailForm(forms.ModelForm):
         label='Наименовании компании',
     )
     email = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        widget=forms.EmailInput(attrs={'class': 'form-control'}),
         label='Электронная почта',
     )
     phone_number = forms.CharField(
@@ -108,3 +128,37 @@ class CompanyDetailForm(forms.ModelForm):
         model = CompanyDetail
         fields = ('name', 'phone_number', 'email',
                   'address', 'web_site', 'company_motto')
+
+
+class SearchClientForm(forms.Form):
+    """Форма для поиска клиентов"""
+    full_name = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='ФИО',
+        required=False
+    )
+    date_of_birth = forms.DateField(label='Дата рождения',
+                                    widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'}),
+                                    required=False
+                                    )
+    email = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Электронная почта',
+        required=False
+    )
+    city = forms.ModelChoiceField(
+        queryset=City.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите город проживания',
+        required=False
+    )
+    phone_number = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Номер телефона',
+        required=False
+    )
+
+    class Meta:
+        model = Client
+        fields = (
+            'full_name', 'city', 'date_of_birth', 'email', 'phone_number')

@@ -6,15 +6,15 @@ from django.contrib import messages
 from icecream import ic
 
 from .forms import UserLoginForm, ClientForm, CompanyDetailForm
-from .models import Client
+from .models import Client, CompanyDetail
 
 User = get_user_model()
 
 
 def logout_view(request):
     """Функция выхода"""
-
-    logout(request)
+    print(ap)
+    # logout(request)
     return redirect('home')
 
 
@@ -32,16 +32,18 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form': form})
 
 
-def add_client_birth_view(request):
+def add_client_view(request):
     """Сохраняем форму с данными о клиентах"""
     form = ClientForm(request.POST or None)
     if form.is_valid():
         new_client = form.save(commit=False)
         data = form.cleaned_data
-        check_client = Client.objects.filter(phone_number=data['phone_number'], first_name=data['first_name'])
+        fullname = f"{data['last_name'] + ' ' + data['first_name'] + ' ' + data['father_name']}"
+        check_client = Client.objects.filter(phone_number=data['phone_number'], first_name=fullname)
         if check_client.exists():
             messages.error(request, 'Клиент уже существует в системе!!')
         else:
+            new_client.full_name = fullname
             new_client.save()
             messages.success(request, 'Клиент добавлен в систему.')
             return redirect('add_client')
@@ -49,11 +51,11 @@ def add_client_birth_view(request):
 
 
 def add_company_info_view(request):
-    """Сохраняем данные о компании"""
     form = CompanyDetailForm(request.POST or None)
     if form.is_valid():
         company = form.save(commit=False)
         data = form.cleaned_data
+        # message = artist is not None and CompanyDetail.objects.filter(artist=artist).exists()
         check_company = Client.objects.filter(name=data['name'])
         if check_company.exists():
             messages.error(request, 'Информация об этой компании уже существует!!')
@@ -62,4 +64,3 @@ def add_company_info_view(request):
             messages.success(request, 'Информация о компании  добавлена в систему.')
             return redirect('accounts/add_company')
     return render(request, 'accounts/company_detail.html', {'form': form})
-

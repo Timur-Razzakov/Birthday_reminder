@@ -1,3 +1,5 @@
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+
 from .models import MailingCommerceOffer, Holiday
 from django import forms
 
@@ -6,7 +8,6 @@ from accounts.models import CompanyDetail
 """Форма для объединения страны и ссылки"""
 
 
-# class GeneralForm(forms.ModelForm):
 #
 class HolidayFrom(forms.Form):
     name = forms.CharField(
@@ -30,7 +31,7 @@ class HolidayFrom(forms.Form):
 class MailingCommerceOfferFrom(forms.ModelForm):
     photo = forms.ImageField(
         widget=forms.FileInput(attrs={'class': 'form-control'}),
-        label='Текст',
+        label='Изображение',
     )
 
     link = forms.URLField(
@@ -38,7 +39,7 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         label='Ссылки ( Если их несколько, то введите через запятую)',
     )
     message = forms.CharField(
-        widget=forms.Textarea(attrs={'class': 'form-control'}),
+        widget=CKEditorUploadingWidget(),
         label='Место для вашего предложения',
     )
     company_detail = forms.ModelChoiceField(

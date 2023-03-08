@@ -26,7 +26,7 @@ class Channel(models.Model):
 class CompanyDetail(models.Model):
     """Модель, информации о компании"""
 
-    name = models.CharField(max_length=100, verbose_name='company_name')
+    name = models.CharField(max_length=100, verbose_name='company_name', unique=True)
     address = models.CharField(max_length=255, verbose_name='address')
     phone_number = models.CharField(max_length=13, verbose_name='phone_number',
                                     validators=[custom_validators.phone_validator])
@@ -46,6 +46,7 @@ class CompanyDetail(models.Model):
 
 class Client(models.Model):
     """Модель о Клиентах"""
+    full_name = models.CharField(max_length=100, verbose_name='first_name', null=True, blank=True)
     first_name = models.CharField(max_length=100, verbose_name='first_name')
     last_name = models.CharField(max_length=100, verbose_name='last_name')
     father_name = models.CharField(max_length=255, verbose_name='father_name')
@@ -56,10 +57,11 @@ class Client(models.Model):
                              null=True, blank=True)
     phone_number = models.CharField(max_length=13, verbose_name='phone_number',
                                     validators=[custom_validators.phone_validator], null=True, blank=True)
-    chart_id = models.CharField(max_length=10, verbose_name='chart_id', blank=True, null=True)
     date_of_birth = models.DateField(verbose_name='date_of_birth')
-    # inter_passport = models.CharField(max_length=9, verbose_name='international passport')
-    # passport = models.CharField(max_length=9, verbose_name='national passport')
+    inter_passport = models.CharField(max_length=9, verbose_name='international passport',
+                                      validators=[custom_validators.passport_validator])
+    passport = models.CharField(max_length=9, verbose_name='national passport',
+                                validators=[custom_validators.passport_validator])
     gender = models.CharField(choices=GENDER, verbose_name='GENDER', max_length=9)
     address = models.CharField(max_length=255, verbose_name='address')
     city = models.ForeignKey(City, verbose_name='City', on_delete=models.CASCADE, null=True,
@@ -69,7 +71,7 @@ class Client(models.Model):
     traveled = models.TextField(verbose_name='Текст', blank=True, null=True)
 
     def __str__(self):
-        return "%i, %s %s" % (self.pk, self.first_name, self.chart_id)
+        return "%i, %s " % (self.pk, self.phone_number)
 
 
 class MyUserManager(BaseUserManager):
@@ -107,10 +109,9 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-
+    # chart_id = models.CharField(max_length=10, verbose_name='chart_id', unique=True,)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
-
     objects = MyUserManager()
 
     USERNAME_FIELD = 'email'
