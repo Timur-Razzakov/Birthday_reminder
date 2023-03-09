@@ -22,9 +22,9 @@
                         Создать или изменить</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'add_client' %}"> Клиента</a></li>
-                        <li><a class="dropdown-item" href="{% url 'add_holiday'%}">Праздник</a></li>
-                        <li><a class="dropdown-item" href="{% url 'add_mailing'%}">Рассылку</a></li>
-                        <li><a class="dropdown-item" href="{% url 'add_company'%}">Информацию о компании</a>
+                        <li><a class="dropdown-item" href="{% url 'add_holiday' %}">Праздник</a></li>
+                        <li><a class="dropdown-item" href="{% url 'add_mailing' %}">Рассылку</a></li>
+                        <li><a class="dropdown-item" href="{% url 'add_company' %}">Информацию о компании</a>
                         </li>
                     </ul>
                 </li>
@@ -47,9 +47,8 @@
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
-    <li >
-            {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
-    </li>
+    <li
+    {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
     {% endfor %}
 </ul>
 {% endif %}

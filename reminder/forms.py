@@ -7,11 +7,7 @@ from accounts.models import CompanyDetail, City
 
 
 class HolidayFrom(forms.ModelForm):
-    image = forms.ImageField(
-        widget=forms.FileInput(attrs={'class': 'form-control'}),
-        label='Изображение',
-        required=False
-    )
+
     name = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Наименование праздника',
@@ -27,10 +23,6 @@ class HolidayFrom(forms.ModelForm):
 
 
 class MailingCommerceOfferFrom(forms.ModelForm):
-    image = forms.ImageField(
-        widget=forms.FileInput(attrs={'class': 'form-control'}),
-        label='Изображение',
-    )
 
     link = forms.URLField(
         widget=forms.URLInput(attrs={'class': 'form-control'}),
@@ -47,6 +39,7 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         queryset=City.objects.all(),
         widget=forms.Select(attrs={'class': 'form-control'}),
         label='Выберите город',
+        required=False,
         help_text='Если хотите разослать всем городам, то оставьте поле пустым (-----)',
     )
     message = forms.CharField(
@@ -56,4 +49,4 @@ class MailingCommerceOfferFrom(forms.ModelForm):
 
     class Meta:
         model = MailingCommerceOffer
-        fields = ('image', 'city', 'link', 'company_detail', 'message')
+        fields = ('photo', 'city', 'link', 'company_detail', 'message')

@@ -72,11 +72,11 @@ class ClientForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Номер телефона',
     )
-    international_passport = forms.CharField(
+    inter_passport = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Загран паспорт',
     )
-    national_passport = forms.CharField(
+    passport = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Местный паспорт',
     )
@@ -94,7 +94,7 @@ class ClientForm(forms.ModelForm):
         model = Client
         fields = (
             'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender',
-            'international_passport', 'national_passport', 'email', 'address',
+            'inter_passport', 'passport', 'email', 'address',
             'phone_number')
 
 
@@ -127,7 +127,7 @@ class CompanyDetailForm(forms.ModelForm):
     class Meta:
         model = CompanyDetail
         fields = ('name', 'phone_number', 'email',
-                  'address', 'web_site', 'company_motto')
+                  'address', 'web_site', 'company_motto', 'logo')
 
 
 class SearchClientForm(forms.Form):

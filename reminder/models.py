@@ -17,7 +17,7 @@ class TemplateForChannel(models.Model):
 
 class Holiday(models.Model):
     """Модель для праздников и поздравлений"""
-    image = models.ImageField(verbose_name=' images', upload_to='media/holiday//%Y/%m/%d',
+    image = models.ImageField(verbose_name='Изображение', upload_to='media/holiday//%Y/%m/%d',
                               blank=True)
     name = models.CharField(max_length=255, verbose_name='Holiday name')
     date = models.DateField(verbose_name='Holiday date')
@@ -30,7 +30,7 @@ class Holiday(models.Model):
 class MailingCommerceOffer(models.Model):
     """Модель для рассылки коммерческих предложений"""
 
-    photo = models.ImageField(verbose_name=' images', upload_to='media/%Y/%m/%d', blank=True)
+    photo = models.ImageField(verbose_name=' Изображение', upload_to='media/%Y/%m/%d', blank=True)
     message = models.TextField(verbose_name='message')
     link = models.URLField(max_length=255, unique=True, verbose_name='url',
                            null=True, blank=True)

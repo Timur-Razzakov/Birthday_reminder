@@ -13,14 +13,12 @@ User = get_user_model()
 
 def logout_view(request):
     """Функция выхода"""
-    print(ap)
-    # logout(request)
+    logout(request)
     return redirect('home')
 
 
 def login_view(request):
     """Функция для авторизации"""
-
     form = UserLoginForm(request.POST or None)
     if form.is_valid():
         data = form.cleaned_data
@@ -51,16 +49,23 @@ def add_client_view(request):
 
 
 def add_company_info_view(request):
-    form = CompanyDetailForm(request.POST or None)
-    if form.is_valid():
-        company = form.save(commit=False)
-        data = form.cleaned_data
-        # message = artist is not None and CompanyDetail.objects.filter(artist=artist).exists()
-        check_company = Client.objects.filter(name=data['name'])
-        if check_company.exists():
-            messages.error(request, 'Информация об этой компании уже существует!!')
+    """Сохраняем информацию о компании"""
+    form = CompanyDetailForm
+    if request.method == "POST":
+        form = CompanyDetailForm(request.POST, request.FILES)
+        print(form)
+        if form.is_valid():
+            company = form.save(commit=False)
+            data = form.cleaned_data
+            print(data)
+            check_company = CompanyDetail.objects.filter(name=data['name'])
+            if check_company.exists():
+                messages.error(request, 'Информация об этой компании уже существует!!')
+            else:
+                company.save()
+                messages.success(request, 'Информация о компании  добавлена в систему.')
+                return redirect('accounts/add_company')
         else:
-            company.save()
-            messages.success(request, 'Информация о компании  добавлена в систему.')
-            return redirect('accounts/add_company')
+            form = CompanyDetailForm()
+            print(124314124124)
     return render(request, 'accounts/company_detail.html', {'form': form})

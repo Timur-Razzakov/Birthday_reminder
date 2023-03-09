@@ -54,33 +54,36 @@ def searchView(request):
 
 def add_mailing_view(request):
     """Сохраняем рассылку новых предложений"""
-    form = MailingCommerceOfferFrom(request.POST, request.FILES)
-    if form.is_valid():
-        new_mailing = form.save()
-        data = form.cleaned_data
-        client_chart_id = Client.objects.get(chart_id=data['chart_id'])
-        if client_chart_id:
-            messages.error(request, 'Такой chart_id уже есть')
-        else:
+    form = MailingCommerceOfferFrom
+    if request.method == "POST":
+        form = MailingCommerceOfferFrom(request.POST, request.FILES)
+        if form.is_valid():
+            new_mailing = form.save(commit=False)
             new_mailing.save()
             messages.success(request, 'Коммерческое предложение сохранено.')
-            return render(request, 'home.html', {'new_mailing': new_mailing})
+            return redirect('add_mailing')
+    else:
+        form = MailingCommerceOfferFrom()
     return render(request, 'add_mailing.html', {'form': form})
 
 
 def add_holiday_view(request):
     """Добавляем праздники"""
-    form = HolidayFrom(request.POST, request.FILES)
-    if form.is_valid():
-        holiday = form.save(commit=False)
-        data = form.cleaned_data
-        check_holiday = Holiday.objects.filter(name=data['name'])
-        if check_holiday.exists():
-            messages.error(request, 'Этот праздник уже есть в базе!!')
+    form = HolidayFrom
+    if request.method == "POST":
+        form = HolidayFrom(request.POST, request.FILES)
+        if form.is_valid():
+            holiday = form.save(commit=False)
+            data = form.cleaned_data
+            check_holiday = Holiday.objects.filter(name=data['name'])
+            if check_holiday.exists():
+                messages.error(request, 'Этот праздник уже есть в базе!!')
+            else:
+                holiday.save()
+                messages.success(request, 'Праздник был добавлен!')
+                return redirect('add_holiday')
         else:
-            holiday.save()
-            messages.success(request, 'Праздник был добавлен!')
-            return redirect('add_holiday')
+            form = HolidayFrom()
     return render(request, 'add_holiday.html', {'form': form})
 
 

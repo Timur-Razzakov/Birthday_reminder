@@ -8,9 +8,8 @@ from reminder_service import custom_validators
 class Gender(models.Model):
     name = models.CharField(verbose_name='GENDER', max_length=7)
 
-
-def __str__(self):
-    return self.name
+    def __str__(self):
+        return self.name
 
 
 class City(models.Model):
@@ -45,7 +44,7 @@ class CompanyDetail(models.Model):
                                null=True, blank=True)
     company_motto = models.CharField(max_length=255, verbose_name='company_motto',
                                      null=True, blank=True)
-    logo = models.ImageField(verbose_name='logo', upload_to='logo/%Y/%m/%d ', blank=True)
+    logo = models.ImageField(verbose_name='Логотип Компании', upload_to='logo/', blank=True)
 
     def __str__(self):
         return "%i, %s " % (self.pk, self.name)

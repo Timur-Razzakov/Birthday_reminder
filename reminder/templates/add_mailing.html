@@ -3,21 +3,24 @@
 
 {% block title %} Register {% endblock %}
 
-
 {% block content %}
 <div class="col-md-8 mx-auto my-2">
     <div class="container px-4">
         <div class="row ">
             <div class="col-md-8 mx-auto">
-                <h4 class="my-2">Рассылка предложений</h4>
-                <form method="POST" enctype="multipart/form-data"  action="">{% csrf_token %}
+                <h4 class="my-4">Рассылка предложений</h4>
+                <form method="POST" enctype="multipart/form-data" action="">{% csrf_token %}
                     <div class="form-outline">
-                        {{ form.media }}<!--  Для вывода "Ckeditor"  -->
                         {{ form.as_p }}
+                        {{ form.media }}<!--  Для вывода "Ckeditor"  -->
                         <br>
                     </div>
-                    <button type="submit" class="btn btn-primary">Разослать</button>
+                    <div class="container-buttons">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <a href="#" class="badge badge-info">Список Предложений</a>
+                    </div>
                 </form>
+
             </div>
         </div>
     </div>
