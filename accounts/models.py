@@ -3,7 +3,14 @@ from django.db import models
 from django.core.validators import RegexValidator, EmailValidator, URLValidator
 
 from reminder_service import custom_validators
-from reminder_service.custom_validators import GENDER
+
+
+class Gender(models.Model):
+    name = models.CharField(verbose_name='GENDER', max_length=7)
+
+
+def __str__(self):
+    return self.name
 
 
 class City(models.Model):
@@ -62,7 +69,7 @@ class Client(models.Model):
                                       validators=[custom_validators.passport_validator])
     passport = models.CharField(max_length=9, verbose_name='national passport',
                                 validators=[custom_validators.passport_validator])
-    gender = models.CharField(choices=GENDER, verbose_name='GENDER', max_length=9)
+    gender = models.ForeignKey(Gender, verbose_name='GENDER', on_delete=models.CASCADE)
     address = models.CharField(max_length=255, verbose_name='address')
     city = models.ForeignKey(City, verbose_name='City', on_delete=models.CASCADE, null=True,
                              blank=True)

@@ -6,8 +6,9 @@ from .views import *
 urlpatterns = [
     path('', show_all_client_view, name='home'),
     path('add_mailing/', add_mailing_view, name='add_mailing'),
+    path('add_holiday/', add_holiday_view, name='add_holiday'),
     # path('search/', views.SearchView.as_view(), name='search'),
-    path('clients_list/', searchView, name='clients_list'),
+    path('search/', searchView, name='search'),
 ]
 
 

@@ -1,8 +1,6 @@
 <!doctype html>
 {% load static %}
 
-
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
     <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet" crossorigin="anonymous">
-       <script src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -26,7 +22,7 @@
                         Создать или изменить</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'add_client' %}"> Клиента</a></li>
-                        <li><a class="dropdown-item" href="#">Праздник</a></li>
+                        <li><a class="dropdown-item" href="{% url 'add_holiday'%}">Праздник</a></li>
                         <li><a class="dropdown-item" href="{% url 'add_mailing'%}">Рассылку</a></li>
                         <li><a class="dropdown-item" href="{% url 'add_company'%}">Информацию о компании</a>
                         </li>
@@ -51,7 +47,7 @@
 {% if messages %}
 <ul class="messages">
     {% for message in messages %}
-    <li
+    <li >
             {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}
     </li>
     {% endfor %}
@@ -62,14 +58,10 @@
 
 <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
-
 <script src="{% static 'js/manage_groups.js' %}"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+
+<!--Скрипт, для открытия и закрытия доп вкладки "создать или изменить"-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

@@ -10,6 +10,7 @@ from .forms import MailingCommerceOfferFrom, HolidayFrom
 from accounts.models import Client, CompanyDetail
 
 from accounts.forms import SearchClientForm
+from .models import Holiday
 
 
 # Create your views here.
@@ -35,11 +36,6 @@ def searchView(request):
         _filter = {}
         if full_name:
             _filter['full_name'] = full_name
-        # # объединяем несколько таблиц и сравниваем с данными, которые мы получаем с формы
-        # m = Client.objects.annotate(
-        #     full_name=Concat('first_name', Value(' '), 'last_name', Value(' '), 'father_name',
-        #                      output_field=CharField())
-        # ).filter(Q(full_name__icontains=full_name))
         elif city:  # __iexact игнорит регистр
             _filter['city'] = city
         elif birthday:
@@ -58,7 +54,7 @@ def searchView(request):
 
 def add_mailing_view(request):
     """Сохраняем рассылку новых предложений"""
-    form = MailingCommerceOfferFrom(request.POST or None)
+    form = MailingCommerceOfferFrom(request.POST, request.FILES)
     if form.is_valid():
         new_mailing = form.save()
         data = form.cleaned_data
@@ -72,14 +68,21 @@ def add_mailing_view(request):
     return render(request, 'add_mailing.html', {'form': form})
 
 
-def add_holiday(request):
+def add_holiday_view(request):
     """Добавляем праздники"""
-    form = HolidayFrom(request.POST or None)
+    form = HolidayFrom(request.POST, request.FILES)
     if form.is_valid():
-        holiday = form.save()
+        holiday = form.save(commit=False)
         data = form.cleaned_data
-
+        check_holiday = Holiday.objects.filter(name=data['name'])
+        if check_holiday.exists():
+            messages.error(request, 'Этот праздник уже есть в базе!!')
+        else:
+            holiday.save()
+            messages.success(request, 'Праздник был добавлен!')
+            return redirect('add_holiday')
     return render(request, 'add_holiday.html', {'form': form})
+
 
 def update_client_view(request):
     pass

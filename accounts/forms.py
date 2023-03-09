@@ -4,8 +4,7 @@ from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
 from django.forms import NumberInput
 
-from .models import Client, CompanyDetail, City
-from reminder_service.custom_validators import GENDER
+from .models import Client, CompanyDetail, City, Gender
 
 User = get_user_model()
 
@@ -60,8 +59,9 @@ class ClientForm(forms.ModelForm):
     date_of_birth = forms.DateField(label='Дата рождения',
                                     widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
                                     )
-    gender = forms.CharField(
-        widget=forms.Select(choices=GENDER, attrs={'class': 'form-control'}),
+    gender = forms.ModelChoiceField(
+        queryset=Gender.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
         label='Пол человека',
     )
     email = forms.CharField(

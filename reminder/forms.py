@@ -1,35 +1,33 @@
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
-
+from ckeditor.widgets import CKEditorWidget
+from django.forms import NumberInput
 from .models import MailingCommerceOffer, Holiday
 from django import forms
 
-from accounts.models import CompanyDetail
-
-"""Форма для объединения страны и ссылки"""
+from accounts.models import CompanyDetail, City
 
 
-#
-class HolidayFrom(forms.Form):
+class HolidayFrom(forms.ModelForm):
+    image = forms.ImageField(
+        widget=forms.FileInput(attrs={'class': 'form-control'}),
+        label='Изображение',
+        required=False
+    )
     name = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Наименование праздника',
     )
     date = forms.DateField(label='Дата праздника',
-                           input_formats=['%d.%m.%Y', '%Y.%m.%d'],
-                           widget=forms.DateInput(attrs={'class': 'form-control'}),
+                           widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
                            )
-    clients = forms.MultipleChoiceField(
-        widget=forms.SelectMultiple(attrs={'class': 'form-control'}),
-        label='Пол человека',
-    )
+    congratulation = forms.CharField(widget=CKEditorWidget(), label='Поздравление')
 
     class Meta:
         model = Holiday
-        fields = ('name', 'date', 'clients')
+        fields = ('image', 'name', 'date', 'congratulation')
 
 
 class MailingCommerceOfferFrom(forms.ModelForm):
-    photo = forms.ImageField(
+    image = forms.ImageField(
         widget=forms.FileInput(attrs={'class': 'form-control'}),
         label='Изображение',
     )
@@ -38,17 +36,24 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         widget=forms.URLInput(attrs={'class': 'form-control'}),
         label='Ссылки ( Если их несколько, то введите через запятую)',
     )
-    message = forms.CharField(
-        widget=CKEditorUploadingWidget(),
-        label='Место для вашего предложения',
-    )
+
     company_detail = forms.ModelChoiceField(
         queryset=CompanyDetail.objects.all(),
         required=True,
         widget=forms.Select(attrs={'class': 'form-control'}),
         label='Выберите реквизиты вашей компании'
     )
+    city = forms.ModelChoiceField(
+        queryset=City.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите город',
+        help_text='Если хотите разослать всем городам, то оставьте поле пустым (-----)',
+    )
+    message = forms.CharField(
+        widget=CKEditorWidget(),
+        label='Место для вашего предложения',
+    )
 
     class Meta:
         model = MailingCommerceOffer
-        fields = ('photo', 'link', 'company_detail', 'message',)
+        fields = ('image', 'city', 'link', 'company_detail', 'message')

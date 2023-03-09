@@ -9,9 +9,10 @@
     <div class="container px-4">
         <div class="row ">
             <div class="col-md-8 mx-auto">
-                <h4 class="my-2">Add new mailing</h4>
-                <form method="POST" action="">{% csrf_token %}
+                <h4 class="my-2">Рассылка предложений</h4>
+                <form method="POST" enctype="multipart/form-data"  action="">{% csrf_token %}
                     <div class="form-outline">
+                        {{ form.media }}<!--  Для вывода "Ckeditor"  -->
                         {{ form.as_p }}
                         <br>
                     </div>

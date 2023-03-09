@@ -21,7 +21,20 @@ class MailingCommerceOfferAdmin(admin.ModelAdmin):
     list_display = ('pk', 'photo', 'link', 'company_detail', 'message', 'sending_status', 'created_at')
 
 
+class HolidayForm(forms.ModelForm):
+    congratulation = forms.CharField(widget=CKEditorUploadingWidget())
+
+    class Meta:
+        model = Holiday
+        fields = '__all__'
+
+
+class HolidayFormAdmin(admin.ModelAdmin):
+    form = HolidayForm
+    list_display = ('id','image', 'name', 'date', 'congratulation')
+
+
 admin.site.register(TemplateForChannel, )
-admin.site.register(MailingCommerceOffer, MailingCommerceOfferAdmin )
+admin.site.register(MailingCommerceOffer, MailingCommerceOfferAdmin)
 admin.site.register(Result, )
-admin.site.register(Holiday, )
+admin.site.register(Holiday, HolidayFormAdmin)
