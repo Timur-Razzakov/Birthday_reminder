@@ -26,30 +26,30 @@ def searchView(request):
     form = SearchClientForm()
     full_name = request.GET.get('full_name', None)
     city = request.GET.get('city', None)
-    birthday = request.GET.get('date_of_birth', None)
+    date_of_birth = request.GET.get('date_of_birth', '')
     email = request.GET.get('email', None)
     phone_number = request.GET.get('phone_number', None)
     context = {'full_name': full_name, 'city': city,
-               'birthday': birthday, 'email': email,
+               'email': email, 'date_of_birth': date_of_birth,
                'phone_number': phone_number, 'form': form}
-    if full_name or city or birthday or email or phone_number:
+    if full_name or city or email or phone_number or date_of_birth:
         _filter = {}
-        if full_name:
-            _filter['full_name'] = full_name
-        elif city:  # __iexact игнорит регистр
+        if full_name:  # __icontains --> поиск по части слова
+            _filter['full_name__icontains'] = full_name
+        if city:  # __iexact игнорит регистр
             _filter['city'] = city
-        elif birthday:
-            _filter['date_of_birth'] = birthday
-        elif email:
+        if date_of_birth:
+            _filter['date_of_birth'] = date_of_birth
+        if email:
             _filter['email'] = email
-        else:
+        if phone_number:
             _filter['phone_number'] = phone_number
         qs = Client.objects.filter(**_filter)
         paginator = Paginator(qs, 5)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         context['object_list'] = page_obj
-    return render(request, 'accounts/clients_list.html', context)
+    return render(request, 'clients_list.html', context)
 
 
 def add_mailing_view(request):
@@ -62,8 +62,6 @@ def add_mailing_view(request):
             new_mailing.save()
             messages.success(request, 'Коммерческое предложение сохранено.')
             return redirect('add_mailing')
-    else:
-        form = MailingCommerceOfferFrom()
     return render(request, 'add_mailing.html', {'form': form})
 
 
@@ -82,8 +80,6 @@ def add_holiday_view(request):
                 holiday.save()
                 messages.success(request, 'Праздник был добавлен!')
                 return redirect('add_holiday')
-        else:
-            form = HolidayFrom()
     return render(request, 'add_holiday.html', {'form': form})
 
 

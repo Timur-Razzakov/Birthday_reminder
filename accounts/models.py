@@ -52,7 +52,7 @@ class CompanyDetail(models.Model):
 
 class Client(models.Model):
     """Модель о Клиентах"""
-    full_name = models.CharField(max_length=100, verbose_name='first_name', null=True, blank=True)
+    full_name = models.CharField(max_length=100, verbose_name='full_name', null=True, blank=True)
     first_name = models.CharField(max_length=100, verbose_name='first_name')
     last_name = models.CharField(max_length=100, verbose_name='last_name')
     father_name = models.CharField(max_length=255, verbose_name='father_name')

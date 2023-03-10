@@ -37,7 +37,7 @@ def add_client_view(request):
         new_client = form.save(commit=False)
         data = form.cleaned_data
         fullname = f"{data['last_name'] + ' ' + data['first_name'] + ' ' + data['father_name']}"
-        check_client = Client.objects.filter(phone_number=data['phone_number'], first_name=fullname)
+        check_client = Client.objects.filter(passport=data['passport'], full_name=fullname)
         if check_client.exists():
             messages.error(request, 'Клиент уже существует в системе!!')
         else:
@@ -53,19 +53,17 @@ def add_company_info_view(request):
     form = CompanyDetailForm
     if request.method == "POST":
         form = CompanyDetailForm(request.POST, request.FILES)
-        print(form)
+        print(form.is_valid())
         if form.is_valid():
             company = form.save(commit=False)
             data = form.cleaned_data
             print(data)
             check_company = CompanyDetail.objects.filter(name=data['name'])
+            print(check_company)
             if check_company.exists():
                 messages.error(request, 'Информация об этой компании уже существует!!')
             else:
                 company.save()
                 messages.success(request, 'Информация о компании  добавлена в систему.')
-                return redirect('accounts/add_company')
-        else:
-            form = CompanyDetailForm()
-            print(124314124124)
+                return redirect('add_company')
     return render(request, 'accounts/company_detail.html', {'form': form})

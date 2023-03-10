@@ -72,14 +72,15 @@ class ClientForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Номер телефона',
     )
-    inter_passport = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control'}),
-        label='Загран паспорт',
-    )
     passport = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
-        label='Местный паспорт',
+        label='Внутренний паспорт',
     )
+    inter_passport = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Загранпаспорт',
+    )
+
     address = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Адрес проживания',
@@ -87,15 +88,20 @@ class ClientForm(forms.ModelForm):
     city = forms.ModelChoiceField(
         queryset=City.objects.all(),
         widget=forms.Select(attrs={'class': 'form-control'}),
-        label='Выберите город проживания',
+        label='Город проживания',
+    )
+    traveled = forms.CharField(
+        widget=forms.Textarea(attrs={'class': 'form-control'}),
+        label='Введите посещённые места',
+        help_text='Введите наименование города или страны, через запятую'
     )
 
     class Meta:
         model = Client
         fields = (
-            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender',
-            'inter_passport', 'passport', 'email', 'address',
-            'phone_number')
+            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender', 'email', 'address',
+            'phone_number', 'city',
+            'inter_passport', 'passport', 'traveled')
 
 
 class CompanyDetailForm(forms.ModelForm):
@@ -139,7 +145,7 @@ class SearchClientForm(forms.Form):
     )
     date_of_birth = forms.DateField(label='Дата рождения',
                                     widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'}),
-                                    required=False
+                                    required=False,
                                     )
     email = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
