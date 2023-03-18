@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} Job Finder {% endblock %}
+
+{% block content %}
+
+<!--Формируем список вакансий-->
+{% if object_list %}
+<h3 class="my-4 text-center">Список ваших компаний.</h3>
+{% for obj in  object_list %}
+<div class="row ">
+    <div class="col-md-8 mx-auto">
+        <div class="card my-3">
+
+            <h5 class="card-header"><a href="#">{{ obj.name }} </a></h5>
+            <div class="card-body">
+                <p><strong>{{ obj.address }}</strong></p>
+                <p><strong>{{ obj.phone_number }}</strong></p>
+                {% autoescape off %}
+                <p>{{obj.message }}
+                    {% endautoescape %}
+                <p>{{obj.email }}
+                <p>{{obj.web_site }}
+                <p>{{obj.company_motto }}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+{% else %}
+
+<h3 class=" my-4 text-center">Информации о Компании пока не нет!</h3>
+
+{% endif %}
+{% endblock %}
