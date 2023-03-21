@@ -1,21 +1,22 @@
 from ckeditor.widgets import CKEditorWidget
-from django.forms import NumberInput
-from .models import MailingCommerceOffer, Holiday
 from django import forms
+from django.forms import  NumberInput
 
 from accounts.models import CompanyDetail, City
+from .models import MailingCommerceOffer, Holiday
 
 
 class HolidayFrom(forms.ModelForm):
-
     name = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Наименование праздника',
     )
     date = forms.DateField(label='Дата праздника',
+                           required=True,
                            widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
                            )
-    congratulation = forms.CharField(widget=CKEditorWidget(), label='Поздравление')
+    congratulation = forms.CharField(widget=CKEditorWidget(),
+                                     label='Поздравление')  # max_file_size=1024 * 1024 * 5
 
     class Meta:
         model = Holiday
@@ -23,7 +24,6 @@ class HolidayFrom(forms.ModelForm):
 
 
 class MailingCommerceOfferFrom(forms.ModelForm):
-
     link = forms.URLField(
         widget=forms.URLInput(attrs={'class': 'form-control'}),
         label='Ссылки ( Если их несколько, то введите через запятую)',
@@ -47,6 +47,15 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         label='Место для вашего предложения',
     )
 
+    images = forms.ImageField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False, )
+
     class Meta:
         model = MailingCommerceOffer
-        fields = ('photo', 'city', 'link', 'company_detail', 'message')
+        fields = ['images', 'city', 'link', 'company_detail', 'message']
+
+    # для отображения изображений (ManyToMany)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance.pk:
+            self.fields['images'].initial = self.instance.photo.values_list('id',
+                                                                            flat=True)  # получаем список ID изображений, связанных с текущей моделью

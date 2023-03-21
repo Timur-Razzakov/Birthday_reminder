@@ -16,9 +16,8 @@
     <div class="col-md-8 mx-auto">
         <div class="card my-3">
 
-            <h5 class="card-header"><a href="{% url 'update_client' obj.id %}">{{ obj.last_name}} {{
-                obj.first_name}}
-                {{ obj.father_name }}</a></h5>
+            <h5 class="card-header"><a href="{% url 'update_client' obj.id %}">{{ obj.last_name}}
+                {{ obj.first_name}} {{ obj.father_name }}</a></h5>
             <div class="card-body">
                 <p><strong>{{ obj.email }}</strong></p>
                 <p><strong>{{ obj.phone_number }}</strong></p>

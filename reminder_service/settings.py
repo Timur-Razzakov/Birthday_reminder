@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'reminder',
     'debug_toolbar',
     'ckeditor',
+    'multiupload',
 ]
 
 MIDDLEWARE = [
@@ -215,3 +216,22 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+# Redis related settings
+REDIS_HOST = '127.0.0.1'
+RADIS_PORT = '6379'
+CELERY_BROKER_URL = "redis://" + REDIS_HOST + ':' + RADIS_PORT + '/0'  # для подключения
+CELERY_BROKER_TRANSPORT_OPTIONS = {'visibility_timeout': 3600}
+CELERY_RESULT_BACKEND = "redis://" + REDIS_HOST + ':' + RADIS_PORT + '/0'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Tashkent'
+
+#  путь к файлу celery_django.py в переменную celery_app в settings.py
+CELERY_APP = 'reminder_service.celery_django:app'
+
+# Список приложений, в которых содержатся задачи Celery
+CELERY_IMPORTS = (
+    'reminder.tasks',
+)

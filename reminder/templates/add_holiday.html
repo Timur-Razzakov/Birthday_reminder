@@ -15,7 +15,10 @@
                         {{ form.as_p }}
                         {{ form.media }}
                     </div>
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <div class="container-buttons">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <a href="{% url 'show_holiday' %}" class="badge badge-info">Список Праздников</a>
+                    </div>
                 </form>
             </div>
         </div>

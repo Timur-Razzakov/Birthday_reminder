@@ -1,4 +1,3 @@
-
 .badge {
     display: flex;
     align-items: center;
@@ -9,9 +8,6 @@
     display: flex;
     justify-content: space-between;}
 
-.container-buttons {
-    display: flex;
-    justify-content: space-between;}
 
 #main-container {
     margin-top: 65px;

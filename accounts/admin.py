@@ -11,10 +11,11 @@ class UserCreationForm(forms.ModelForm):
     """Форма для заполнения пароля и создание пользователя"""
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    user_name = forms.CharField(label='User name (telegram_nickname) ', widget=forms.TextInput)
 
     class Meta:
         model = MyUser
-        fields = ('email',)
+        fields = ('email', 'user_name')
 
     def clean_password2(self):
         """Проверяет пароли на совпадение между собой"""
@@ -38,7 +39,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = MyUser
-        fields = ('email', 'password', 'is_active', 'is_admin')
+        fields = ('email', 'password', 'user_name', 'is_active', 'is_admin')
 
     def clean_password(self):
         # Независимо от того, что предоставил пользователь, вернуть начальное значение.
@@ -56,7 +57,7 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('is_admin',)
     fieldsets = (
         # Поля для Отображения в админке
-        (None, {'fields': ('email', 'password')}),
+        (None, {'fields': ('email', 'password', 'user_name')}),
 
         ('Permissions', {'fields': ('is_admin',)}),
     )
@@ -65,7 +66,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2'),
+            'fields': ('email', 'password1', 'password2', 'user_name'),
         }),
     )
     search_fields = ('email',)

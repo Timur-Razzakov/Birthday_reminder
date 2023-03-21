@@ -1,27 +1,30 @@
 from django.db import models
 
 from accounts.models import Client, CompanyDetail, Channel, Gender, City
+from reminder_service.custom_validators import TEMPLATE_NAME
 
 
 class TemplateForChannel(models.Model):
     """Модель для шаблона сообщений"""
-
+    name = models.CharField(choices=TEMPLATE_NAME, max_length=255, verbose_name='template_name')
     channel = models.ForeignKey(Channel, verbose_name='channel', on_delete=models.CASCADE, null=True,
                                 blank=True)
     templates_for_massage = models.TextField(verbose_name='templates_for_massage')
-    gender = models.ForeignKey(Gender, verbose_name='GENDER', on_delete=models.CASCADE)
+    gender = models.ForeignKey(Gender, verbose_name='GENDER', blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "%s, %s " % (self.channel, self.gender)
+        return "%s, %s " % (self.name, self.gender)
 
 
 class Holiday(models.Model):
     """Модель для праздников и поздравлений"""
-    image = models.ImageField(verbose_name='Изображение', upload_to='media/holiday//%Y/%m/%d',
-                              blank=True)
+    image = models.ImageField(verbose_name='Изображение', upload_to='holiday/%Y/%m/%d',
+                              blank=True, null=True)
     name = models.CharField(max_length=255, verbose_name='Holiday name')
-    date = models.DateField(verbose_name='Holiday date')
+    date = models.DateField(verbose_name='Holiday date', blank=True, null=True)
     congratulation = models.TextField(verbose_name='congratulate_text')
+    gender = models.ForeignKey(Gender, verbose_name='GENDER', null=True,
+                               blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return "%s, %s " % (self.name, self.date)
@@ -29,25 +32,35 @@ class Holiday(models.Model):
 
 class MailingCommerceOffer(models.Model):
     """Модель для рассылки коммерческих предложений"""
-
-    photo = models.ImageField(verbose_name=' Изображение', upload_to='media/%Y/%m/%d', blank=True)
+    photo = models.ManyToManyField('MultipleImage', blank=True)
     message = models.TextField(verbose_name='message')
     link = models.URLField(max_length=255, unique=True, verbose_name='url',
                            null=True, blank=True)
     company_detail = models.ForeignKey(CompanyDetail, verbose_name='company_detail', on_delete=models.CASCADE,
                                        )
-    sending_status = models.CharField(verbose_name='sending_status', max_length=90, null=True,
-                                      blank=True, default=False)
     created_at = models.DateTimeField(verbose_name="created_at", auto_now_add=True)
     city = models.ForeignKey(City, verbose_name='City', on_delete=models.CASCADE, null=True,
                              blank=True)
+    sending_status = models.CharField(verbose_name='sending_status', max_length=90, null=True,
+                                      blank=True, default=False)
+
+    # функция, для вывода 1 изображения при использовании ManyToMany в шаблоне
+    def get_first_image(self):
+        return self.photo.first().image.url if self.photo.first() else None
 
     def __str__(self):
-        return "%i, %s " % (self.pk, self.sending_status)
+        return "%i" % (self.pk,)
+
+
+class MultipleImage(models.Model):
+    image = models.ImageField(verbose_name=' Изображение', upload_to='media/%Y/%m/%d', blank=True, null=True)
+
+    def __str__(self):
+        return str(self.image)
 
 
 class Result(models.Model):
-    """Модель для итоговых данных для отправки и рассылки клиентам"""
+    """Модель для итоговых данных для поздравления клиентов"""
 
     client = models.ManyToManyField(Client, verbose_name="Client")
     process_date = models.DateTimeField(verbose_name='sent_to', null=True, blank=True)

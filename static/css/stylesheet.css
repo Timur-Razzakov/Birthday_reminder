@@ -1,0 +1,120 @@
+
+.badge {
+    display: flex;
+    align-items: center;
+    text-align:center;
+    font-size:90%;
+}
+.container-buttons {
+    display: flex;
+    justify-content: space-between;}
+
+
+#main-container {
+    margin-top: 65px;
+}
+
+.navbar {
+    border-bottom: 1px solid rgba(150,150,150,.5);
+}
+
+#drchrono_logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#brand-logo {
+    height: 30px;
+    margin-top: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button-container .btn-default {
+    width: 120px;
+}
+
+ @media (max-width: 767px) {
+    .patient-list {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+ }
+
+ .glyphicon-ok {
+    color: green;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-size: 1.5em;
+    display: none;
+ }
+
+ .glyphicon-ok.msg-sent {
+    display: block;
+ }
+
+/*PATIENTS*/
+
+.patient-container {
+    background: rgba(200,200,200,.2);
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.hide-group {
+    display: none;
+}
+
+.profile-pic-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.profile-pic {
+    height: 110px;
+    max-width: 100%;
+    display: inline-block;
+    border: 1px solid rgba(150,150,150,.6);
+}
+
+.patient-info {
+    vertical-align: top;
+    display: inline-block;
+}
+
+.patient-profile {
+    display: inline-block;
+    width: 100%;
+}
+
+.patient-communication {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.profile-hidden {
+    display: none;
+}
+
+.greetings-btn {
+    margin-top: 15px;
+}
+
+
+/*LOGIN*/
+.login-container{
+    margin-top: 150px;
+    text-align: center;
+}
+
+.login {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 150px;
+}

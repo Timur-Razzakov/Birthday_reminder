@@ -3,7 +3,7 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django.contrib import admin
 from django import forms
 
-from .models import TemplateForChannel, MailingCommerceOffer, Result, Holiday
+from .models import TemplateForChannel, MailingCommerceOffer, Result, Holiday, MultipleImage
 
 
 # Register your models here.
@@ -18,7 +18,8 @@ class MailingCommerceOfferForm(forms.ModelForm):
 
 class MailingCommerceOfferAdmin(admin.ModelAdmin):
     form = MailingCommerceOfferForm
-    list_display = ('pk', 'photo', 'link', 'company_detail', 'message', 'sending_status', 'created_at')
+    list_display = ('pk', 'link', 'company_detail', 'message', 'created_at')
+    filter_horizontal = ('photo',)  # для ManyToMany
 
 
 class HolidayForm(forms.ModelForm):
@@ -31,10 +32,12 @@ class HolidayForm(forms.ModelForm):
 
 class HolidayFormAdmin(admin.ModelAdmin):
     form = HolidayForm
-    list_display = ('id','image', 'name', 'date', 'congratulation')
+    list_display = ('id', 'image', 'name', 'date', 'congratulation')
 
 
 admin.site.register(TemplateForChannel, )
 admin.site.register(MailingCommerceOffer, MailingCommerceOfferAdmin)
 admin.site.register(Result, )
+admin.site.register(MultipleImage, )
+
 admin.site.register(Holiday, HolidayFormAdmin)

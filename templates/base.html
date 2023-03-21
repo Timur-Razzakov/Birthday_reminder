@@ -7,7 +7,9 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+    <link href="{% static 'css/album.css' %}" rel="stylesheet">
     <link href="{% static 'css/stylesheet.css' %}" rel="stylesheet" crossorigin="anonymous">
+
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -20,6 +22,7 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Создать или изменить</a>
+                    {% if user.is_authenticated %}
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{% url 'add_client' %}"> Клиента</a></li>
                         <li><a class="dropdown-item" href="{% url 'add_holiday' %}">Праздник</a></li>
@@ -28,7 +31,7 @@
                         </li>
                     </ul>
                 </li>
-                {% if user.is_authenticated %}
+
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'logout' %}">Выйти</a>
                 </li>
@@ -45,12 +48,18 @@
     </div>
 </nav>
 {% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li
-    {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-</ul>
+{% for message in messages %}
+{% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+<div align='center' class=" alert alert-success" role="alert">
+    {{ message }}
+</div>
+{% endif %}
+{% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+<div align='center' class=" alert alert-danger" role="alert">
+    {{ message }}
+</div>
+{% endif %}
+{% endfor %}
 {% endif %}
 {% block content %} {% endblock %}
 

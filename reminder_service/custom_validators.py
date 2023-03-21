@@ -2,6 +2,14 @@ from django.core.validators import RegexValidator, EmailValidator
 from django.core.exceptions import ValidationError
 import re
 
+TEMPLATE_NAME = (
+    ('', ''),
+    ('Коммерческое предложение', 'Коммерческое предложение'),
+    ('День рождения', 'День рождения'),
+    ('Праздники', 'Праздники'),
+)
+
+
 # GENDER = (
 #     ('', ''),
 #     ('Мужчина', 'Мужчина'),

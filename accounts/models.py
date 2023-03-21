@@ -1,6 +1,6 @@
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+from django.core.validators import EmailValidator
 from django.db import models
-from django.core.validators import RegexValidator, EmailValidator, URLValidator
 
 from reminder_service import custom_validators
 
@@ -31,23 +31,21 @@ class Channel(models.Model):
 
 class CompanyDetail(models.Model):
     """Модель, информации о компании"""
-
-    name = models.CharField(max_length=100, verbose_name='company_name', unique=True)
+    name = models.CharField(max_length=100, verbose_name='company_name')
     address = models.CharField(max_length=255, verbose_name='address')
     phone_number = models.CharField(max_length=13, verbose_name='phone_number',
                                     validators=[custom_validators.phone_validator])
     email = models.CharField(max_length=200, verbose_name='email',
-                             unique=True,
                              validators=[EmailValidator(message='Почта неверного формата!!')],
                              null=True, blank=True)
-    web_site = models.URLField(max_length=200, verbose_name='url', unique=True,
+    web_site = models.URLField(max_length=200, verbose_name='url',
                                null=True, blank=True)
     company_motto = models.CharField(max_length=255, verbose_name='company_motto',
                                      null=True, blank=True)
     logo = models.ImageField(verbose_name='Логотип Компании', upload_to='logo/', blank=True)
 
     def __str__(self):
-        return "%i, %s " % (self.pk, self.name)
+        return "%s" % (self.name,)
 
 
 class Client(models.Model):
@@ -73,15 +71,15 @@ class Client(models.Model):
     city = models.ForeignKey(City, verbose_name='City', on_delete=models.CASCADE, null=True,
                              blank=True)
     channel = models.ForeignKey(Channel, verbose_name='channel', on_delete=models.CASCADE, null=True,
-                                blank=True)
+                                blank=True, default=1)
     traveled = models.TextField(verbose_name='Текст', blank=True, null=True)
 
     def __str__(self):
-        return "%i, %s " % (self.pk, self.phone_number)
+        return str(self.phone_number)
 
 
 class MyUserManager(BaseUserManager):
-    def create_user(self, email, password=None):
+    def create_user(self, email, user_name, password=None):
         """
         Создаёт пользователя с указанным email-лом и паролем
         """
@@ -91,7 +89,6 @@ class MyUserManager(BaseUserManager):
         user = self.model(
             email=self.normalize_email(email)
         )
-
         user.set_password(password)  # зашифровывает пароль
         user.save(using=self._db)
         return user
@@ -115,7 +112,9 @@ class MyUser(AbstractBaseUser):
         max_length=255,
         unique=True,
     )
-    # chart_id = models.CharField(max_length=10, verbose_name='chart_id', unique=True,)
+    user_name = models.CharField(max_length=100, verbose_name='user_name', unique=True, )
+    list_display = ('email', 'is_admin', 'user_name')
+
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     objects = MyUserManager()
@@ -127,11 +126,11 @@ class MyUser(AbstractBaseUser):
         return self.email
 
     def has_perm(self, perm, obj=None):
-        """проверяет есть ли у пользователя указанное разрешение """
+        """Проверяет есть ли у пользователя указанное разрешение """
         return True
 
     def has_module_perms(self, app_label):
-        """есть  ли у пользователя разрешение на доступ к моделям в данном приложении. """
+        """Есть ли у пользователя разрешение на доступ к моделям в данном приложении. """
         return True
 
     @property

@@ -4,7 +4,7 @@ from django.contrib.auth.hashers import check_password
 from django.contrib.auth.models import User
 from django.forms import NumberInput
 
-from .models import Client, CompanyDetail, City, Gender
+from .models import Client, CompanyDetail, City, Gender, Channel
 
 User = get_user_model()
 
@@ -68,6 +68,11 @@ class ClientForm(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Электронная почта',
     )
+    channel = forms.ModelChoiceField(
+        queryset=Channel.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите, куда отправлять сообщения?',
+    )
     phone_number = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}),
         label='Номер телефона',
@@ -99,7 +104,8 @@ class ClientForm(forms.ModelForm):
     class Meta:
         model = Client
         fields = (
-            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender', 'email', 'address',
+            'first_name', 'last_name', 'father_name', 'date_of_birth', 'gender', 'channel', 'email',
+            'address',
             'phone_number', 'city',
             'inter_passport', 'passport', 'traveled')
 

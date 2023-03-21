@@ -14,7 +14,10 @@
                     <div class="form-outline">
                         {{ form.as_p }}
                     </div>
-                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <div class="container-buttons">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <a href="{% url 'show_company_detail' %}" class="badge badge-info">Мои Компании</a>
+                    </div>
                 </form>
             </div>
         </div>
