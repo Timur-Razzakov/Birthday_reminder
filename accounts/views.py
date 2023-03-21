@@ -1,14 +1,8 @@
-import datetime
-
-from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.core.paginator import Paginator
-from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.urls import reverse_lazy
-from django.views.generic import UpdateView
-from icecream import ic
+from django.contrib.auth import authenticate, login, get_user_model, logout
+from django.core.paginator import Paginator
+from django.shortcuts import render, redirect, get_object_or_404
 
-from reminder_service.custom_validators import TEMPLATE_NAME
 from .forms import UserLoginForm, ClientForm, CompanyDetailForm
 from .models import Client, CompanyDetail
 
@@ -17,7 +11,7 @@ User = get_user_model()
 
 def logout_view(request):
     """Функция выхода"""
-    # logout(request)
+    logout(request)
     return redirect('home')
 
 
@@ -51,54 +45,26 @@ def add_client_view(request):
             new_client.save()
             messages.success(request, 'Клиент добавлен в систему.')
             return redirect('add_client')
-    else:
-        messages.error(request, 'Перепроверьте введённые данные')
-    return render(request, 'accounts/add_birthday.html', {'form': form})
+    return render(request, 'accounts/add_client.html', {'form': form})
 
 
 def update_client_view(request, id):
     """Обновление данных о клиенте"""
-    get_client = Client.objects.get(id=id)
-
+    get_client = get_object_or_404(Client, id=id)
     if request.method == 'POST':
-        form = ClientForm(request.POST)
+        form = ClientForm(request.POST, instance=get_client)
         if form.is_valid():
+            get_client = form.save(commit=False)
             data = form.cleaned_data
-            get_client.first_name = data['first_name'],
-            get_client.last_name = data['last_name'],
-            get_client.father_name = data['father_name'],
-            get_client.phone_number = data['phone_number'],
-            get_client.date_of_birth = data['date_of_birth'],
-            get_client.inter_passport = data['inter_passport'],
-            get_client.passport = data['passport'],
-            get_client.gender = data['gender'],
-            get_client.address = data['address'],
-            get_client.city = data['city'],
-            get_client.channel = data['channel'],
-            get_client.traveled = data['traveled'],
-            fullname = f"{data['last_name'] + ' ' + data['first_name'] + ' ' + data['father_name']}"
-            get_client.fullname = fullname
+            fullname = f"{data['last_name']} {data['first_name']} {data['father_name']}"
+            get_client.full_name = fullname
             get_client.save()
             messages.success(request, 'Данные изменены!!')
             return redirect('add_client')
-        else:
-            messages.error(request, 'Перепроверьте введённые данные')
-    form = ClientForm(
-        initial={'first_name': get_client.first_name,
-                 'last_name': get_client.last_name,
-                 'father_name': get_client.father_name,
-                 'email': get_client.email,
-                 'phone_number': get_client.phone_number,
-                 'date_of_birth': get_client.date_of_birth,
-                 'inter_passport': get_client.inter_passport,
-                 'passport': get_client.passport,
-                 'gender': get_client.gender,
-                 'address': get_client.address,
-                 'city': get_client.city,
-                 'channel': get_client.channel,
-                 'traveled': get_client.traveled,
-                 })
-    return render(request, "accounts/add_birthday.html",
+    else:
+        form = ClientForm(instance=get_client)
+
+    return render(request, "accounts/add_client.html",
                   {'form': form})
 
 
@@ -107,13 +73,10 @@ def add_company_info_view(request):
     form = CompanyDetailForm
     if request.method == "POST":
         form = CompanyDetailForm(request.POST, request.FILES)
-        print(form.is_valid())
         if form.is_valid():
             company = form.save(commit=False)
             data = form.cleaned_data
-            print(data)
             check_company = CompanyDetail.objects.filter(name=data['name'])
-            print(check_company)
             if check_company.exists():
                 messages.error(request, 'Информация об этой компании уже существует!!')
             else:

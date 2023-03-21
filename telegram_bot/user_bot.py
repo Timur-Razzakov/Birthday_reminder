@@ -121,7 +121,7 @@ async def send_message_mailing(api_id, api_hash, image_data, mailing_id: int, cl
                     if len(image_data) != 0:
                         for item in image_data:
                             await app.send_photo(user_id, photo=f'media/{item}')
-                            time.sleep(2)
+                            time.sleep(1)
                     await app.send_message(user_id, message)
                     update_mailing(mailing_id)
                     time.sleep(3)
@@ -131,7 +131,7 @@ async def send_message_mailing(api_id, api_hash, image_data, mailing_id: int, cl
                 if len(error_list) != 0:
                     await app.send_message(admin_username,
                                            f"К сожалению, пользователи с этими номерами телефона: \n{error_list}\n "
-                                           f"пока не пользуется Telegram или он скрыл свой номер телефона")
+                                           f"пока не пользуется Telegram или они скрыли свой номер телефона")
             await app.send_message(admin_username,
                                    f"<b>Было отправлено:</b> {client_count} пользователям!!")
         except FloodWait as e:

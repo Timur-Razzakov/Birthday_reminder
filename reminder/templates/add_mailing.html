@@ -11,9 +11,6 @@
                 <h4 class="my-4">Рассылка предложений</h4>
                 <form method="POST" enctype="multipart/form-data" action="">{% csrf_token %}
                     <div class="form-outline">
-<!--                        {% for image in images %}-->
-<!--                        <img src="{{ image.image }}" alt="{{ image.title }}">-->
-<!--                        {% endfor %}-->
                         {{ form.as_p }}
                         {{ form.media }}<!--  Для вывода "Ckeditor"  -->
                         <br>
