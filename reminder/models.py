@@ -32,6 +32,7 @@ class Holiday(models.Model):
 
 class MailingCommerceOffer(models.Model):
     """Модель для рассылки коммерческих предложений"""
+
     photo = models.ManyToManyField('MultipleImage', blank=True)
     message = models.TextField(verbose_name='message')
     link = models.URLField(max_length=255, unique=True, verbose_name='url',

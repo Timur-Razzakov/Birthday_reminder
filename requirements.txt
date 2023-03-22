@@ -57,3 +57,6 @@ watchfiles==0.18.1
 websockets==10.4
 xarray==2023.1.0
 xyzservices==2023.2.0
+
+Django~=4.1.7
+Jinja2~=3.1.2

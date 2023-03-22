@@ -1,3 +1,5 @@
+import asyncio
+import datetime
 import os
 import sys
 import time
@@ -7,6 +9,13 @@ import dotenv
 from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
 
+from reminder.models import Result, MailingCommerceOffer
+from accounts.models import Client as MyClient
+
+from pyrogram import Client
+from pyrogram.types import InputPhoneContact, InputMediaPhoto
+import logging
+
 dotenv.load_dotenv('.env')
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))
@@ -15,15 +24,6 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reminder_service.settings")
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 django.setup()
 # # ---------------------------------------------------------------------------------
-import asyncio
-
-import datetime
-from reminder.models import Result, MailingCommerceOffer
-from accounts.models import Client as cl
-
-from pyrogram import Client
-from pyrogram.types import InputPhoneContact, InputMediaPhoto
-import logging
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ def get_data():
     client_phones = []
 
     for item in data:
-        all_phones = cl.objects.filter(id=item['client']).values('phone_number', 'first_name')
+        all_phones = MyClient.objects.filter(id=item['client']).values('phone_number', 'first_name')
         for phone in all_phones:
             client = {
                 'id': item['id'],
@@ -88,7 +88,8 @@ async def send_message_holiday(api_id, api_hash, client_data: list, admin_userna
                     error_list.append(client['phone_number'])
             if len(error_list) != 0:
                 await app.send_message(admin_username,
-                                       f"К сожалению, пользователи с этими номерами телефона: \n{error_list}\n "
+                                       f"К сожалению, пользователи с этими номерами телефона: "
+                                       f"\n{error_list}\n "
                                        f"пока не пользуется Telegram или он скрыл свой номер телефона")
             if client_count < 10:
                 await app.send_message(admin_username,
@@ -135,7 +136,8 @@ async def send_message_mailing(image_data: list, mailing_id: int, client_list, c
 
                 if len(error_list) != 0:
                     await app.send_message(admin_username,
-                                           f"К сожалению, пользователи с этими номерами телефона: \n{error_list}\n "
+                                           f"К сожалению, пользователи с этими номерами телефона: "
+                                           f"\n{error_list}\n "
                                            f"пока не пользуется Telegram или они скрыли свой номер телефона")
             await app.send_message(admin_username,
                                    f"<b>Было отправлено:</b> {client_count} пользователям!!")

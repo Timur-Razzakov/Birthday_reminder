@@ -7746,3 +7746,20 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLR
 2023-03-22 14:29:55,589 - INFO  basehttp  168371 - "GET /admin/reminder/mailingcommerceoffer/ HTTP/1.1" 200 20713
 2023-03-22 14:30:46,428 - INFO  autoreload  168371 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
 2023-03-22 14:30:47,174 - INFO  autoreload  169993 - Watching for file changes with StatReloader
+2023-03-22 14:34:42,499 - INFO  autoreload  169993 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-22 14:34:43,223 - INFO  autoreload  172809 - Watching for file changes with StatReloader
+2023-03-22 14:35:16,786 - INFO  autoreload  172809 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-22 14:35:17,339 - INFO  autoreload  173020 - Watching for file changes with StatReloader
+2023-03-22 14:35:31,762 - INFO  basehttp  173020 - "GET / HTTP/1.1" 200 14869
+2023-03-22 14:35:35,218 - INFO  basehttp  173020 - "GET /add_mailing/ HTTP/1.1" 200 18841
+2023-03-22 14:35:35,505 - WARNING  basehttp  173020 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-22 14:35:37,438 - INFO  basehttp  173020 - "GET /show_mailings/ HTTP/1.1" 200 17158
+2023-03-22 14:35:37,631 - INFO  basehttp  173020 - "GET /show_mailings/ HTTP/1.1" 200 17158
+2023-03-22 14:35:39,902 - INFO  basehttp  173020 - "GET /send_mailing/64/? HTTP/1.1" 302 0
+2023-03-22 14:35:39,964 - INFO  basehttp  173020 - "GET /show_mailings/ HTTP/1.1" 200 17276
+2023-03-22 14:35:40,163 - INFO  basehttp  173020 - "GET /show_mailings/ HTTP/1.1" 200 17158
+2023-03-22 14:41:06,511 - INFO  basehttp  173020 - "GET /send_mailing/31/? HTTP/1.1" 302 0
+2023-03-22 14:41:06,516 - INFO  autoreload  173020 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-03-22 14:41:07,225 - INFO  autoreload  176712 - Watching for file changes with StatReloader
+2023-03-22 14:41:13,226 - INFO  basehttp  176712 - "GET /show_mailings/ HTTP/1.1" 200 17278
+2023-03-22 14:41:13,486 - INFO  basehttp  176712 - "GET /show_mailings/ HTTP/1.1" 200 17158
