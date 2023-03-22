@@ -1,5 +1,6 @@
-import pika
 from typing import Optional
+
+import pika
 
 
 class Consumer(object):

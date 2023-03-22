@@ -8,4 +8,5 @@ class ReminderConfig(AppConfig):
     def ready(self):
         import reminder.signals
 
+
 default_app_config = 'reminder.apps.MyAppConfig'

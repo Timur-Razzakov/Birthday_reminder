@@ -10,15 +10,56 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-import dotenv
 from pathlib import Path
+
+import dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 dotenv.load_dotenv(f'{BASE_DIR}/.env')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'console': {
+            # точный формат не важен, это минимальная информация
+            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+        },
+        'myformatter': {
+            'format': '{asctime} - {levelname}  {module}  {process:d} - {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'console',
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': f'{BASE_DIR}/logs/file_today.log',  # место
+            'formatter': 'myformatter'
+        },
+
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',  # берёт от DEBUG-а и выше
+            'propagate': True
+        },
+    },
+    'reminder_service': {
+        'level': 'INFO',
+        'handlers': ['console', 'sentry'],
+        # требуется, чтобы избежать двойного ведения журнала с помощью корневого логгера
+        'propagate': False,
+    },
+
+}
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')

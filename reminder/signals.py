@@ -41,4 +41,3 @@
 #         print(msg)
 #         create_mailing.message = msg
 #         create_mailing.save()
-

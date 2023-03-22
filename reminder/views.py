@@ -1,22 +1,12 @@
-import asyncio
-import os
-from io import BytesIO
-
 from django.contrib import messages
 from django.core.paginator import Paginator
-from django.http import HttpResponse
-from django.shortcuts import render, redirect, get_object_or_404
-from icecream import ic
-from asgiref.sync import async_to_sync
+from django.shortcuts import render, redirect
+
 from accounts.forms import SearchClientForm
-from accounts.models import Client, CompanyDetail
-from .tasks import send_messages
+from accounts.models import Client
 from .forms import MailingCommerceOfferFrom, HolidayFrom
-from .models import Holiday, MailingCommerceOffer, TemplateForChannel, MultipleImage
-
-from jinja2 import Template
-
-from telegram_bot.user_bot import send_message_mailing
+from .models import Holiday, MailingCommerceOffer, MultipleImage
+from .tasks import send_messages_task
 
 
 # Create your views here.
@@ -111,50 +101,12 @@ def update_mailing_view(request, id):
 
 
 def send_mailing_view(request, id):
-    api_id = os.environ.get('API_ID')
-    api_hash = os.environ.get('API_HASH')
-    """Отправляем указанное коммерческое предложение"""
+    """Получаем id нужного предложения и передаём в очередь"""
     if request.user.is_authenticated:  # будет исп для выбора кому отправлять отчёт об отправке сообщений
         user = request.user
-        mailing = MailingCommerceOffer.objects.get(id=id)
         if request.method == 'GET':
-            template = TemplateForChannel.objects.get(name__icontains='предложение')
-            if mailing.city is None:
-                clients = Client.objects.all().values('phone_number', 'first_name')
-            else:
-                clients = Client.objects.filter(city=mailing.city).values('phone_number', 'first_name')
-            mailing_message = Template(template.templates_for_massage)
-            company_data = CompanyDetail.objects.filter(name=mailing.company_detail).values(
-                'address',
-                'name',
-                'phone_number',
-                'email',
-                'web_site',
-                'company_motto',
-                'logo')
-            image_data = []
-            # проверяем, есть ли фотографии
-            if mailing.photo:
-                for item in mailing.photo.all():
-                    image_data.append(item)
-            # перебираем информацию о компании для template
-            for item in company_data:
-                msg = mailing_message.render(
-                    message=mailing.message,
-                    link=mailing.link,
-                    name=item['name'],
-                    address=item['address'],
-                    phone_number=item['phone_number'],
-                    email=item['email'],
-                    web_site=item['web_site'],
-                    company_motto=item['company_motto'],
-                    logo=item['logo'],
-                )
-            # send_messages.delay(api_id, api_hash, mailing.id,
-            #                     clients, msg, 'Razzakov_Timur')
-            asyncio.run(send_message_mailing(api_id, api_hash, image_data, mailing.id,
-                                             clients, msg, 'Razzakov_Timur'))
-        messages.success(request, 'Успешно отправлено!!')
+            send_messages_task.delay(user.user_name, id)
+            messages.success(request, 'Успешно отправлено!!')
     return redirect('show_mailings')
 
 

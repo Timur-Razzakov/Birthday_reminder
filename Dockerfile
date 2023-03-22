@@ -21,5 +21,6 @@ RUN pip install -r requirements.txt
 # Copy all stuff
 COPY . /app
 
-## Run python  manage.py
-#CMD python manage.py runserver
+
+# run celery
+CMD [ "celery", "-A", "reminder_service", "worker", "-l", "info" ]

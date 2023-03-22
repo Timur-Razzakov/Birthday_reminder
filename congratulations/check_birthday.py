@@ -11,10 +11,8 @@ django.setup()
 # ---------------------------------------------------------------------------------
 from jinja2 import Template
 import datetime
-import time
 from reminder.models import Holiday, TemplateForChannel, Result
 from accounts.models import Client, Channel
-from schedule import every, repeat, run_pending
 
 today = datetime.date.today()
 times = datetime.time()
@@ -49,6 +47,7 @@ def birthday():
                 res_for_send.save()
                 print("Данные сохранены")
         return 'Нет соответствующего праздника'
+
 
 #
 # while True:

@@ -1,7 +1,6 @@
-from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
-from django.contrib import admin
 from django import forms
+from django.contrib import admin
 
 from .models import TemplateForChannel, MailingCommerceOffer, Result, Holiday, MultipleImage
 

@@ -7,7 +7,12 @@ from .forms import UserLoginForm, ClientForm, CompanyDetailForm
 from .models import Client, CompanyDetail
 
 User = get_user_model()
+import logging
 
+logger = logging.getLogger(__name__)
+
+
+# logger.warning('fasdf')
 
 def logout_view(request):
     """Функция выхода"""
@@ -26,7 +31,7 @@ def login_view(request):
         login(request, user)
         return redirect('home')
     else:
-        messages.error(request, 'Перепроверьте введённые данные')
+        logger.warning('')
     return render(request, 'accounts/login.html', {'form': form})
 
 

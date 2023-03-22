@@ -1,6 +1,6 @@
 from ckeditor.widgets import CKEditorWidget
 from django import forms
-from django.forms import  NumberInput
+from django.forms import NumberInput
 
 from accounts.models import CompanyDetail, City
 from .models import MailingCommerceOffer, Holiday

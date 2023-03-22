@@ -1,6 +1,5 @@
 from django.urls import path
 
-from reminder.views import show_holiday_view
 from .views import *
 
 # app_name = 'accounts'

@@ -1,9 +1,7 @@
 import os
 import sys
-import time
 
 import django
-
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))
 sys.path.append(proj)
@@ -15,7 +13,6 @@ from jinja2 import Template
 import datetime
 from reminder.models import Holiday, TemplateForChannel, Result
 from accounts.models import Client, Gender
-from schedule import every, repeat, run_pending
 
 today = datetime.date.today()
 print(today)

@@ -1,6 +1,6 @@
-from django.core.validators import RegexValidator, EmailValidator
-from django.core.exceptions import ValidationError
 import re
+
+from django.core.exceptions import ValidationError
 
 TEMPLATE_NAME = (
     ('', ''),

@@ -4,8 +4,7 @@ import time
 
 import django
 import dotenv
-from icecream import ic
-from pyrogram.errors import FloodWait, PeerIdInvalid, UsernameInvalid
+from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
 
 dotenv.load_dotenv('.env')
@@ -23,10 +22,10 @@ from reminder.models import Result, MailingCommerceOffer
 from accounts.models import Client as cl
 
 from pyrogram import Client
-from django.db.models.signals import post_save
-from django.dispatch import receiver
-from django.contrib.auth.models import User
-from pyrogram.types import InputPhoneContact
+from pyrogram.types import InputPhoneContact, InputMediaPhoto
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def get_data():
@@ -59,9 +58,17 @@ def update_result(result_id):
     client.save()
 
 
+def update_mailing(mailing_id):
+    """Обновляем модель MailingCommerceOffer, Sending_status=True и process_date=today"""
+    mailing = MailingCommerceOffer.objects.get(id=mailing_id)
+    mailing.sending_status = True
+    mailing.save()
+
+
 async def send_message_holiday(api_id, api_hash, client_data: list, admin_username):
     """Получаем chart_id пользователя и рассылаем сообщения из модели Result"""
-    async with Client('account', api_id, api_hash) as app:
+    string_session = os.environ.get('STRING_SESSION')
+    async with Client('account', api_id, api_hash, string_session) as app:
         client_count = len(client_data)
         client_name = []
         error_list = []
@@ -91,42 +98,40 @@ async def send_message_holiday(api_id, api_hash, client_data: list, admin_userna
                 await app.send_message(admin_username,
                                        f"<b>Сегодня мы поздравили:</b> {client_count} пользователей!!")
         except FloodWait as e:
+            logger.exception("FloodWait", e.value)
             await asyncio.sleep(e.value)
 
 
-# app.run(send_message_holiday(data, 'Razzakov_Timur'))
-
-def update_mailing(mailing_id):
-    """Обновляем модель MailingCommerceOffer, Sending_status=True и process_date=today"""
-    mailing = MailingCommerceOffer.objects.get(id=mailing_id)
-    mailing.sending_status = True
-    mailing.save()
-
-
-async def send_message_mailing(api_id, api_hash, image_data, mailing_id: int, client_list, message,
-                               admin_username):
+async def send_message_mailing(image_data: list, mailing_id: int, client_list, commercial_offer: str,
+                               admin_username: str):
+    api_id = os.environ.get('API_ID')
+    api_hash = os.environ.get('API_HASH')
+    string_session = os.environ.get('STRING_SESSION')
     """Получаем chart_id пользователя и рассылаем сообщения"""
     error_list = []  # список номеров, которым не смогли отправить сообщение
-    async with Client('account', api_id, api_hash) as app:
+
+    async with Client('account', api_id, api_hash, session_string=string_session) as app:
         client_count = len(client_list)
         try:
             for client in client_list:
                 # сохраняем пользователей и получаем chat_id, если даже он есть, сохраняем (без циклов)
                 contact: ImportedContacts = await app.import_contacts(
-                    [InputPhoneContact(phone=client['phone_number'], first_name=client['first_name'])]
+                    [InputPhoneContact(phone=client.phone_number, first_name=client.first_name)]
                 )
                 if contact.users:
                     user_id = contact.users[0].id
                     # проверяем есть ли фото, если да, то рассылаем их первыми
                     if len(image_data) != 0:
-                        for item in image_data:
-                            await app.send_photo(user_id, photo=f'media/{item}')
-                            time.sleep(1)
-                    await app.send_message(user_id, message)
+                        # собирает все изображения и отправляет в 1 сообщении
+                        media = [InputMediaPhoto(f'media/{item}') for item in image_data]
+                        await app.send_media_group(user_id,
+                                                   media=media)
+                        await asyncio.sleep(3)
+                    await app.send_message(user_id, commercial_offer)
                     update_mailing(mailing_id)
-                    time.sleep(3)
+                    await asyncio.sleep(3)
                 else:
-                    error_list.append(client['phone_number'])
+                    error_list.append(client.phone_number)
 
                 if len(error_list) != 0:
                     await app.send_message(admin_username,

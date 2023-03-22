@@ -31,7 +31,7 @@ class Channel(models.Model):
 
 class CompanyDetail(models.Model):
     """Модель, информации о компании"""
-    name = models.CharField(max_length=100, verbose_name='company_name')
+    name = models.CharField(max_length=100, verbose_name='company_name', unique=True)
     address = models.CharField(max_length=255, verbose_name='address')
     phone_number = models.CharField(max_length=13, verbose_name='phone_number',
                                     validators=[custom_validators.phone_validator])
