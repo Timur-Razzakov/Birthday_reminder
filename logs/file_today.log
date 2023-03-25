@@ -7763,3 +7763,230 @@ django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLR
 2023-03-22 14:41:07,225 - INFO  autoreload  176712 - Watching for file changes with StatReloader
 2023-03-22 14:41:13,226 - INFO  basehttp  176712 - "GET /show_mailings/ HTTP/1.1" 200 17278
 2023-03-22 14:41:13,486 - INFO  basehttp  176712 - "GET /show_mailings/ HTTP/1.1" 200 17158
+2023-03-23 11:37:09,216 - INFO  autoreload  8905 - Watching for file changes with StatReloader
+2023-03-23 11:37:26,244 - INFO  basehttp  8905 - "GET / HTTP/1.1" 200 14871
+2023-03-23 11:37:26,500 - INFO  basehttp  8905 - "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+2023-03-23 11:37:26,715 - INFO  basehttp  8905 - "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+2023-03-23 11:37:27,035 - INFO  basehttp  8905 - "GET /static/css/album.css HTTP/1.1" 304 0
+2023-03-23 11:37:27,099 - INFO  basehttp  8905 - "GET /static/js/manage_groups.js HTTP/1.1" 304 0
+2023-03-23 11:37:27,107 - INFO  basehttp  8905 - "GET /static/js/jquery-3.1.0.min.js HTTP/1.1" 304 0
+2023-03-23 11:37:27,158 - INFO  basehttp  8905 - "GET /static/css/stylesheet.css HTTP/1.1" 304 0
+2023-03-23 11:37:27,318 - INFO  basehttp  8905 - "GET /static/js/bootstrap.js HTTP/1.1" 304 0
+2023-03-23 11:37:27,565 - INFO  basehttp  8905 - "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+2023-03-23 11:37:27,761 - INFO  basehttp  8905 - "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+2023-03-23 11:37:28,068 - INFO  basehttp  8905 - "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+2023-03-23 11:37:33,278 - WARNING  log  8905 - Not Found: /favicon.ico
+2023-03-23 11:37:33,278 - WARNING  basehttp  8905 - "GET /favicon.ico HTTP/1.1" 404 14266
+2023-03-23 11:37:41,493 - INFO  basehttp  8905 - "GET /accounts/add_client/ HTTP/1.1" 200 16211
+2023-03-23 11:38:37,153 - INFO  basehttp  8905 - "POST /accounts/add_client/ HTTP/1.1" 200 16572
+2023-03-23 11:38:47,200 - INFO  basehttp  8905 - "POST /accounts/add_client/ HTTP/1.1" 302 0
+2023-03-23 11:38:47,324 - INFO  basehttp  8905 - "GET /accounts/add_client/ HTTP/1.1" 200 16341
+2023-03-23 11:39:00,423 - INFO  basehttp  8905 - "GET /add_mailing/ HTTP/1.1" 200 18843
+2023-03-23 11:39:00,592 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor-init.js HTTP/1.1" 304 0
+2023-03-23 11:39:01,073 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/config.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,103 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:39:01,287 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/lang/en.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,310 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/editor.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,661 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/styles.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,770 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/autogrow/plugin.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,914 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/autoembed/plugin.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,921 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/embedsemantic/plugin.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:01,939 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/autolink/plugin.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,135 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/embedbase/plugin.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,251 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/tableselection/styles/tableselection.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,277 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/autoembed/lang/en.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,316 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/embedbase/lang/en.js?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,356 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/scayt/dialogs/dialog.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,743 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/dialog/styles/dialog.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:02,749 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/plugins/copyformatting/styles/copyformatting.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:03,365 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/icons.png?t=b47abaf HTTP/1.1" 304 0
+2023-03-23 11:39:03,366 - INFO  basehttp  8905 - "GET /static/ckeditor/ckeditor/contents.css?t=M6K9 HTTP/1.1" 304 0
+2023-03-23 11:39:18,099 - INFO  basehttp  8905 - "GET /add_mailing/ HTTP/1.1" 200 18843
+2023-03-23 11:39:18,484 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:39:26,341 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17161
+2023-03-23 11:39:26,590 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17160
+2023-03-23 11:39:26,598 - INFO  basehttp  8905 - "GET /media/media/2023/03/21/20230219-MauiWhale_ROW1029422995_UHD.jpg HTTP/1.1" 304 0
+2023-03-23 11:39:36,807 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17158
+2023-03-23 11:39:42,298 - INFO  basehttp  8905 - "GET /admin/ HTTP/1.1" 200 21075
+2023-03-23 11:39:46,327 - INFO  basehttp  8905 - "GET /admin/reminder/mailingcommerceoffer/ HTTP/1.1" 200 20714
+2023-03-23 11:39:46,476 - INFO  basehttp  8905 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-03-23 11:39:49,346 - INFO  basehttp  8905 - "GET /admin/reminder/mailingcommerceoffer/64/change/ HTTP/1.1" 200 29726
+2023-03-23 11:39:49,429 - INFO  basehttp  8905 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-03-23 11:39:49,653 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:39:52,392 - INFO  basehttp  8905 - "GET /admin/reminder/mailingcommerceoffer/ HTTP/1.1" 200 20714
+2023-03-23 11:39:53,804 - INFO  basehttp  8905 - "GET /admin/reminder/mailingcommerceoffer/31/change/ HTTP/1.1" 200 29683
+2023-03-23 11:39:53,895 - INFO  basehttp  8905 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-03-23 11:39:54,099 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:40:10,947 - INFO  basehttp  8905 - "POST /admin/reminder/mailingcommerceoffer/31/change/ HTTP/1.1" 302 0
+2023-03-23 11:40:11,018 - INFO  basehttp  8905 - "GET /admin/reminder/mailingcommerceoffer/add/ HTTP/1.1" 200 29488
+2023-03-23 11:40:11,153 - INFO  basehttp  8905 - "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+2023-03-23 11:40:11,376 - INFO  basehttp  8905 - "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+2023-03-23 11:40:11,383 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:40:13,870 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:40:14,011 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:40:16,453 - INFO  basehttp  8905 - "GET /send_mailing/31/? HTTP/1.1" 302 0
+2023-03-23 11:40:16,509 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17254
+2023-03-23 11:40:16,689 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:43:21,204 - INFO  basehttp  8905 - "GET /accounts/add_client/ HTTP/1.1" 200 16210
+2023-03-23 11:43:31,699 - INFO  basehttp  8905 - "GET / HTTP/1.1" 200 14867
+2023-03-23 11:43:34,621 - INFO  basehttp  8905 - "GET /search/?full_name=%D0%92%D0%B0%D0%B4%D0%B8%D0%BC&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 15528
+2023-03-23 11:43:36,895 - INFO  basehttp  8905 - "GET /accounts/update_client/12/ HTTP/1.1" 200 16505
+2023-03-23 11:43:48,711 - INFO  basehttp  8905 - "POST /accounts/update_client/12/ HTTP/1.1" 302 0
+2023-03-23 11:43:48,783 - INFO  basehttp  8905 - "GET /accounts/add_client/ HTTP/1.1" 200 16322
+2023-03-23 11:44:57,027 - INFO  basehttp  8905 - "GET /add_mailing/ HTTP/1.1" 200 18841
+2023-03-23 11:44:57,338 - WARNING  basehttp  8905 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:44:58,948 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:44:59,106 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:45:00,544 - INFO  basehttp  8905 - "GET /send_mailing/31/? HTTP/1.1" 302 0
+2023-03-23 11:45:00,599 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17254
+2023-03-23 11:45:00,807 - INFO  basehttp  8905 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:46:38,843 - INFO  autoreload  8905 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 11:46:39,917 - INFO  autoreload  15997 - Watching for file changes with StatReloader
+2023-03-23 11:51:52,077 - INFO  autoreload  19081 - Watching for file changes with StatReloader
+2023-03-23 11:52:03,312 - INFO  autoreload  19081 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 11:52:03,870 - INFO  autoreload  19210 - Watching for file changes with StatReloader
+2023-03-23 11:52:08,621 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17138
+2023-03-23 11:52:08,791 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:52:10,455 - INFO  basehttp  19210 - "GET /update_mailing/31/? HTTP/1.1" 200 18919
+2023-03-23 11:52:10,743 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:52:19,605 - INFO  basehttp  19210 - "POST /update_mailing/31/? HTTP/1.1" 302 0
+2023-03-23 11:52:19,659 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17248
+2023-03-23 11:52:19,896 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:52:23,501 - INFO  basehttp  19210 - "GET /send_mailing/31/? HTTP/1.1" 302 0
+2023-03-23 11:52:23,559 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17254
+2023-03-23 11:52:23,733 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17136
+2023-03-23 11:52:25,203 - INFO  basehttp  19210 - "GET /update_mailing/31/? HTTP/1.1" 200 18918
+2023-03-23 11:52:25,322 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:52:36,055 - INFO  basehttp  19210 - "POST /update_mailing/31/? HTTP/1.1" 302 0
+2023-03-23 11:52:36,143 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17251
+2023-03-23 11:52:36,467 - INFO  basehttp  19210 - "GET /show_mailings/ HTTP/1.1" 200 17142
+2023-03-23 11:52:36,556 - INFO  basehttp  19210 - "GET /media/media/2023/03/23/20230220-Itaimbezinho_ROW9209171352_UHD.jpg HTTP/1.1" 200 7398492
+2023-03-23 11:52:41,447 - INFO  basehttp  19210 - "GET /update_mailing/64/? HTTP/1.1" 200 18982
+2023-03-23 11:52:41,570 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:52:45,009 - INFO  basehttp  19210 - "GET /add_holiday/ HTTP/1.1" 200 18107
+2023-03-23 11:52:45,196 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:52:48,860 - INFO  basehttp  19210 - "GET /show_holiday/ HTTP/1.1" 200 22664
+2023-03-23 11:52:49,063 - INFO  basehttp  19210 - "GET /show_holiday/ HTTP/1.1" 200 22666
+2023-03-23 11:52:49,145 - INFO  basehttp  19210 - "GET /media/holiday/2023/03/21/20230301-LuebeckCityGate_ROW1412960867_UHD.jpg HTTP/1.1" 200 2972077
+2023-03-23 11:52:51,633 - INFO  basehttp  19210 - "GET /update_holiday/20/? HTTP/1.1" 200 18463
+2023-03-23 11:52:51,780 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:54:33,058 - INFO  basehttp  19210 - "GET /accounts/add_client/ HTTP/1.1" 200 16212
+2023-03-23 11:54:34,708 - INFO  basehttp  19210 - "GET /accounts/add_company/ HTTP/1.1" 200 14700
+2023-03-23 11:54:36,658 - INFO  basehttp  19210 - "GET /accounts/show_company_detail/ HTTP/1.1" 200 13352
+2023-03-23 11:54:45,406 - INFO  basehttp  19210 - "GET /accounts/add_client/ HTTP/1.1" 200 16210
+2023-03-23 11:54:51,819 - INFO  basehttp  19210 - "GET / HTTP/1.1" 200 14869
+2023-03-23 11:55:01,811 - INFO  basehttp  19210 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16330
+2023-03-23 11:55:13,261 - INFO  basehttp  19210 - "GET /add_holiday/ HTTP/1.1" 200 18105
+2023-03-23 11:55:13,575 - WARNING  basehttp  19210 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 11:55:14,687 - INFO  basehttp  19210 - "GET /show_holiday/ HTTP/1.1" 200 22664
+2023-03-23 11:55:14,861 - INFO  basehttp  19210 - "GET /show_holiday/ HTTP/1.1" 200 22664
+2023-03-23 11:55:20,036 - INFO  basehttp  19210 - "GET /accounts/add_company/ HTTP/1.1" 200 14699
+2023-03-23 11:55:21,189 - INFO  basehttp  19210 - "GET /accounts/show_company_detail/ HTTP/1.1" 200 13351
+2023-03-23 11:55:36,878 - INFO  basehttp  19210 - "GET / HTTP/1.1" 200 14868
+2023-03-23 11:55:45,105 - INFO  basehttp  19210 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16330
+2023-03-23 11:55:56,766 - INFO  basehttp  19210 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16330
+2023-03-23 11:56:06,663 - INFO  basehttp  19210 - "GET / HTTP/1.1" 200 14867
+2023-03-23 22:07:48,305 - INFO  autoreload  343956 - Watching for file changes with StatReloader
+2023-03-23 22:10:53,074 - INFO  autoreload  343956 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 22:10:53,961 - INFO  autoreload  345817 - Watching for file changes with StatReloader
+2023-03-23 22:11:08,490 - INFO  basehttp  345817 - "GET / HTTP/1.1" 200 14871
+2023-03-23 22:11:11,900 - WARNING  log  345817 - Not Found: /favicon.ico
+2023-03-23 22:11:11,900 - WARNING  basehttp  345817 - "GET /favicon.ico HTTP/1.1" 404 14266
+2023-03-23 22:11:18,028 - INFO  basehttp  345817 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16332
+2023-03-23 22:11:23,774 - INFO  basehttp  345817 - "GET /accounts/add_client/ HTTP/1.1" 200 16411
+2023-03-23 22:11:26,044 - ERROR  log  345817 - Internal Server Error: /accounts/show_clients/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/views.py", line 82, in show_all_clients_view
+    return render(request, 'reminder/clients_list.html', {'object_list': page_obj})
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reminder/clients_list.html
+2023-03-23 22:11:26,129 - ERROR  basehttp  345817 - "GET /accounts/show_clients/ HTTP/1.1" 500 110763
+2023-03-23 22:11:42,026 - INFO  autoreload  345817 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/views.py changed, reloading.
+2023-03-23 22:11:42,585 - INFO  autoreload  346708 - Watching for file changes with StatReloader
+2023-03-23 22:11:45,454 - INFO  basehttp  346708 - "GET /accounts/show_clients/ HTTP/1.1" 200 17744
+2023-03-23 22:11:55,027 - INFO  basehttp  346708 - "GET /search/? HTTP/1.1" 200 14358
+2023-03-23 22:11:58,866 - INFO  basehttp  346708 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16330
+2023-03-23 22:15:14,898 - INFO  autoreload  346708 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/urls.py changed, reloading.
+2023-03-23 22:15:15,464 - INFO  autoreload  348787 - Watching for file changes with StatReloader
+2023-03-23 22:15:22,134 - INFO  basehttp  348787 - "GET / HTTP/1.1" 200 14869
+2023-03-23 22:15:23,618 - INFO  basehttp  348787 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14427
+2023-03-23 22:16:49,547 - INFO  autoreload  348787 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:16:50,090 - INFO  autoreload  349995 - Watching for file changes with StatReloader
+2023-03-23 22:16:56,084 - INFO  basehttp  349995 - "GET / HTTP/1.1" 200 14869
+2023-03-23 22:16:56,096 - INFO  basehttp  349995 - "GET /static/css/stylesheet.css HTTP/1.1" 304 0
+2023-03-23 22:16:57,862 - INFO  basehttp  349995 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14427
+2023-03-23 22:17:18,315 - INFO  autoreload  349995 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:17:18,953 - INFO  autoreload  350337 - Watching for file changes with StatReloader
+2023-03-23 22:17:24,123 - INFO  basehttp  350337 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14429
+2023-03-23 22:17:36,051 - INFO  autoreload  350337 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:17:37,139 - INFO  autoreload  350648 - Watching for file changes with StatReloader
+2023-03-23 22:17:38,319 - INFO  basehttp  350648 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14429
+2023-03-23 22:18:18,112 - INFO  autoreload  350648 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:18:18,657 - INFO  autoreload  350954 - Watching for file changes with StatReloader
+2023-03-23 22:18:21,720 - INFO  basehttp  350954 - "GET / HTTP/1.1" 200 14869
+2023-03-23 22:18:25,727 - INFO  basehttp  350954 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14427
+2023-03-23 22:18:51,227 - INFO  autoreload  350954 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:18:51,809 - INFO  autoreload  351521 - Watching for file changes with StatReloader
+2023-03-23 22:18:53,112 - INFO  basehttp  351521 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14429
+2023-03-23 22:19:48,371 - INFO  autoreload  351521 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:19:48,926 - INFO  autoreload  352098 - Watching for file changes with StatReloader
+2023-03-23 22:19:52,387 - INFO  basehttp  352098 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 14429
+2023-03-23 22:22:16,639 - INFO  autoreload  352098 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-23 22:22:17,307 - INFO  autoreload  353501 - Watching for file changes with StatReloader
+2023-03-23 22:22:20,838 - INFO  basehttp  353501 - "GET / HTTP/1.1" 200 14869
+2023-03-23 22:26:52,145 - INFO  autoreload  353501 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/views.py changed, reloading.
+2023-03-23 22:26:52,666 - INFO  autoreload  356460 - Watching for file changes with StatReloader
+2023-03-23 22:26:58,716 - INFO  basehttp  356460 - "GET / HTTP/1.1" 200 15061
+2023-03-23 22:27:01,237 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18750
+2023-03-23 22:27:12,981 - INFO  basehttp  356460 - "GET /search/?full_name=%D0%A0%D0%B0%D0%B7%D0%B7%D0%B0%D0%BA%D0%BE%D0%B2&date_of_birth=&email=&city=&phone_number= HTTP/1.1" 200 16330
+2023-03-23 22:27:19,258 - INFO  basehttp  356460 - "GET / HTTP/1.1" 200 15059
+2023-03-23 22:28:37,430 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18818
+2023-03-23 22:28:56,994 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18818
+2023-03-23 22:28:57,852 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18820
+2023-03-23 22:28:59,245 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18818
+2023-03-23 22:29:21,431 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18954
+2023-03-23 22:29:22,370 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 18953
+2023-03-23 22:29:50,839 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19093
+2023-03-23 22:30:00,208 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19098
+2023-03-23 22:30:01,390 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19098
+2023-03-23 22:30:47,325 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19418
+2023-03-23 22:30:48,053 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19419
+2023-03-23 22:30:54,092 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19430
+2023-03-23 22:30:55,191 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19430
+2023-03-23 22:31:31,719 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19578
+2023-03-23 22:31:32,504 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19578
+2023-03-23 22:31:51,390 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19773
+2023-03-23 22:31:52,142 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 19776
+2023-03-23 22:32:13,026 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 20028
+2023-03-23 22:32:13,677 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 20031
+2023-03-23 22:32:20,381 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 20028
+2023-03-23 22:32:21,178 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 20028
+2023-03-23 22:32:52,329 - INFO  basehttp  356460 - "GET /add_holiday/ HTTP/1.1" 200 18106
+2023-03-23 22:32:52,432 - INFO  basehttp  356460 - "GET /static/ckeditor/ckeditor/ckeditor.js HTTP/1.1" 304 0
+2023-03-23 22:32:52,711 - WARNING  basehttp  356460 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-23 22:32:55,203 - INFO  basehttp  356460 - "GET /show_holiday/ HTTP/1.1" 200 22666
+2023-03-23 22:32:55,403 - INFO  basehttp  356460 - "GET /show_holiday/ HTTP/1.1" 200 22664
+2023-03-23 22:32:55,421 - INFO  basehttp  356460 - "GET /media/holiday/2023/03/21/20230301-LuebeckCityGate_ROW1412960867_UHD.jpg HTTP/1.1" 304 0
+2023-03-23 22:34:08,759 - INFO  basehttp  356460 - "GET /accounts/add_client/ HTTP/1.1" 200 16294
+2023-03-23 22:34:13,537 - INFO  basehttp  356460 - "GET / HTTP/1.1" 200 15059
+2023-03-23 22:34:14,896 - INFO  basehttp  356460 - "GET /show_clients/ HTTP/1.1" 200 20028
+2023-03-23 22:34:25,903 - INFO  basehttp  356460 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number=998916852700 HTTP/1.1" 200 14439
+2023-03-23 22:34:31,271 - INFO  basehttp  356460 - "GET /search/?full_name=&date_of_birth=&email=&city=&phone_number=%2B998916852700 HTTP/1.1" 200 15799
+2023-03-23 22:35:58,064 - INFO  autoreload  356460 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 22:35:58,710 - INFO  autoreload  362260 - Watching for file changes with StatReloader
+2023-03-23 22:44:10,960 - INFO  autoreload  362260 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 22:44:11,494 - INFO  autoreload  367156 - Watching for file changes with StatReloader
+2023-03-23 22:46:52,699 - INFO  autoreload  367156 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 22:46:53,726 - INFO  autoreload  368957 - Watching for file changes with StatReloader
+2023-03-23 22:48:13,544 - INFO  autoreload  368957 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-03-23 22:48:14,224 - INFO  autoreload  369866 - Watching for file changes with StatReloader
+2023-03-24 21:36:23,828 - INFO  autoreload  376260 - Watching for file changes with StatReloader

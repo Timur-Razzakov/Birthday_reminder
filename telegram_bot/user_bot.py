@@ -9,9 +9,6 @@ import dotenv
 from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
 
-from reminder.models import Result, MailingCommerceOffer
-from accounts.models import Client as MyClient
-
 from pyrogram import Client
 from pyrogram.types import InputPhoneContact, InputMediaPhoto
 import logging
@@ -26,25 +23,7 @@ django.setup()
 # # ---------------------------------------------------------------------------------
 
 logger = logging.getLogger(__name__)
-
-
-def get_data():
-    """Получаем данные """
-    data = Result.objects.filter(sending_status=False).values('id', 'client', 'process_date', 'message',
-                                                              'sending_status')
-    client_phones = []
-
-    for item in data:
-        all_phones = MyClient.objects.filter(id=item['client']).values('phone_number', 'first_name')
-        for phone in all_phones:
-            client = {
-                'id': item['id'],
-                'name': phone['first_name'],
-                'phone_number': phone['phone_number'],
-                'message': item['message'],
-            }
-            client_phones.append(client)
-    return client_phones
+from reminder.models import Result, MailingCommerceOffer
 
 
 today = datetime.datetime.today()
@@ -58,16 +37,11 @@ def update_result(result_id):
     client.save()
 
 
-def update_mailing(mailing_id):
-    """Обновляем модель MailingCommerceOffer, Sending_status=True и process_date=today"""
-    mailing = MailingCommerceOffer.objects.get(id=mailing_id)
-    mailing.sending_status = True
-    mailing.save()
-
-
-async def send_message_holiday(api_id, api_hash, client_data: list, admin_username):
+async def send_message_holiday(client_data: list, admin_username):
     """Получаем chart_id пользователя и рассылаем сообщения из модели Result"""
     string_session = os.environ.get('STRING_SESSION')
+    api_id = os.environ.get('API_ID')
+    api_hash = os.environ.get('API_HASH')
     async with Client('account', api_id, api_hash, string_session) as app:
         client_count = len(client_data)
         client_name = []
@@ -101,6 +75,18 @@ async def send_message_holiday(api_id, api_hash, client_data: list, admin_userna
         except FloodWait as e:
             logger.exception("FloodWait", e.value)
             await asyncio.sleep(e.value)
+
+#
+# asyncio.run(send_message_holiday(get_data(), 'Razzakov_Timur'))
+
+
+# ------------------------Отправляем по телеграмму Коммерческие предложения-------------------------
+
+def update_mailing(mailing_id):
+    """Обновляем модель MailingCommerceOffer, Sending_status=True и process_date=today"""
+    mailing = MailingCommerceOffer.objects.get(id=mailing_id)
+    mailing.sending_status = True
+    mailing.save()
 
 
 async def send_message_mailing(image_data: list, mailing_id: int, client_list, commercial_offer: str,

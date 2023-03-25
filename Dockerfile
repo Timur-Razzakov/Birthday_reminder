@@ -22,5 +22,5 @@ RUN pip install -r requirements.txt
 COPY . /app
 
 
-# run celery
-CMD [ "celery", "-A", "reminder_service", "worker", "-l", "info" ]
+# run redis
+#CMD docker run -d -p 6379:6379 redis

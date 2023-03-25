@@ -24,7 +24,10 @@
                 <div class="form-group">
                     {{ form.as_p }}
                 </div>
-                <button type="submit" class="btn btn-primary">Найти</button>
+                <div class="container-buttons">
+                    <button type="submit" class="btn btn-primary">Найти</button>
+                    <a href="{% url 'show_clients' %}" class="badge badge-info">Показать всех клиентов</a>
+                </div>
             </form>
         </div>
     </div>
@@ -34,7 +37,8 @@
     <div class="col-md-4 mx-auto">
         <div class="container px-2">
             <p class="text-justify">
-                Для работы с сервисом войдите в свою учётную запись <br>или попросите у администратора "Логин" и "Пароль"
+                Для работы с сервисом войдите в свою учётную запись <br>или попросите у администратора "Логин"
+                и "Пароль"
 
             </p>
 

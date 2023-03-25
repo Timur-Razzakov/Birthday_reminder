@@ -49,6 +49,16 @@ def searchView(request):
     return render(request, 'clients_list.html', context)
 
 
+def show_all_clients_view(request):
+    """Выводит все компании"""
+    form = SearchClientForm()
+    get_clients = Client.objects.all().order_by('first_name')
+    paginator = Paginator(get_clients, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'clients_list.html', {'object_list': page_obj, 'form': form})
+
+
 def add_mailing_view(request):
     """Сохраняем рассылку новых предложений"""
     form = MailingCommerceOfferFrom

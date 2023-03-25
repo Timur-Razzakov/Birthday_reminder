@@ -73,6 +73,7 @@ def update_client_view(request, id):
                   {'form': form})
 
 
+
 def add_company_info_view(request):
     """Сохраняем информацию о компании"""
     form = CompanyDetailForm

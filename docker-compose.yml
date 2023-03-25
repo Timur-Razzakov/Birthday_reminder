@@ -1,31 +1,50 @@
 version: "3"
 
 services:
-  app:
+  reminder_service:
     build: ./
     restart: always
-    ports:
-      - "80:8000"
     command: bash -c "python manage.py migrate  && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
     depends_on:
       - db
+      - redis
   redis:
     image: redis
     ports:
       - "6379:6379"
+    volumes:
+      - ./redis/data:/data
   celery:
     build: .
     command: celery -A reminder_service worker -l info
+    volumes:
+      - .:/code
     depends_on:
       - redis
+      - db
+      - reminder_service
+    links:
+      - redis
+  schedule:
+    build: .
+    command: celery -A reminder_service beat -l info
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+      - redis
+      - reminder_service
+    links:
+      - redis
   db:
-    image: postgres # указывать точную версию
+    image: postgres:latest # указывать точную версию
     restart: always
     env_file:
       - .env
     volumes:
       - data:/var/lib/postgresql/data
-
 volumes:
   data:
 

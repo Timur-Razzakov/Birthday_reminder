@@ -6,6 +6,8 @@ from .views import *
 urlpatterns = [
     path('', show_all_client_view, name='home'),
     path('search/', searchView, name='search'),
+    path('show_clients/', show_all_clients_view, name='show_clients'),
+
 
     path('add_mailing/', add_mailing_view, name='add_mailing'),
     path('show_mailings/', show_mailings_view, name='show_mailings'),
