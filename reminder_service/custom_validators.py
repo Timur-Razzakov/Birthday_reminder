@@ -1,6 +1,7 @@
 import re
 
 from django.core.exceptions import ValidationError
+from django.core.files.images import get_image_dimensions
 
 TEMPLATE_NAME = (
     ('', ''),
@@ -51,3 +52,20 @@ def passport_validator(value):
     message = 'Неверный формат паспортных данных'
     if not bool(re.fullmatch(regex, value)) and len(value) != 9:
         raise ValidationError(message)
+
+
+MAX_PHOTOS = 3
+MAX_PHOTO_SIZE = 5 * 1024 * 1024  # 2 MB
+
+
+def validate_photo_size(photo):
+    filesize = photo.size
+    if filesize > MAX_PHOTO_SIZE:
+        raise ValidationError(f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
+
+
+def validate_images_size(images):
+    for image in images:
+        filesize = image.size
+        if filesize > MAX_PHOTO_SIZE:
+            return True

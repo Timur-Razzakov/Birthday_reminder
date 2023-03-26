@@ -1,9 +1,11 @@
 from django.contrib import messages
+from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
 from accounts.forms import SearchClientForm
 from accounts.models import Client
+from reminder_service.custom_validators import MAX_PHOTOS, validate_images_size, MAX_PHOTO_SIZE
 from .forms import MailingCommerceOfferFrom, HolidayFrom
 from .models import Holiday, MailingCommerceOffer, MultipleImage
 from .tasks import send_messages_task
@@ -65,15 +67,25 @@ def add_mailing_view(request):
     if request.method == "POST":
         form = MailingCommerceOfferFrom(request.POST, request.FILES)
         if form.is_valid():
-            new_mailing = form.save(commit=False)
-            new_mailing.save()
-            for image in request.FILES.getlist('images'):
-                name = MultipleImage.objects.create(image=image)
-                new_mailing.photo.add(MultipleImage.objects.get(image=name))
-            new_mailing.save()
-            form.save_m2m()
-            messages.success(request, 'Коммерческое предложение сохранено.')
-            return redirect('add_mailing')
+            images = request.FILES.getlist('images')
+            if len(images) > MAX_PHOTOS:
+                messages.warning(request,
+                                 f"Максимальное количество изображений: {MAX_PHOTOS}")
+
+            elif validate_images_size(images):
+                messages.warning(request,
+                                 f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
+            else:
+                new_mailing = form.save(commit=False)
+                new_mailing.save()
+                # создаем связь между объектом MailingCommerceOffer и MultipleImage
+                for image in images:
+                    name = MultipleImage.objects.create(image=image)
+                    new_mailing.photo.add(MultipleImage.objects.get(image=name))
+                new_mailing.save()
+                form.save_m2m()
+                messages.success(request, 'Коммерческое предложение сохранено.')
+                return redirect('add_mailing')
         else:
             messages.error(request, 'Перепроверьте введённые данные')
     return render(request, 'add_mailing.html', {'form': form})
@@ -144,7 +156,7 @@ def add_holiday_view(request):
 
 def show_holiday_view(request):
     get_holidays = Holiday.objects.all().order_by('date')
-    paginator = Paginator(get_holidays, 5)
+    paginator = Paginator(get_holidays, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'show_holiday.html', {'object_list': page_obj})

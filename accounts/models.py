@@ -42,7 +42,9 @@ class CompanyDetail(models.Model):
                                null=True, blank=True)
     company_motto = models.CharField(max_length=255, verbose_name='company_motto',
                                      null=True, blank=True)
-    logo = models.ImageField(verbose_name='Логотип Компании', upload_to='logo/', blank=True)
+    logo = models.ImageField(verbose_name='Логотип Компании',
+                             validators=[custom_validators.validate_photo_size],
+                             upload_to='logo/', blank=True)
 
     def __str__(self):
         return "%s" % (self.name,)

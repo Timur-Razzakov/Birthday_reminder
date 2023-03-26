@@ -14,8 +14,6 @@ services:
     image: redis
     ports:
       - "6379:6379"
-    volumes:
-      - ./redis/data:/data
   celery:
     build: .
     command: celery -A reminder_service worker -l info

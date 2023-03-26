@@ -1,7 +1,9 @@
+from django.core.exceptions import ValidationError
 from django.db import models
+from PIL import Image
 
 from accounts.models import Client, CompanyDetail, Channel, Gender, City
-from reminder_service.custom_validators import TEMPLATE_NAME
+from reminder_service.custom_validators import TEMPLATE_NAME, validate_photo_size, MAX_PHOTOS, MAX_PHOTO_SIZE
 
 
 class TemplateForChannel(models.Model):
@@ -19,7 +21,7 @@ class TemplateForChannel(models.Model):
 class Holiday(models.Model):
     """Модель для праздников и поздравлений"""
     image = models.ImageField(verbose_name='Изображение', upload_to='holiday/%Y/%m/%d',
-                              blank=True, null=True)
+                              blank=True, null=True, validators=[validate_photo_size])
     name = models.CharField(max_length=255, verbose_name='Holiday name')
     date = models.DateField(verbose_name='Holiday date', blank=True, null=True)
     congratulation = models.TextField(verbose_name='congratulate_text')
@@ -44,17 +46,23 @@ class MailingCommerceOffer(models.Model):
                              blank=True)
     sending_status = models.CharField(verbose_name='sending_status', max_length=90, null=True,
                                       blank=True, default=False)
+    #
+    # def clean(self):
+    #     for image in self.photo.all():
+    #         if image.image.size > 2 * 1024 * 1024:  # 5 Мбайт
+    #             raise ValidationError('Размер изображения "{}" больше 5 Мбайт.'.format(image.image.name))
 
     # функция, для вывода 1 изображения при использовании ManyToMany в шаблоне
     def get_first_image(self):
         return self.photo.first().image.url if self.photo.first() else None
 
     def __str__(self):
-        return "%i" % (self.pk,)
+        return str(self.pk)
 
 
 class MultipleImage(models.Model):
-    image = models.ImageField(verbose_name=' Изображение', upload_to='media/%Y/%m/%d', blank=True, null=True)
+    image = models.ImageField(validators=[validate_photo_size], verbose_name=' Изображение',
+                              upload_to='media/%Y/%m/%d', blank=True, null=True)
 
     def __str__(self):
         return str(self.image)

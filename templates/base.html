@@ -59,6 +59,11 @@
     {{ message }}
 </div>
 {% endif %}
+{% if message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+<div align='center' class=" alert alert-warning" role="alert">
+    {{ message }}
+</div>
+{% endif %}
 {% endfor %}
 {% endif %}
 {% block content %} {% endblock %}
