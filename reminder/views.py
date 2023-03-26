@@ -68,6 +68,9 @@ def add_mailing_view(request):
         form = MailingCommerceOfferFrom(request.POST, request.FILES)
         if form.is_valid():
             images = request.FILES.getlist('images')
+            # Валидацию прописал здесь, так как в моделе выдаёт ошибку
+            # needs to have a value for field "id" before this many-to-many relationship can be used.
+            # Временно остался на этом варианте!!
             if len(images) > MAX_PHOTOS:
                 messages.warning(request,
                                  f"Максимальное количество изображений: {MAX_PHOTOS}")

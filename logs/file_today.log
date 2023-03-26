@@ -10182,3 +10182,7 @@ ValueError: "<MailingCommerceOffer: None>" needs to have a value for field "id" 
 2023-03-27 01:25:40,331 - INFO  basehttp  240469 - "GET /show_mailings/ HTTP/1.1" 200 17232
 2023-03-27 01:25:40,571 - INFO  basehttp  240469 - "GET /show_mailings/ HTTP/1.1" 200 17234
 2023-03-27 01:25:40,581 - INFO  basehttp  240469 - "GET /media/media/2023/03/27/20230321-ColourDay_ROW6649031679_UHD.jpg HTTP/1.1" 200 2216870
+2023-03-27 01:27:57,830 - INFO  autoreload  240469 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-27 01:27:58,934 - INFO  autoreload  243428 - Watching for file changes with StatReloader
+2023-03-27 01:29:34,257 - INFO  autoreload  243428 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-27 01:29:35,144 - INFO  autoreload  244175 - Watching for file changes with StatReloader
