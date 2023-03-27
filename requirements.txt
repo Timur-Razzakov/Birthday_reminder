@@ -6,6 +6,7 @@ celery==5.2.7
 configparser==5.3.0
 django-ckeditor==6.5.1
 django-debug-toolbar==3.8.1
+django-loguru==1.0.3
 django-multiupload==0.6.1
 django-scheduler==0.10.1
 docopt==0.6.2
@@ -57,6 +58,3 @@ watchfiles==0.18.1
 websockets==10.4
 xarray==2023.1.0
 xyzservices==2023.2.0
-
-Django~=4.1.7
-Jinja2~=3.1.2

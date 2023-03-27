@@ -10186,3 +10186,74 @@ ValueError: "<MailingCommerceOffer: None>" needs to have a value for field "id" 
 2023-03-27 01:27:58,934 - INFO  autoreload  243428 - Watching for file changes with StatReloader
 2023-03-27 01:29:34,257 - INFO  autoreload  243428 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
 2023-03-27 01:29:35,144 - INFO  autoreload  244175 - Watching for file changes with StatReloader
+2023-03-27 01:30:52,337 - INFO  basehttp  244175 - "GET / HTTP/1.1" 200 15108
+2023-03-27 01:30:55,216 - INFO  basehttp  244175 - "GET /add_mailing/ HTTP/1.1" 200 18912
+2023-03-27 01:30:55,528 - WARNING  basehttp  244175 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 01:30:57,460 - INFO  basehttp  244175 - "GET /show_mailings/ HTTP/1.1" 200 17233
+2023-03-27 01:30:57,691 - INFO  basehttp  244175 - "GET /media/media/2023/03/27/20230321-ColourDay_ROW6649031679_UHD.jpg HTTP/1.1" 304 0
+2023-03-27 01:30:57,741 - INFO  basehttp  244175 - "GET /show_mailings/ HTTP/1.1" 200 17234
+2023-03-27 01:31:23,637 - INFO  basehttp  244175 - "GET /send_mailing/22/? HTTP/1.1" 302 0
+2023-03-27 01:31:23,702 - INFO  basehttp  244175 - "GET /show_mailings/ HTTP/1.1" 200 17350
+2023-03-27 01:31:23,956 - INFO  basehttp  244175 - "GET /show_mailings/ HTTP/1.1" 200 17231
+2023-03-27 01:32:17,162 - INFO  basehttp  244175 - "GET /accounts/add_client/ HTTP/1.1" 200 16342
+2023-03-27 01:32:18,337 - INFO  basehttp  244175 - "GET / HTTP/1.1" 200 15106
+2023-03-27 01:32:19,823 - INFO  basehttp  244175 - "GET /show_clients/ HTTP/1.1" 200 14424
+2023-03-27 02:14:46,248 - INFO  autoreload  264296 - Watching for file changes with StatReloader
+2023-03-27 02:15:00,952 - INFO  autoreload  264403 - Watching for file changes with StatReloader
+2023-03-27 02:15:03,890 - INFO  basehttp  264403 - "GET / HTTP/1.1" 200 15108
+2023-03-27 02:15:06,046 - INFO  basehttp  264403 - "GET /add_mailing/ HTTP/1.1" 200 18913
+2023-03-27 02:15:06,412 - WARNING  basehttp  264403 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 02:15:08,340 - INFO  basehttp  264403 - "GET /show_mailings/ HTTP/1.1" 200 17232
+2023-03-27 02:15:08,676 - INFO  basehttp  264403 - "GET /media/media/2023/03/27/20230321-ColourDay_ROW6649031679_UHD.jpg HTTP/1.1" 304 0
+2023-03-27 02:15:08,683 - INFO  basehttp  264403 - "GET /show_mailings/ HTTP/1.1" 200 17234
+2023-03-27 02:15:10,472 - INFO  basehttp  264403 - "GET /update_mailing/21/? HTTP/1.1" 200 19006
+2023-03-27 02:15:10,772 - WARNING  basehttp  264403 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 02:15:18,557 - INFO  basehttp  264403 - "POST /update_mailing/21/? HTTP/1.1" 302 0
+2023-03-27 02:15:18,621 - INFO  basehttp  264403 - "GET /show_mailings/ HTTP/1.1" 200 17384
+2023-03-27 02:15:18,874 - INFO  basehttp  264403 - "GET /show_mailings/ HTTP/1.1" 200 17231
+2023-03-27 02:16:41,427 - INFO  autoreload  264403 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-03-27 02:16:42,165 - INFO  autoreload  265226 - Watching for file changes with StatReloader
+2023-03-27 02:16:44,817 - INFO  basehttp  265226 - "GET /update_mailing/21/? HTTP/1.1" 200 19008
+2023-03-27 02:16:47,642 - INFO  basehttp  265226 - "POST /update_mailing/21/? HTTP/1.1" 200 19164
+2023-03-27 02:16:47,932 - WARNING  basehttp  265226 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 02:17:04,051 - INFO  basehttp  265226 - "POST /update_mailing/21/? HTTP/1.1" 200 19159
+2023-03-27 02:17:04,190 - WARNING  basehttp  265226 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 02:17:18,099 - INFO  basehttp  265226 - "POST /update_mailing/21/? HTTP/1.1" 302 0
+2023-03-27 02:17:18,191 - INFO  basehttp  265226 - "GET /show_mailings/ HTTP/1.1" 200 17419
+2023-03-27 02:17:18,419 - INFO  basehttp  265226 - "GET /media/media/2023/03/27/20230320-PurpleCrocus_ROW6467551673_UHD_DQZa3aB.jpg HTTP/1.1" 200 1191451
+2023-03-27 13:01:41,994 - INFO  autoreload  30178 - Watching for file changes with StatReloader
+2023-03-27 13:01:57,834 - INFO  basehttp  30178 - "GET / HTTP/1.1" 200 15109
+2023-03-27 13:01:59,090 - INFO  basehttp  30178 - "GET /static/css/stylesheet.css HTTP/1.1" 304 0
+2023-03-27 13:02:07,717 - WARNING  log  30178 - Not Found: /favicon.ico/
+2023-03-27 13:02:07,718 - WARNING  basehttp  30178 - "GET /favicon.ico/ HTTP/1.1" 404 14450
+2023-03-27 13:02:37,886 - INFO  basehttp  30178 - "GET /add_mailing/ HTTP/1.1" 200 18913
+2023-03-27 13:02:38,272 - WARNING  basehttp  30178 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 13:02:40,276 - INFO  basehttp  30178 - "GET /show_mailings/ HTTP/1.1" 200 17308
+2023-03-27 13:02:40,682 - INFO  basehttp  30178 - "GET /media/media/2023/03/27/20230321-ColourDay_ROW6649031679_UHD.jpg HTTP/1.1" 304 0
+2023-03-27 13:02:40,686 - INFO  basehttp  30178 - "GET /media/media/2023/03/27/20230320-PurpleCrocus_ROW6467551673_UHD_DQZa3aB.jpg HTTP/1.1" 304 0
+2023-03-27 13:02:43,099 - INFO  basehttp  30178 - "GET /update_mailing/22/? HTTP/1.1" 200 24109
+2023-03-27 13:02:43,394 - WARNING  basehttp  30178 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 13:02:49,847 - INFO  basehttp  30178 - "GET /send_mailing/22/? HTTP/1.1" 302 0
+2023-03-27 13:02:49,924 - INFO  basehttp  30178 - "GET /show_mailings/ HTTP/1.1" 200 17425
+2023-03-27 13:03:21,292 - INFO  basehttp  30178 - "GET /accounts/add_client/ HTTP/1.1" 200 16341
+2023-03-27 13:03:57,936 - INFO  basehttp  30178 - "POST /accounts/add_client/ HTTP/1.1" 302 0
+2023-03-27 13:03:58,008 - INFO  basehttp  30178 - "GET /accounts/add_client/ HTTP/1.1" 200 16470
+2023-03-27 13:05:28,625 - INFO  basehttp  30178 - "POST /accounts/add_client/ HTTP/1.1" 302 0
+2023-03-27 13:05:28,740 - INFO  basehttp  30178 - "GET /accounts/add_client/ HTTP/1.1" 200 16471
+2023-03-27 13:06:32,688 - INFO  basehttp  30178 - "POST /accounts/add_client/ HTTP/1.1" 302 0
+2023-03-27 13:06:32,763 - INFO  basehttp  30178 - "GET /accounts/add_client/ HTTP/1.1" 200 16470
+2023-03-27 13:06:45,155 - INFO  basehttp  30178 - "GET /add_holiday/ HTTP/1.1" 200 18105
+2023-03-27 13:06:45,466 - WARNING  basehttp  30178 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 13:06:46,450 - INFO  basehttp  30178 - "GET /add_mailing/ HTTP/1.1" 200 18912
+2023-03-27 13:06:46,627 - WARNING  basehttp  30178 - "GET /static/ckeditor/ckeditor/skins/moono/skin.js?t=M6K9 HTTP/1.1" 404 1877
+2023-03-27 13:06:48,164 - INFO  basehttp  30178 - "GET /show_mailings/ HTTP/1.1" 200 17306
+2023-03-27 13:06:49,787 - INFO  basehttp  30178 - "GET /send_mailing/22/? HTTP/1.1" 302 0
+2023-03-27 13:06:49,855 - INFO  basehttp  30178 - "GET /show_mailings/ HTTP/1.1" 200 17425
+2023-03-27 13:09:13,378 - INFO  autoreload  30178 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-03-27 13:09:14,390 - INFO  autoreload  33961 - Watching for file changes with StatReloader
+2023-03-27 13:54:41,693 - INFO  autoreload  33961 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-03-27 13:54:45,937 - INFO  autoreload  53749 - Watching for file changes with StatReloader
+2023-03-27 13:54:50,417 - INFO  autoreload  53749 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-03-27 13:54:51,195 - INFO  autoreload  53778 - Watching for file changes with StatReloader
+2023-03-27 14:21:28,313 - INFO  autoreload  53778 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-03-27 14:21:29,560 - INFO  autoreload  65551 - Watching for file changes with StatReloader

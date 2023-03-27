@@ -108,16 +108,29 @@ def update_mailing_view(request, id):
     if request.method == 'POST':
         form = MailingCommerceOfferFrom(request.POST, request.FILES, instance=mailing)
         if form.is_valid():
-            # проверяем, если мы фото передали, то обновляем, если нет, то оставляем как есть
-            if request.FILES.getlist('images'):
-                mailing = form.save(commit=False)
-                mailing.photo.clear()  # удаляем связи многие-ко-многим со старыми изображениями
-                for image in request.FILES.getlist('images'):  # добавляем новые изображения
-                    image_model = MultipleImage.objects.create(image=image)
-                    mailing.photo.add(image_model)
-            mailing.save()
-            messages.success(request, 'Данные изменены!!')
-            return redirect('show_mailings')
+            images = request.FILES.getlist('images')
+            if images:
+                # Валидацию прописал здесь, так как в моделе выдаёт ошибку
+                # needs to have a value for field "id" before this many-to-many relationship can be used.
+                # Временно остался на этом варианте!!
+                if len(images) > MAX_PHOTOS:
+                    messages.warning(request,
+                                     f"Максимальное количество изображений: {MAX_PHOTOS}")
+
+                elif validate_images_size(images):
+                    messages.warning(request,
+                                     f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
+                    # проверяем, если мы фото передали, то обновляем, если нет, то оставляем как есть
+                else:
+                    mailing = form.save(commit=False)
+                    mailing.photo.clear()  # удаляем связи многие-ко-многим со старыми изображениями
+                    for image in request.FILES.getlist('images'):  # добавляем новые изображения
+                        image_model = MultipleImage.objects.create(image=image)
+                        mailing.photo.add(image_model)
+                    mailing.save()
+                    messages.success(request, 'Данные изменены!!')
+                    return redirect('show_mailings')
+
     else:
         form = MailingCommerceOfferFrom(instance=mailing)
     context = {'form': form}

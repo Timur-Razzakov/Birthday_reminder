@@ -22,7 +22,7 @@ app.conf.beat_schedule = {
 app.conf.beat_schedule = {
     'run-every-day-at-7': {
         'task': 'tasks.check_birthday',
-        'schedule': crontab(hour=7, minute=0),
+        'schedule': crontab(hour=14, minute=50),
     },
 }
 
