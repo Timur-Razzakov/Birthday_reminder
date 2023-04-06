@@ -54,8 +54,8 @@ def passport_validator(value):
         raise ValidationError(message)
 
 
-MAX_PHOTOS = 3
-MAX_PHOTO_SIZE = 5 * 1024 * 1024  # 2 MB
+MAX_PHOTOS = 10
+MAX_PHOTO_SIZE = 8 * 1024 * 1024  # 8 MB
 
 
 def validate_photo_size(photo):

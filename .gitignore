@@ -5,3 +5,4 @@
 *.pyc
 ../configurations
 *.session
+/reminder/signals.py

@@ -1,0 +1,686 @@
+2023-04-05 00:21:07 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-05 00:21:07 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:21:07 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:21:09 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-05 00:21:09 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:21:09 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:21:09 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:21:09 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 00:21:11 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 00:21:11 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 00:21:11 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 00:21:11 - INFO  session.start:155 - Session started
+2023-04-05 00:21:11 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 00:21:39 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 00:21:39 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 00:21:39 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 00:21:39 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:21:39 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 00:21:39 - INFO  session.stop:180 - Session stopped
+2023-04-05 00:22:07 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:22:08 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:22:08 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 00:22:09 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 00:22:09 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 00:22:09 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 00:22:09 - INFO  session.start:155 - Session started
+2023-04-05 00:22:09 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 00:22:10 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 00:22:10 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 00:22:10 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 00:22:10 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:22:10 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 00:22:10 - INFO  session.stop:180 - Session stopped
+2023-04-05 00:22:58 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:22:59 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:22:59 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 00:22:59 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 00:22:59 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 00:22:59 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 00:22:59 - INFO  session.start:155 - Session started
+2023-04-05 00:22:59 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 00:23:00 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 00:23:00 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 00:23:00 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 00:23:00 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:23:00 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 00:23:00 - INFO  session.stop:180 - Session stopped
+2023-04-05 00:23:20 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:23:20 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:23:20 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 00:23:22 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 00:23:22 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 00:23:22 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 00:23:22 - INFO  session.start:155 - Session started
+2023-04-05 00:23:22 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 00:23:22 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 00:23:23 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 00:23:23 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 00:23:23 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:23:23 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 00:23:23 - INFO  session.stop:180 - Session stopped
+2023-04-05 00:27:55 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-05 00:27:55 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:27:55 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:27:57 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-05 00:27:57 - INFO  connection.close:66 - Disconnected
+2023-04-05 00:27:57 - INFO  connection.connect:47 - Connecting...
+2023-04-05 00:27:57 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 00:27:57 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 00:27:58 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 00:27:58 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 00:27:58 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 00:27:58 - INFO  session.start:155 - Session started
+2023-04-05 00:27:58 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 17:41:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:42:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:43:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:43:37 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:43:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:44:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-05 17:44:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:44:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:44:20 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-05 17:44:35 - INFO  views.update_client_view:69 - User Леженкин Никита Игоревич updated in successfully
+2023-04-05 17:46:17 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:46:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:46:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:47:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:52:26 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:52:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:52:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:52:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:54:02 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:54:03 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:54:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:54:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:56:20 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:56:21 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:56:21 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:57:11 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:57:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:57:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:57:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:57:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:57:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:57:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:57:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:58:40 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:58:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:58:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:59:17 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:59:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:59:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:59:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:59:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:59:46 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:59:55 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 17:59:56 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 17:59:56 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 17:59:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:00:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:00:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:01:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:02:28 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:02:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:02:54 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:02:59 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:03:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:03:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:03:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:03:08 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:05:44 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:05:44 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:05:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:05:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:05:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:06:28 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:06:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:06:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:06:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:06:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:06:43 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:06:44 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:06:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:06:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:09:52 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:12:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:12:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:30:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:30:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:30:51 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:31:00 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:31:01 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:31:01 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:31:01 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:31:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:32:24 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:32:25 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:32:25 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:32:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:32:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:35:50 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-05 18:38:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:38:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:38:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:41:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:41:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:41:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:45:47 - INFO  views.add_holiday_view:172 -  Новый год has been added
+2023-04-05 18:48:33 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:48:34 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:48:34 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:48:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:48:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:50:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:50:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:50:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:50:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:50:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:51:58 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 18:51:59 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:51:59 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:51:59 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:52:01 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:54:11 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 18:56:54 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:56:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:56:55 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 18:59:11 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 18:59:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 18:59:12 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:02:26 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 19:02:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:02:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:02:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:02:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:04:16 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 19:04:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:04:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:04:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:04:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:10:25 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:10:26 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:10:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:12:26 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:12:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:12:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:12:57 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:12:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:12:58 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:13:11 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:13:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:13:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:13:18 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:13:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:13:19 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:14:25 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:14:26 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:14:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:18:54 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-05 19:18:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:18:56 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:21:34 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 19:21:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:21:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:22:54 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 19:22:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:22:55 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:22:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:23:01 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:23:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 19:23:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:23:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:23:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:42:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 19:42:05 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 19:42:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 19:42:37 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 19:45:16 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 19:45:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:28:24 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 20:28:25 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:28:25 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 20:28:26 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:28:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 20:29:58 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 20:29:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:50:25 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:50:30 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:50:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 20:50:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:04:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:05:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:09:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:11:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:13:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:13:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:13:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:17:51 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-05 21:17:57 - INFO  views.login_view:30 - User razzakov334@gmail.com logged in successfully
+2023-04-05 21:29:03 - INFO  views.add_client_view:52 - User Раззаков Тимур Алишерович created in successfully
+2023-04-05 21:30:34 - INFO  views.add_client_view:52 - User Леженкин Никита Игоревич created in successfully
+2023-04-05 21:31:42 - INFO  views.add_client_view:52 - User Обухов Вадим Анатольевич created in successfully
+2023-04-05 21:32:51 - INFO  views.add_client_view:52 - User Кан Константин Владиславович created in successfully
+2023-04-05 21:34:00 - INFO  views.add_client_view:52 - User Раззакова Луиза Алишеровна created in successfully
+2023-04-05 21:43:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:46:21 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:21 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:21 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:46:21 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:21 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:35 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:35 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:46:35 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:35 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:46:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:46:36 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:48:17 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:48:17 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:48:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:48:17 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:48:17 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:50:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 21:50:14 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:50:14 - INFO  check_birthday.birthday:49 - data to model 'Result' saved
+2023-04-05 21:50:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:50:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:53:38 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 21:55:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:55:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:32 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:32 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:55:33 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:33 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:55:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:55:33 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:56:18 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:18 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:56:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:19 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:28 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:28 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:56:29 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:29 - INFO  check_birthday.birthday:51 - data to model 'Result' saved
+2023-04-05 21:56:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:56:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:56:44 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 21:56:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 21:56:45 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 21:56:52 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:02:25 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_birthday.py changed, reloading.
+2023-04-05 22:02:26 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:02:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 22:02:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:02:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:56:21 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-05 22:56:22 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:56:22 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 22:59:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-05 22:59:43 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 22:59:43 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:00:06 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:00:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:00:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:00:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:00:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:06:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:06:05 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:07:19 - INFO  user_bot.get_data_from_result:71 - received data from the model Result
+2023-04-05 23:07:20 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:07:21 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:07:21 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:07:22 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:07:22 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:07:22 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:07:22 - INFO  session.start:155 - Session started
+2023-04-05 23:07:22 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:07:23 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:07:24 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:07:24 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:07:24 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:07:24 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:07:24 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:07:25 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:07:25 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:07:25 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:07:27 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:07:27 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:07:27 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:07:27 - INFO  session.start:155 - Session started
+2023-04-05 23:07:27 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:07:28 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:07:28 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:07:28 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:07:28 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:07:28 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:07:28 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:08:02 - INFO  user_bot.get_data_from_result:73 - received data from the model Result
+2023-04-05 23:08:02 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:08:03 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:08:03 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:08:05 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:08:05 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:08:05 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:08:05 - INFO  session.start:155 - Session started
+2023-04-05 23:08:05 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:08:06 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:08:07 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:08:07 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:08:07 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:08:07 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:08:07 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:08:07 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:08:08 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:08:08 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:08:10 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:08:10 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:08:10 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:08:10 - INFO  session.start:155 - Session started
+2023-04-05 23:08:10 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:08:12 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:08:12 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:08:12 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:08:12 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:08:12 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:08:12 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:08:47 - INFO  user_bot.get_data_from_result:73 - received data from the model Result
+2023-04-05 23:08:48 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:08:49 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:08:49 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:08:52 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:08:52 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:08:52 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:08:52 - INFO  session.start:155 - Session started
+2023-04-05 23:08:52 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:08:52 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:08:53 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:08:53 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:08:53 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:08:53 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:08:53 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:08:55 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:08:55 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:08:55 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:08:57 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:08:57 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:08:57 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:08:57 - INFO  session.start:155 - Session started
+2023-04-05 23:08:58 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:08:59 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:08:59 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:08:59 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:08:59 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:08:59 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:08:59 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:09:36 - INFO  user_bot.get_data_from_result:73 - received data from the model Result
+2023-04-05 23:09:38 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:09:38 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:09:38 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:09:40 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:09:40 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:09:40 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:09:40 - INFO  session.start:155 - Session started
+2023-04-05 23:09:40 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:09:41 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:09:42 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:09:42 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:09:42 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:09:42 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:09:42 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:09:42 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:09:42 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:09:42 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:09:44 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:09:44 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:09:44 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:09:44 - INFO  session.start:155 - Session started
+2023-04-05 23:09:44 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:09:46 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:09:46 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:09:46 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:09:46 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:09:46 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:09:46 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:09:46 - INFO  user_bot.get_data_from_result:73 - received data from the model Result
+2023-04-05 23:09:46 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:09:46 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:09:46 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:09:48 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:09:48 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:09:48 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:09:48 - INFO  session.start:155 - Session started
+2023-04-05 23:09:48 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:09:48 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:09:48 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:09:48 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:09:48 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:09:48 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:09:48 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:09:49 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:09:49 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:09:49 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:09:50 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:09:50 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:09:50 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:09:50 - INFO  session.start:155 - Session started
+2023-04-05 23:09:50 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:09:50 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:09:50 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:09:50 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:09:50 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:09:50 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:09:50 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:11:19 - INFO  user_bot.get_data_from_result:74 - received data from the model Result
+2023-04-05 23:11:20 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:11:20 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:11:20 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:11:22 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:11:22 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:11:22 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:11:22 - INFO  session.start:155 - Session started
+2023-04-05 23:11:22 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:11:23 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:11:23 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:11:23 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:11:23 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:11:23 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:11:23 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:11:24 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:11:25 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:11:25 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:11:27 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:11:27 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:11:27 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:11:27 - INFO  session.start:155 - Session started
+2023-04-05 23:11:28 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:11:31 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:11:31 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:11:31 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:11:31 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:11:31 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:11:31 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:11:31 - INFO  user_bot.get_data_from_result:74 - received data from the model Result
+2023-04-05 23:11:32 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:11:32 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:11:32 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:11:34 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:11:34 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:11:34 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:11:34 - INFO  session.start:155 - Session started
+2023-04-05 23:11:34 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:11:35 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:11:35 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:11:35 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:11:35 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:11:35 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:11:35 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:11:35 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:11:35 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:11:35 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:11:37 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:11:37 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:11:37 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:11:37 - INFO  session.start:155 - Session started
+2023-04-05 23:11:37 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:11:38 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:11:38 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:11:38 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:11:38 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:11:38 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:11:38 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:12:00 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:12:00 - INFO  user_bot.get_data_from_result:74 - received data from the model Result
+2023-04-05 23:12:01 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:12:01 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:12:01 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:12:03 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:12:03 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:12:03 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:12:03 - INFO  session.start:155 - Session started
+2023-04-05 23:12:03 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:12:03 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:12:04 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:12:04 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:12:04 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:12:04 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:12:04 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:12:07 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:12:07 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:12:07 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:12:09 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:12:09 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:12:09 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:12:09 - INFO  session.start:155 - Session started
+2023-04-05 23:12:09 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:12:10 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:12:11 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:12:11 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:12:11 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:12:11 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:12:11 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:12:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:12:11 - INFO  user_bot.get_data_from_result:74 - received data from the model Result
+2023-04-05 23:12:13 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:12:13 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:12:13 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:12:15 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:12:15 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-05 23:12:15 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:12:15 - INFO  session.start:155 - Session started
+2023-04-05 23:12:15 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:12:16 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:12:17 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:12:17 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:12:17 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:12:17 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:12:17 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:12:18 - INFO  connection.connect:47 - Connecting...
+2023-04-05 23:12:18 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-05 23:12:18 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-05 23:12:20 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-05 23:12:20 - INFO  session.start:140 - Device: CPython 3.8.10 - AgAAB_gAKAJCZwqs3nH1HT-yRe5F-quG7cSzC7iMXAF8vdm3GFDEmFVnVdCkagkmrEwwOzTUUEvl4LxaIyZsIUW1Yb1FjkETB08jnnZDj-ELtH7dJT5vKnqJKnTajRw0CjBLhIQp0HvwyWbzH8UqDaC2YJO6aw0hcFYYJf3NYlgL3aq07nTzg44s-FCOwu74sQqmvSlp4BXrGD6uy22WMomTNKNTIZIwVCDHeQpk7hIRW7mKFsJoReE6XcXu3zviNp_KbCMtrLi04ochnDDugHqr75t_i7Zq4PwTzdg--cFui81FA7PUfTxTOb0TiT2eobTqARA5qn-8gnR6a1w3oKsnbj5qIgAAAAA6tgUQAA
+2023-04-05 23:12:20 - INFO  session.start:141 - System: Linux 5.15.0-67-generic (en)
+2023-04-05 23:12:20 - INFO  session.start:155 - Session started
+2023-04-05 23:12:20 - INFO  session.ping_worker:272 - PingTask started
+2023-04-05 23:12:21 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-05 23:12:21 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-05 23:12:21 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-05 23:12:21 - INFO  connection.close:66 - Disconnected
+2023-04-05 23:12:21 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-05 23:12:21 - INFO  session.stop:180 - Session stopped
+2023-04-05 23:12:21 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:16:28 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:16:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:16:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:17:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:17:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:17:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:17:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:17:31 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:17:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:17:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:17:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:17:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:20:38 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:20:39 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:20:39 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:20:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:20:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:20:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:20:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:20:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:30:06 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:30:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:30:07 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:30:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:30:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:32:02 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:32:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:32:03 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:33:37 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:33:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:33:38 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:33:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:33:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:40:21 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-05 23:40:22 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:40:22 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:42:34 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:42:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:42:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:44:00 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:44:01 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:44:01 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:44:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:44:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:45:31 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:45:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:45:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:45:38 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:45:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:45:38 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:45:39 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:46:28 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:46:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:46:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:46:45 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:46:46 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:46:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:46:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:46:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:47:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:47:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:47:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:50:02 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:50:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:50:03 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:50:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:50:43 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:50:43 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:50:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:50:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:54:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-05 23:54:43 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:54:43 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:54:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:54:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:54:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:54:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:54:56 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:57:30 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-05 23:57:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:57:31 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:57:38 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-05 23:57:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:57:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-05 23:57:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-05 23:57:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:00:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.

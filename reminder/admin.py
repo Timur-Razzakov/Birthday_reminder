@@ -17,7 +17,7 @@ class MailingCommerceOfferForm(forms.ModelForm):
 
 class MailingCommerceOfferAdmin(admin.ModelAdmin):
     form = MailingCommerceOfferForm
-    list_display = ('pk', 'link', 'company_detail', 'message', 'created_at')
+    list_display = ('company_detail', 'message', 'created_at', 'pk', 'link',)
     filter_horizontal = ('photo',)  # для ManyToMany
 
 
@@ -31,12 +31,20 @@ class HolidayForm(forms.ModelForm):
 
 class HolidayFormAdmin(admin.ModelAdmin):
     form = HolidayForm
-    list_display = ('id', 'image', 'name', 'date', 'congratulation')
+    list_display = ('name', 'date', 'congratulation', 'id', 'image',)
 
 
-admin.site.register(TemplateForChannel, )
+class TemplateForChannelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'channel', 'gender', 'templates_for_massage', 'id',)
+
+
+class ResultAdmin(admin.ModelAdmin):
+    list_display = ('sending_status', 'created_at', 'image', 'process_date', 'channels', 'id',)
+
+
+admin.site.register(TemplateForChannel, TemplateForChannelAdmin)
 admin.site.register(MailingCommerceOffer, MailingCommerceOfferAdmin)
-admin.site.register(Result, )
+admin.site.register(Result, ResultAdmin)
 admin.site.register(MultipleImage, )
 
 admin.site.register(Holiday, HolidayFormAdmin)

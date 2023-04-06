@@ -29,7 +29,7 @@ class Holiday(models.Model):
                                blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
-        return "%s, %s " % (self.name, self.date)
+        return str(self.pk)
 
 
 class MailingCommerceOffer(models.Model):
@@ -46,11 +46,6 @@ class MailingCommerceOffer(models.Model):
                              blank=True)
     sending_status = models.CharField(verbose_name='sending_status', max_length=90, null=True,
                                       blank=True, default=False)
-    #
-    # def clean(self):
-    #     for image in self.photo.all():
-    #         if image.image.size > 2 * 1024 * 1024:  # 5 Мбайт
-    #             raise ValidationError('Размер изображения "{}" больше 5 Мбайт.'.format(image.image.name))
 
     # функция, для вывода 1 изображения при использовании ManyToMany в шаблоне
     def get_first_image(self):
@@ -76,9 +71,11 @@ class Result(models.Model):
     created_at = models.DateTimeField(verbose_name="created_at", null=True, blank=True, auto_now_add=True)  #
     channels = models.ForeignKey(Channel, on_delete=models.SET_NULL, verbose_name='channels for send',
                                  null=True, blank=True)
+    image = models.ForeignKey(Holiday, on_delete=models.SET_NULL, verbose_name='image',
+                              null=True, blank=True)
     message = models.TextField(verbose_name="Message")  #
     sending_status = models.CharField(verbose_name='sending_status', max_length=90, null=True,
-                                      blank=True, default=False)  # --
+                                      blank=True, default=False)
 
     def __str__(self):
         return str(self.sending_status)

@@ -1,10 +1,10 @@
 import datetime
+import logging
 import os
 import sys
 
 import django
 from jinja2 import Template
-import logging
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))
 sys.path.append(proj)
@@ -36,6 +36,7 @@ def birthday():
             for item in get_client:
                 res_for_send = Result.objects.create()
                 res_for_send.client.add(item['pk'])
+                res_for_send.image = Holiday.objects.get(id=get_congrats.id)
                 res_for_send.channels = Channel.objects.get(id=item['channel'])
                 template = TemplateForChannel.objects.get(gender=item['gender'],
                                                           name__icontains=get_congrats.name)
@@ -45,5 +46,7 @@ def birthday():
                                                      message=message, )
                 res_for_send.message = finished_message
                 res_for_send.save()
-                logger.info(f'Data saved')
+                logger.info("data to model 'Result' saved")
+        else:
+            logger.warning('holiday, with the name "День рождения" is missing')
         return 'Нет соответствующего праздника'

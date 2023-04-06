@@ -2,7 +2,6 @@ import asyncio
 import datetime
 import os
 import sys
-import time
 
 import django
 import dotenv
@@ -23,10 +22,26 @@ django.setup()
 # # ---------------------------------------------------------------------------------
 
 logger = logging.getLogger(__name__)
-from reminder.models import Result, MailingCommerceOffer
-
+from reminder.models import Result, MailingCommerceOffer, Holiday
 
 today = datetime.datetime.today()
+
+from accounts.models import Client as cl
+
+
+async def get_string_session():
+    """Получаем string_session, чтобы отправлять сообщение без задержек,
+    так как pyrogram исп sqlite """
+    api_id = os.environ.get('API_ID')
+    api_hash = os.environ.get('API_HASH')
+    async with Client('account', api_id, api_hash) as app:
+        string_session = await app.export_session_string()
+    return string_session
+
+
+#
+# #
+# asyncio.run(get_string_session())
 
 
 def update_result(result_id):
@@ -39,7 +54,7 @@ def update_result(result_id):
 
 async def send_message_holiday(client_data: list, admin_username):
     """Получаем chart_id пользователя и рассылаем сообщения из модели Result"""
-    string_session = os.environ.get('STRING_SESSION')
+    string_session = await get_string_session()
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
     async with Client('account', api_id, api_hash, string_session) as app:
@@ -48,6 +63,7 @@ async def send_message_holiday(client_data: list, admin_username):
         error_list = []
         try:
             for client in client_data:
+                get_image = Holiday.objects.get(id=client['images'])
                 client_name.append(client['name'])
                 # сохраняем пользователей и получаем chat_id, если даже он есть, сохраняем (без циклов)
                 contact: ImportedContacts = await app.import_contacts(
@@ -55,8 +71,8 @@ async def send_message_holiday(client_data: list, admin_username):
                 )
                 if contact.users:
                     user_id = contact.users[0].id
-                    await app.send_message(user_id, client['message'])
-                    time.sleep(5)
+                    await app.send_photo(user_id, photo=f'media/{get_image.image}', caption=client['message'])
+                    await asyncio.sleep(5)
                     update_result(client['id'])
                 else:
                     error_list.append(client['phone_number'])
@@ -68,7 +84,7 @@ async def send_message_holiday(client_data: list, admin_username):
             if client_count < 10:
                 await app.send_message(admin_username,
                                        f"<b>Сегодня мы поздравили:</b>\n{client_name} ")
-                time.sleep(5)
+                await asyncio.sleep(5)
             else:
                 await app.send_message(admin_username,
                                        f"<b>Сегодня мы поздравили:</b> {client_count} пользователей!!")
@@ -76,8 +92,9 @@ async def send_message_holiday(client_data: list, admin_username):
             logger.exception("FloodWait", e.value)
             await asyncio.sleep(e.value)
 
+
 #
-# asyncio.run(send_message_holiday(get_data(), 'Razzakov_Timur'))
+# asyncio.run(send_message_holiday(get_data_from_result(), 'Razzakov_Timur'))
 
 
 # ------------------------Отправляем по телеграмму Коммерческие предложения-------------------------
@@ -93,7 +110,7 @@ async def send_message_mailing(image_data: list, mailing_id: int, client_list, c
                                admin_username: str):
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
-    string_session = os.environ.get('STRING_SESSION')
+    string_session = await get_string_session()
     """Получаем chart_id пользователя и рассылаем сообщения"""
     error_list = []  # список номеров, которым не смогли отправить сообщение
 

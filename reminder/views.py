@@ -1,5 +1,6 @@
+import logging
+
 from django.contrib import messages
-from django.core.exceptions import ValidationError
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
 
@@ -10,18 +11,19 @@ from .forms import MailingCommerceOfferFrom, HolidayFrom
 from .models import Holiday, MailingCommerceOffer, MultipleImage
 from .tasks import send_messages_task
 
+logger = logging.getLogger(__name__)
+
 
 # Create your views here.
 
 def show_all_client_view(request):
     """Поиск клиентов"""
-
     form = SearchClientForm()
     return render(request, 'home.html', {'form': form})
 
 
 def searchView(request):
-    """выводит список клиентов"""
+    """Выводит список клиентов"""
     form = SearchClientForm()
     full_name = request.GET.get('full_name', None)
     city = request.GET.get('city', None)
@@ -74,7 +76,6 @@ def add_mailing_view(request):
             if len(images) > MAX_PHOTOS:
                 messages.warning(request,
                                  f"Максимальное количество изображений: {MAX_PHOTOS}")
-
             elif validate_images_size(images):
                 messages.warning(request,
                                  f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
@@ -87,6 +88,7 @@ def add_mailing_view(request):
                     new_mailing.photo.add(MultipleImage.objects.get(image=name))
                 new_mailing.save()
                 form.save_m2m()
+                logger.info('Commercial offer saved')
                 messages.success(request, 'Коммерческое предложение сохранено.')
                 return redirect('add_mailing')
         else:
@@ -128,6 +130,7 @@ def update_mailing_view(request, id):
                         image_model = MultipleImage.objects.create(image=image)
                         mailing.photo.add(image_model)
                     mailing.save()
+                    logger.info('Commercial offer updated')
                     messages.success(request, 'Данные изменены!!')
                     return redirect('show_mailings')
 
@@ -140,10 +143,12 @@ def update_mailing_view(request, id):
 
 def send_mailing_view(request, id):
     """Получаем id нужного предложения и передаём в очередь"""
-    if request.user.is_authenticated:  # будет исп для выбора кому отправлять отчёт об отправке сообщений
+    if request.user.is_authenticated:  # будет использоваться для выбора кому
+        # отправлять отчёт об отправке сообщений
         user = request.user
         if request.method == 'GET':
             send_messages_task.delay(user.user_name, id)
+            logger.info('data passed to celery task')
             messages.success(request, 'Успешно отправлено!!')
     return redirect('show_mailings')
 
@@ -158,10 +163,12 @@ def add_holiday_view(request):
             data = form.cleaned_data
             check_holiday = Holiday.objects.filter(name=data['name'])
             if check_holiday.exists():
+                logger.warning('This holiday is already in the database %s', data['name'])
                 messages.error(request, 'Этот праздник уже есть в базе!!')
             else:
                 holiday.save()
                 form.save_m2m()
+                logger.info(' %s has been added', data['name'])
                 messages.success(request, 'Праздник был добавлен!')
                 return redirect('add_holiday')
         else:

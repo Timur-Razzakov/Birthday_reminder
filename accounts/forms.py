@@ -29,7 +29,7 @@ class UserLoginForm(forms.Form):
 
             if not user:
                 raise forms.ValidationError('Данный аккаунт отключен')
-        return super(UserLoginForm, self).clean(*args, **kwargs)
+        return super(UserLoginForm, self).clean()
 
 
 class CityFrom(forms.Form):

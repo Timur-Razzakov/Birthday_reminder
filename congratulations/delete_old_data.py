@@ -5,8 +5,10 @@
 import os
 import sys
 import time
-
+import logging
 import django
+from datetime import datetime, timedelta
+from django.core.management.base import BaseCommand
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))
 sys.path.append(proj)
@@ -14,9 +16,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reminder_service.settings")
 
 django.setup()
 # ---------------------------------------------------------------------------------
-from datetime import datetime, timedelta
+
 from reminder.models import Result, MailingCommerceOffer
-from django.core.management.base import BaseCommand
+
+logger = logging.getLogger(__name__)
 
 
 class Command(BaseCommand):
@@ -27,3 +30,4 @@ class Command(BaseCommand):
                               created_at__lte=datetime.now() - timedelta(days=10)).delete()
         MailingCommerceOffer.objects.filter(sending_status=True,
                                             created_at__lte=datetime.now() - timedelta(days=10)).delete()
+        logger.info("data removed from Result and MailingCommerceOffer")

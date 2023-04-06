@@ -1,6 +1,7 @@
 import asyncio
 import logging
 
+from celery import shared_task
 from django.core.exceptions import ObjectDoesNotExist
 from jinja2 import Template
 
@@ -9,7 +10,6 @@ from congratulations.check_birthday import birthday
 from congratulations.check_holiday import holiday
 from congratulations.delete_old_data import Command
 from reminder.models import MailingCommerceOffer, TemplateForChannel, Result
-from reminder_service.celery import app
 from telegram_bot.user_bot import send_message_mailing, send_message_holiday
 
 logger = logging.getLogger(__name__)
@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 def get_data_from_result():
     """Получаем данные из модели Result"""
     data = Result.objects.filter(sending_status=False).values('id', 'client', 'process_date', 'message',
-                                                              'sending_status')
+                                                              'sending_status', 'image')
     client_phones = []
 
     for item in data:
@@ -29,12 +29,14 @@ def get_data_from_result():
                 'name': phone['first_name'],
                 'phone_number': phone['phone_number'],
                 'message': item['message'],
+                'images': item['image']
             }
             client_phones.append(client)
+    logger.info("received data from the model Result")
     return client_phones
 
 
-@app.task
+@shared_task
 def send_messages_task(user: str, mailing_id: int) -> None:
     """Собираем сообщение в единое"""
     try:
@@ -42,13 +44,13 @@ def send_messages_task(user: str, mailing_id: int) -> None:
         mailing = MailingCommerceOffer.objects.select_related('city', 'company_detail').prefetch_related(
             'photo').get(id=mailing_id)
     except ObjectDoesNotExist:
-        logger.error(f"MailingCommerceOffer с id={mailing_id} не найден")
-        raise ValueError(f"MailingCommerceOffer с id={mailing_id} не найден")
+        logger.error(f"MailingCommerceOffer with id={mailing_id} not found")
+        raise ValueError(f"MailingCommerceOffer with id={mailing_id} not found")
     try:
         # Получаем объект шаблона
         template = TemplateForChannel.objects.get(name__icontains='предложение')
-    except ObjectDoesNotExist:
-        logger.error(f"TemplateForChannel does not exist")
+    except ObjectDoesNotExist as e:
+        logger.error(f"TemplateForChannel does not exist %s", e)
         raise ValueError(f"TemplateForChannel с именем, содержащим 'предложение', не найден")
     # если указан город, то берём по нему, если нет, то всех
     clients = Client.objects.filter(city=mailing.city) if mailing.city else Client.objects.all()
@@ -79,26 +81,33 @@ def send_messages_task(user: str, mailing_id: int) -> None:
             send_message_mailing(image_data=image_data, mailing_id=mailing_id, client_list=clients,
                                  commercial_offer=commercial_offer, admin_username='Razzakov_Timur', ))
         loop.run_until_complete(task)
+        logger.info('data sent successfully')
     except Exception as e:
         # Логирование ошибки
         logger.error(f'data collected and sent to the bot: {str(e)}')
 
 
-@app.task
+@shared_task
 def check_holiday_task():
     """Вызываем функцию, для проверки праздников сегодня и сохраняем в модель Result"""
-    holiday()
-    logger.info(f'data added')
+    try:
+        holiday()
+        logger.info(f'task completed')
+    except Exception as e:
+        logger.error('problem with tasks: %s', e)
 
 
-@app.task
+@shared_task
 def check_birthday_task():
     """Вызываем функцию, для проверки дня рождения у клиентов и сохраняем в модель Result"""
-    birthday()
-    logger.info(f'data added')
+    try:
+        birthday()
+        logger.info(f'task completed')
+    except Exception as e:
+        logger.error('problem with tasks: %s', e)
 
 
-@app.task
+@shared_task
 def send_congratulation_task():
     """Вызываем функцию, для проверки модели и рассылки по тг поздравлений"""
     try:
@@ -113,7 +122,7 @@ def send_congratulation_task():
         logger.error(f'send_congratulation_task: {str(e)}')
 
 
-@app.task
+@shared_task
 def delete_old_task():
     """Удаляем старые данные, которым больше 5-дней. Чистим Result и MailingCommerceOffer"""
     Command.handle()

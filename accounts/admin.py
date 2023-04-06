@@ -4,6 +4,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.contrib.auth.models import Group
 
+from .forms import ClientForm, CompanyDetailForm
 from .models import MyUser, Client, CompanyDetail, Channel, City, Gender
 
 
@@ -74,11 +75,33 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 
+class ClientAdmin(admin.ModelAdmin):
+    form = ClientForm
+    list_display = ('first_name', 'father_name', 'date_of_birth', 'phone_number', 'pk',)
+
+
+class CompanyDetailAdmin(admin.ModelAdmin):
+    form = CompanyDetailForm
+    list_display = ('name', 'email', 'phone_number', 'pk',)
+
+
+class CityAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
+class ChannelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
+class GenderAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
 admin.site.register(MyUser, UserAdmin)
-admin.site.register(Client)
-admin.site.register(CompanyDetail)
-admin.site.register(Channel, )
-admin.site.register(City, )
-admin.site.register(Gender, )
+admin.site.register(Client, ClientAdmin)
+admin.site.register(CompanyDetail, CompanyDetailAdmin)
+admin.site.register(Channel, ChannelAdmin)
+admin.site.register(City, CityAdmin)
+admin.site.register(Gender, GenderAdmin)
 """ отмена регистрацию модели группы от администратора"""
 admin.site.unregister(Group)

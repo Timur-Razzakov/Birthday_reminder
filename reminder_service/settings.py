@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
+from datetime import datetime
 from pathlib import Path
 
 import dotenv
@@ -21,44 +22,30 @@ dotenv.load_dotenv(f'{BASE_DIR}/.env')
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'console': {
-            # точный формат не важен, это минимальная информация
-            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': '{}/logs/my_log_{}.log'.format(BASE_DIR, datetime.now().strftime('%Y-%m-%d')),
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5,
+            'formatter': 'standard',
         },
-        'myformatter': {
-            'format': '{asctime} - {levelname}  {module}  {process:d} - {message}',
+    },
+    'loggers': {
+        '': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+    'formatters': {
+        'standard': {
+            'format': '{asctime} - {levelname}  {module}.{funcName}:{lineno} - {message}',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
             'style': '{',
         },
     },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'console',
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': f'{BASE_DIR}/logs/file_today.log',  # место
-            'formatter': 'myformatter'
-        },
-
-    },
-
-    'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'INFO',  # берёт от DEBUG-а и выше
-            'propagate': True
-        },
-    },
-    'reminder_service': {
-        'level': 'INFO',
-        'handlers': ['console', 'sentry'],
-        # требуется, чтобы избежать двойного ведения журнала с помощью корневого логгера
-        'propagate': False,
-    },
-
 }
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -171,9 +158,11 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# исп это при работе без докера
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # при использовании докера!!
-MEDIA_ROOT = '/code/media/'
+# MEDIA_ROOT = '/code/media/'
+
 # ckeditor upload path
 CKEDITOR_UPLOAD_PATH = "uploads/"
 # Default primary key field type

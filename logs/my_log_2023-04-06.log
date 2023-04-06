@@ -1,0 +1,245 @@
+2023-04-06 00:00:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:00:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:01:39 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-06 00:01:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:01:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:01:52 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 00:01:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:01:53 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:01:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:01:56 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:02:17 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-06 00:02:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:02:18 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:02:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 00:02:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:02:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:02:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:02:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:03:55 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-06 00:03:56 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:03:56 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:04:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 00:04:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:04:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:04:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:04:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:06:10 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-06 00:06:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:06:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:06:19 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 00:06:20 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:06:20 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:06:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:06:26 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:09:15 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/congratulations/check_holiday.py changed, reloading.
+2023-04-06 00:09:16 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:09:16 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:12:08 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 00:12:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:12:09 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:18:56 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 00:18:57 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 00:18:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 00:19:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 09:59:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 09:59:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 09:59:42 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-06 10:00:08 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-06 10:00:14 - INFO  views.login_view:30 - User razzakov334@gmail.com logged in successfully
+2023-04-06 10:06:13 - INFO  views.add_company_info_view:92 - Company TravelTR created in successfully
+2023-04-06 10:07:54 - INFO  views.add_mailing_view:91 - Commercial offer saved
+2023-04-06 10:09:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 10:09:39 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 10:09:57 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 12:32:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 12:32:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:32:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:33:01 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 12:33:02 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:33:02 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:33:12 - INFO  views.add_mailing_view:91 - Commercial offer saved
+2023-04-06 12:42:44 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/admin.py changed, reloading.
+2023-04-06 12:42:44 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:42:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:43:07 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/admin.py changed, reloading.
+2023-04-06 12:43:08 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:43:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:43:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/admin.py changed, reloading.
+2023-04-06 12:43:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:43:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:44:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/admin.py changed, reloading.
+2023-04-06 12:44:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:44:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:44:41 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/accounts/admin.py changed, reloading.
+2023-04-06 12:44:42 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:44:42 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:53:55 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 12:53:56 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:53:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:55:31 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 12:55:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:55:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 12:58:44 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 12:58:45 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 12:58:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:07:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 13:07:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:07:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:18:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 13:18:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:18:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:30:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/custom_validators.py changed, reloading.
+2023-04-06 13:30:43 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:30:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:36:07 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/celery.py changed, reloading.
+2023-04-06 13:36:07 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:36:08 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:42:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 13:42:37 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:42:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:42:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:42:52 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:42:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:43:00 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:43:00 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:43:57 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 13:43:57 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:43:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:44:25 - INFO  views.add_mailing_view:91 - Commercial offer saved
+2023-04-06 13:47:08 - INFO  views.add_mailing_view:91 - Commercial offer saved
+2023-04-06 13:47:24 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 13:55:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 13:55:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:55:34 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 13:55:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:55:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:55:52 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 13:55:53 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:55:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:56:54 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 13:56:54 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 13:56:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 13:57:02 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:02:39 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:02:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:02:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:02:44 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:04:20 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:04:20 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:04:20 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:04:22 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:09:20 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 14:09:20 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:09:21 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:09:50 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 14:09:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:09:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:13:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 14:13:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:13:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:14:03 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 14:14:03 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:14:04 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:14:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 14:14:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:14:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:14:54 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:15:57 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:15:57 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:15:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:16:00 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:16:29 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:16:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:16:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:16:32 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:17:34 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:17:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:17:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 14:17:36 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 14:53:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 14:53:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 14:53:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:02:11 - INFO  views.update_mailing_view:133 - Commercial offer updated
+2023-04-06 15:02:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:02:36 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:02:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:03:02 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:14:27 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:14:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:14:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:14:59 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:17:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:17:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:17:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:18:01 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:18:02 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:18:02 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:18:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:18:12 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:19:27 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:19:28 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:19:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:20:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:20:22 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:20:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:21:32 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:21:33 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:21:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:21:37 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:23:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 15:23:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:23:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:23:56 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:27:52 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 15:27:52 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:27:52 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:28:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:28:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:28:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:28:55 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:31:08 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:31:08 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:31:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:31:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:31:19 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:32:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:32:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:32:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:32:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:32:20 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:34:37 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:34:37 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:34:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:34:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:34:45 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:35:37 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:35:38 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:35:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:35:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:36:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:36:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:36:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:36:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:36:58 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:37:27 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 15:37:28 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:37:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:37:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:37:36 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:43:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 15:43:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:43:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:45:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 15:45:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:45:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:48:54 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:48:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:49:02 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 15:49:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:49:17 - INFO  views.update_mailing_view:133 - Commercial offer updated
+2023-04-06 15:49:19 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:49:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:50:34 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 15:50:37 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 15:54:02 - INFO  views.send_mailing_view:151 - data passed to celery task

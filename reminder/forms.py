@@ -3,7 +3,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.forms import NumberInput
 
-from accounts.models import CompanyDetail, City
+from accounts.models import CompanyDetail, City, Gender
 from .models import MailingCommerceOffer, Holiday
 
 
@@ -16,18 +16,25 @@ class HolidayFrom(forms.ModelForm):
                            required=True,
                            widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
                            )
+    gender = forms.ModelChoiceField(
+        queryset=Gender.objects.all(),
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите нужный пол'
+    )
     congratulation = forms.CharField(widget=CKEditorWidget(),
                                      label='Поздравление')  # max_file_size=1024 * 1024 * 5
 
     class Meta:
         model = Holiday
-        fields = ('image', 'name', 'date', 'congratulation')
+        fields = ('image', 'name', 'date', 'gender', 'congratulation')
 
 
 class MailingCommerceOfferFrom(forms.ModelForm):
     link = forms.URLField(
         widget=forms.URLInput(attrs={'class': 'form-control'}),
         label='Ссылки ( Если их несколько, то введите через запятую)',
+        required=False
     )
 
     company_detail = forms.ModelChoiceField(
@@ -58,5 +65,6 @@ class MailingCommerceOfferFrom(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         if self.instance.pk:
+            # получаем список ID изображений, связанных с текущей моделью
             self.fields['images'].initial = self.instance.photo.values_list('id',
-                                                                            flat=True)  # получаем список ID изображений, связанных с текущей моделью
+                                                                            flat=True)
