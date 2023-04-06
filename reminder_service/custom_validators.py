@@ -1,3 +1,4 @@
+import os
 import re
 
 from django.core.exceptions import ValidationError
@@ -69,3 +70,10 @@ def validate_images_size(images):
         filesize = image.size
         if filesize > MAX_PHOTO_SIZE:
             return True
+
+
+def validate_video_extension(value):
+    ext = os.path.splitext(value.name)[1]  # получаем расширение файла
+    valid_extensions = ['.mp4', '.avi', '.mov']
+    if not ext.lower() in valid_extensions:
+        raise ValidationError('Недопустимый формат видео')

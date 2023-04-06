@@ -9,7 +9,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
 
 from pyrogram import Client
-from pyrogram.types import InputPhoneContact, InputMediaPhoto
+from pyrogram.types import InputPhoneContact, InputMediaPhoto, InputMediaVideo
 import logging
 
 dotenv.load_dotenv('.env')
@@ -106,7 +106,8 @@ def update_mailing(mailing_id):
     mailing.save()
 
 
-async def send_message_mailing(image_data: list, mailing_id: int, client_list, commercial_offer: str,
+async def send_message_mailing(video_data: list, image_data: list, mailing_id: int, client_list,
+                               commercial_offer: str,
                                admin_username: str):
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
@@ -125,9 +126,15 @@ async def send_message_mailing(image_data: list, mailing_id: int, client_list, c
                 if contact.users:
                     user_id = contact.users[0].id
                     # проверяем есть ли фото, если да, то рассылаем их первыми
-                    if len(image_data) != 0:
+                    if len(image_data or video_data) != 0:
                         # собирает все изображения и отправляет в 1 сообщении
-                        media = [InputMediaPhoto(f'media/{item}') for item in image_data]
+                        media = []
+                        for item in image_data:
+                            media.append(InputMediaPhoto(f'media/{item}'))
+
+                        for item in video_data:
+                            media.append(InputMediaVideo(f'media/{item}'))
+                        print(media)
                         await app.send_media_group(user_id,
                                                    media=media)
                         await asyncio.sleep(3)

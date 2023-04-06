@@ -55,16 +55,16 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         label='Место для вашего предложения',
     )
 
-    images = forms.ImageField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False, )
+    images_and_video = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False, )
 
     class Meta:
         model = MailingCommerceOffer
-        fields = ['images', 'city', 'link', 'company_detail', 'message']
+        fields = ['images_and_video', 'city', 'link', 'company_detail', 'message']
 
     # для отображения изображений (ManyToMany)
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         if self.instance.pk:
             # получаем список ID изображений, связанных с текущей моделью
-            self.fields['images'].initial = self.instance.photo.values_list('id',
+            self.fields['images_and_video'].initial = self.instance.image.values_list('id',
                                                                             flat=True)

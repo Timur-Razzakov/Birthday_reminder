@@ -3,7 +3,8 @@ from django.db import models
 from PIL import Image
 
 from accounts.models import Client, CompanyDetail, Channel, Gender, City
-from reminder_service.custom_validators import TEMPLATE_NAME, validate_photo_size, MAX_PHOTOS, MAX_PHOTO_SIZE
+from reminder_service.custom_validators import TEMPLATE_NAME, validate_photo_size, MAX_PHOTOS, MAX_PHOTO_SIZE, \
+    validate_video_extension
 
 
 class TemplateForChannel(models.Model):
@@ -35,7 +36,8 @@ class Holiday(models.Model):
 class MailingCommerceOffer(models.Model):
     """Модель для рассылки коммерческих предложений"""
 
-    photo = models.ManyToManyField('MultipleImage', blank=True)
+    image = models.ManyToManyField('MultipleImage', blank=True)
+    video = models.ManyToManyField('MultipleVideo', blank=True)
     message = models.TextField(verbose_name='message')
     link = models.URLField(max_length=255, unique=True, verbose_name='url',
                            null=True, blank=True)
@@ -49,7 +51,7 @@ class MailingCommerceOffer(models.Model):
 
     # функция, для вывода 1 изображения при использовании ManyToMany в шаблоне
     def get_first_image(self):
-        return self.photo.first().image.url if self.photo.first() else None
+        return self.image.first().image.url if self.image.first() else None
 
     def __str__(self):
         return str(self.pk)
@@ -61,6 +63,14 @@ class MultipleImage(models.Model):
 
     def __str__(self):
         return str(self.image)
+
+
+class MultipleVideo(models.Model):
+    video = models.FileField(validators=[validate_video_extension], verbose_name=' Видео',
+                             upload_to='video/', blank=True, null=True)
+
+    def __str__(self):
+        return str(self.video)
 
 
 class Result(models.Model):

@@ -243,3 +243,488 @@
 2023-04-06 15:50:34 - INFO  aes.<module>:26 - Using TgCrypto
 2023-04-06 15:50:37 - INFO  views.send_mailing_view:151 - data passed to celery task
 2023-04-06 15:54:02 - INFO  views.send_mailing_view:151 - data passed to celery task
+2023-04-06 16:48:18 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 16:48:19 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 16:48:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 16:50:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 17:07:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:08:30 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:09:21 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:09:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:23:14 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:23:28 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:23:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:23:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:23:58 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00\x00\x00\x00\x00\x00\xff\xee\x00\x0eAdobe\x00d\x00\x00\x00\x00\x01\xff\xe2\x0cXICC_PROFILE\x00\x01\x01\x00\x00\x0cHLino\x02\x10\x00\x00mntrRGB XYZ \x0
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 90, in add_mailing_view
+    form.save_m2m()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/forms/models.py", line 530, in _save_m2m
+    f.save_form_data(self.instance, cleaned_data[f.name])
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/related.py", line 1963, in save_form_data
+    getattr(instance, self.attname).set(data)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/related_descriptors.py", line 1161, in set
+    else self.target_field.get_prep_value(obj)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/related.py", line 1150, in get_prep_value
+    return self.target_field.get_prep_value(value)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got b'\xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00\x00\x00\x00\x00\x00\xff\xee\x00\x0eAdobe\x00d\x00\x00\x00\x00\x01\xff\xe2\x0cXICC_PROFILE\x00\x01\x01\x00\x00\x0cHLino\x02\x10\x00\x00mntrRGB XYZ \x07\xce\x00\x02\x00\t\x00\x06\x001\x00\x00acspMSFT\x00\x00\x00\x00IEC sRGB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xf6\xd6\x00\x01\x00\x00\x00\x00\xd3-HP  \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x11cprt\x00\x00\x01P\x00\x00\x003desc\x00\x00\x01\x84\x00\x00\x00lwtpt\x00\x00\x01\xf0\x00\x00\x00\x14bkpt\x00\x00\x02\x04\x00\x00\x00\x14rXYZ\x00\x00\x02\x18\x00\x00\x00\x14gXYZ\x00\x00\x02,\x00\x00\x00\x14bXYZ\x00\x00\x02@\x00\x00\x00\x14dmnd\x00\x00\x02T\x00\x00\x00pdmdd\x00\x00\x02\xc4\x00\x00\x00\x88vued\x00\x00\x03L\x00\x00\x00\x86view\x00\x00\x03\xd4\x00\x00\x00$lumi\x00\x00\x03\xf8\x00\x00\x00\x14meas\x00\x00\x04\x0c\x00\x00\x00$tech\x00\x00\x040\x00\x00\x00\x0crTRC\x00\x00\x04<\x00\x00\x08\x0cgTRC\x00\x00\x04<\x00\x00\x08\x0cbTRC\x00\x00\x04<\x00\x00\x08\x0ctext\x00\x00\x00\x00Copyright (c) 1998 Hewlett-Packard Company\x00\x00desc\x00\x00\x00\x00\x00\x00\x00\x12sRGB IEC61966-2.1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12sRGB IEC61966-2.1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00XYZ \x00\x00\x00\x00\x00\x00\xf3Q\x00\x01\x00\x00\x00\x01\x16\xccXYZ \x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00XYZ \x00\x00\x00\x00\x00\x00o\xa2\x00\x008\xf5\x00\x00\x03\x90XYZ \x00\x00\x00\x00\x00\x00b\x99\x00\x00\xb7\x85\x00\x00\x18\xdaXYZ \x00\x00\x00\x00\x00\x00$\xa0\x00\x00\x0f\x84\x00\x00\xb6\xcfdesc\x00\x00\x00\x00\x00\x00\x00\x16IEC http://www.iec.ch\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x16IEC http://www.iec.ch\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00desc\x00\x00\x00\x00\x00\x00\x00.IEC 61966-2.1 Default RGB colour space - sRGB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00.IEC 61966-2.1 Default RGB colour space - sRGB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00desc\x00\x00\x00\x00\x00\x00\x00,Reference Viewing Condition in IEC61966-2.1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00,Reference Viewing Condition in IEC61966-2.1\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00view\x00\x00\x00\x00\x00\x13\xa4\xfe\x00\x14_.\x00\x10\xcf\x14\x00\x03\xed\xcc\x00\x04\x13\x0b\x00\x03\\\x9e\x00\x00\x00\x01XYZ \x00\x00\x00\x00\x00L\tV\x00P\x00\x00\x00W\x1f\xe7meas\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x8f\x00\x00\x00\x02sig \x00\x00\x00\x00CRT curv\x00\x00\x00\x00\x00\x00\x04\x00\x00\x00\x00\x05\x00\n'.
+2023-04-06 17:28:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:28:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:28:24 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:29:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 17:29:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:29:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:29:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:29:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:29:18 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:29:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:31:15 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-06 17:31:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:31:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:31:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:33:01 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:33:02 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:33:03 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:33:23 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:33:24 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:33:24 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:33:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:33:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:33:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:33:59 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:34:00 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:34:00 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:34:36 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:34:37 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:34:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:35:01 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 17:35:02 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:35:02 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:35:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:35:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:35:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:35:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:48:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:48:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:48:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:51:11 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:51:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:51:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:51:29 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:51:30 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:51:30 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:52:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:52:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:52:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:53:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:53:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:53:46 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:54:06 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 17:54:07 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:54:08 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:54:26 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:54:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:54:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:56:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:56:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:56:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:57:19 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:57:20 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:57:20 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 17:57:31 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:57:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:59:17 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 17:59:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 17:59:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:00:08 - INFO  views.add_mailing_view:95 - Commercial offer saved
+2023-04-06 18:00:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:00:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:00:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:00:54 - INFO  views.add_mailing_view:95 - Commercial offer saved
+2023-04-06 18:03:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:03:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:03:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:03:31 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:03:31 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:03:32 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:04:01 - INFO  views.add_mailing_view:98 - Commercial offer saved
+2023-04-06 18:05:02 - INFO  views.add_mailing_view:98 - Commercial offer saved
+2023-04-06 18:06:33 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:06:34 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:06:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:06:44 - INFO  views.add_mailing_view:102 - Commercial offer saved
+2023-04-06 18:07:45 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:07:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:07:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:07:51 - INFO  views.add_mailing_view:100 - Commercial offer saved
+2023-04-06 18:11:17 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:11:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:11:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:11:21 - INFO  views.add_mailing_view:100 - Commercial offer saved
+2023-04-06 18:16:01 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:16:01 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:16:02 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:16:16 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 92, in add_mailing_view
+    new_mailing.media.add(MultipleImage.objects.get(image=video))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+reminder.models.MultipleImage.MultipleObjectsReturned: get() returned more than one MultipleImage -- it returned 2!
+2023-04-06 18:16:59 - INFO  views.add_mailing_view:95 - Commercial offer saved
+2023-04-06 18:18:22 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:18:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:18:23 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:18:42 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 92, in add_mailing_view
+    print(MultipleImage.objects.get(video=video))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+reminder.models.MultipleImage.MultipleObjectsReturned: get() returned more than one MultipleImage -- it returned 3!
+2023-04-06 18:20:04 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 89, in add_mailing_view
+    new_mailing.media.add(MultipleImage.objects.get(image=image))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+reminder.models.MultipleImage.MultipleObjectsReturned: get() returned more than one MultipleImage -- it returned 2!
+2023-04-06 18:21:23 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:21:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:21:24 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:21:37 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 92, in add_mailing_view
+    print(MultipleImage.objects.get(video=video))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+reminder.models.MultipleImage.MultipleObjectsReturned: get() returned more than one MultipleImage -- it returned 5!
+2023-04-06 18:22:21 - INFO  views.add_mailing_view:96 - Commercial offer saved
+2023-04-06 18:24:12 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 18:24:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:24:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:24:23 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:24:24 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:24:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 18:24:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:24:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:26:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:26:36 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:26:36 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:26:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:26:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:26:53 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:26:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:27:21 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:27:22 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:27:22 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:27:35 - INFO  views.add_mailing_view:95 - Commercial offer saved
+2023-04-06 18:29:33 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 18:29:33 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:29:34 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:32:10 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:32:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:32:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:32:14 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/20/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 146, in update_mailing_view
+    form = MailingCommerceOfferFrom(instance=mailing)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py", line 69, in __init__
+    self.fields['images'].initial = self.instance.media.values_list('id',
+KeyError: 'images'
+2023-04-06 18:32:28 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/20/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 146, in update_mailing_view
+    form = MailingCommerceOfferFrom(instance=mailing)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py", line 69, in __init__
+    self.fields['images'].initial = self.instance.media.values_list('id',
+KeyError: 'images'
+2023-04-06 18:32:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 18:32:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:32:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:37:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/admin.py changed, reloading.
+2023-04-06 18:37:52 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:37:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:39:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:39:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:39:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:39:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:39:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:39:21 - ERROR  log.log_response:241 - Internal Server Error: /show_mailings/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 108, in show_mailings_view
+    return render(request, 'show_mailing.html', {'object_list': page_obj})
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 314, in render
+    match = condition.eval(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 877, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py", line 54, in get_first_image
+    return self.media.first().image.url if self.media.first() else None
+AttributeError: 'MailingCommerceOffer' object has no attribute 'media'
+2023-04-06 18:39:37 - ERROR  log.log_response:241 - Internal Server Error: /show_mailings/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 108, in show_mailings_view
+    return render(request, 'show_mailing.html', {'object_list': page_obj})
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/test/utils.py", line 111, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 314, in render
+    match = condition.eval(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/defaulttags.py", line 877, in eval
+    return self.value.resolve(context, ignore_failures=True)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/template/base.py", line 914, in _resolve_lookup
+    current = current()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py", line 54, in get_first_image
+    return self.media.first().image.url if self.media.first() else None
+AttributeError: 'MailingCommerceOffer' object has no attribute 'media'
+2023-04-06 18:39:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/models.py changed, reloading.
+2023-04-06 18:39:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:39:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:40:02 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/20/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 146, in update_mailing_view
+    form = MailingCommerceOfferFrom(instance=mailing)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py", line 69, in __init__
+    self.fields['images'].initial = self.instance.media.values_list('id',
+AttributeError: 'MailingCommerceOffer' object has no attribute 'media'
+2023-04-06 18:40:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 18:40:49 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:40:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:40:53 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/20/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 146, in update_mailing_view
+    form = MailingCommerceOfferFrom(instance=mailing)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py", line 69, in __init__
+    self.fields['images_and_video'].initial = self.instance.media.values_list('id',
+AttributeError: 'MailingCommerceOffer' object has no attribute 'media'
+2023-04-06 18:41:32 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/1/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py", line 146, in update_mailing_view
+    form = MailingCommerceOfferFrom(instance=mailing)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py", line 69, in __init__
+    self.fields['images_and_video'].initial = self.instance.media.values_list('id',
+AttributeError: 'MailingCommerceOffer' object has no attribute 'media'
+2023-04-06 18:41:58 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 18:41:59 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:41:59 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:42:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-06 18:42:16 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 18:42:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 18:42:40 - INFO  views.update_mailing_view:141 - Commercial offer updated
+2023-04-06 19:10:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-06 19:10:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:10:05 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:12:36 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:12:36 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:12:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:12:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:12:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:12:47 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:14:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:14:14 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:14:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:14:18 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:14:18 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:14:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:14:25 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:14:26 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:14:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:14:55 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:15:08 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:15:49 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:15:51 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:15:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:16:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:16:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:16:05 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:16:06 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:16:38 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:16:41 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:21:26 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:21:27 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:21:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:21:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:21:36 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:28:40 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:28:41 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:28:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:28:57 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-06 19:28:58 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:28:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:28:59 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:29:07 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:36:38 - INFO  views.update_mailing_view:141 - Commercial offer updated
+2023-04-06 19:37:02 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:37:09 - INFO  views.send_mailing_view:158 - data passed to celery task
+2023-04-06 19:39:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder/views.py changed, reloading.
+2023-04-06 19:39:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-06 19:39:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:39:30 - INFO  views.update_mailing_view:142 - Commercial offer updated
+2023-04-06 19:39:50 - INFO  views.send_mailing_view:159 - data passed to celery task
+2023-04-06 19:39:58 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-06 19:43:04 - INFO  views.update_mailing_view:142 - Commercial offer updated
+2023-04-06 19:43:12 - INFO  views.send_mailing_view:159 - data passed to celery task

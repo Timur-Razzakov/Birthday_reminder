@@ -8,7 +8,7 @@ from accounts.forms import SearchClientForm
 from accounts.models import Client
 from reminder_service.custom_validators import MAX_PHOTOS, validate_images_size, MAX_PHOTO_SIZE
 from .forms import MailingCommerceOfferFrom, HolidayFrom
-from .models import Holiday, MailingCommerceOffer, MultipleImage
+from .models import Holiday, MailingCommerceOffer, MultipleImage, MultipleVideo
 from .tasks import send_messages_task
 
 logger = logging.getLogger(__name__)
@@ -69,23 +69,27 @@ def add_mailing_view(request):
     if request.method == "POST":
         form = MailingCommerceOfferFrom(request.POST, request.FILES)
         if form.is_valid():
-            images = request.FILES.getlist('images')
+            media = request.FILES.getlist('images_and_video')
             # Валидацию прописал здесь, так как в моделе выдаёт ошибку
             # needs to have a value for field "id" before this many-to-many relationship can be used.
             # Временно остался на этом варианте!!
-            if len(images) > MAX_PHOTOS:
+            if len(media) > MAX_PHOTOS:
                 messages.warning(request,
                                  f"Максимальное количество изображений: {MAX_PHOTOS}")
-            elif validate_images_size(images):
+            elif validate_images_size(media):
                 messages.warning(request,
                                  f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
             else:
                 new_mailing = form.save(commit=False)
                 new_mailing.save()
                 # создаем связь между объектом MailingCommerceOffer и MultipleImage
-                for image in images:
-                    name = MultipleImage.objects.create(image=image)
-                    new_mailing.photo.add(MultipleImage.objects.get(image=name))
+                for file in media:
+                    if file.content_type.startswith('image'):
+                        image = MultipleImage.objects.create(image=file)
+                        new_mailing.image.add(MultipleImage.objects.get(image=image))
+                    elif file.content_type.startswith('video'):
+                        video = MultipleVideo.objects.create(video=file)
+                        new_mailing.video.add(MultipleVideo.objects.get(video=video))
                 new_mailing.save()
                 form.save_m2m()
                 logger.info('Commercial offer saved')
@@ -110,30 +114,34 @@ def update_mailing_view(request, id):
     if request.method == 'POST':
         form = MailingCommerceOfferFrom(request.POST, request.FILES, instance=mailing)
         if form.is_valid():
-            images = request.FILES.getlist('images')
-            if images:
+            media = request.FILES.getlist('images_and_video')
+            if media:
                 # Валидацию прописал здесь, так как в моделе выдаёт ошибку
                 # needs to have a value for field "id" before this many-to-many relationship can be used.
                 # Временно остался на этом варианте!!
-                if len(images) > MAX_PHOTOS:
+                if len(media) > MAX_PHOTOS:
                     messages.warning(request,
                                      f"Максимальное количество изображений: {MAX_PHOTOS}")
 
-                elif validate_images_size(images):
+                elif validate_images_size(media):
                     messages.warning(request,
                                      f"Максимальный размер изображения {MAX_PHOTO_SIZE / 1024 / 1024} MB")
                     # проверяем, если мы фото передали, то обновляем, если нет, то оставляем как есть
                 else:
                     mailing = form.save(commit=False)
-                    mailing.photo.clear()  # удаляем связи многие-ко-многим со старыми изображениями
-                    for image in request.FILES.getlist('images'):  # добавляем новые изображения
-                        image_model = MultipleImage.objects.create(image=image)
-                        mailing.photo.add(image_model)
+                    mailing.image.clear()  # удаляем связи многие-ко-многим со старыми изображениями
+                    mailing.video.clear()  # удаляем связи многие-ко-многим со старыми видео
+                    for file in media:
+                        if file.content_type.startswith('image'):
+                            image = MultipleImage.objects.create(image=file)
+                            mailing.image.add(MultipleImage.objects.get(image=image))
+                        elif file.content_type.startswith('video'):
+                            video = MultipleVideo.objects.create(video=file)
+                            mailing.video.add(MultipleVideo.objects.get(video=video))
                     mailing.save()
                     logger.info('Commercial offer updated')
                     messages.success(request, 'Данные изменены!!')
                     return redirect('show_mailings')
-
     else:
         form = MailingCommerceOfferFrom(instance=mailing)
     context = {'form': form}

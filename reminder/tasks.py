@@ -42,7 +42,7 @@ def send_messages_task(user: str, mailing_id: int) -> None:
     try:
         # Получаем объект рассылки
         mailing = MailingCommerceOffer.objects.select_related('city', 'company_detail').prefetch_related(
-            'photo').get(id=mailing_id)
+            'image', 'video').get(id=mailing_id)
     except ObjectDoesNotExist:
         logger.error(f"MailingCommerceOffer with id={mailing_id} not found")
         raise ValueError(f"MailingCommerceOffer with id={mailing_id} not found")
@@ -71,14 +71,16 @@ def send_messages_task(user: str, mailing_id: int) -> None:
         **company_data
     )
     # получаем все изображения
-    image_data = list(item for item in mailing.photo.all()) if mailing.photo else []
+    image_data = list(item for item in mailing.image.all()) if mailing.image else []
+    video_data = list(item for item in mailing.video.all()) if mailing.video else []
     # перебираем информацию о компании для template
     # """Отправляем указанное коммерческое предложение"""
     try:
         loop = asyncio.get_event_loop()
         asyncio.set_event_loop(loop)
         task = loop.create_task(
-            send_message_mailing(image_data=image_data, mailing_id=mailing_id, client_list=clients,
+            send_message_mailing(video_data=video_data, image_data=image_data, mailing_id=mailing_id,
+                                 client_list=clients,
                                  commercial_offer=commercial_offer, admin_username='Razzakov_Timur', ))
         loop.run_until_complete(task)
         logger.info('data sent successfully')
