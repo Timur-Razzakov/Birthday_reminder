@@ -6,6 +6,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from jinja2 import Template
 
 from accounts.models import Client, CompanyDetail
+from accounts.models import MyUser
 from congratulations.check_birthday import birthday
 from congratulations.check_holiday import holiday
 from congratulations.delete_old_data import Command
@@ -81,7 +82,7 @@ def send_messages_task(user: str, mailing_id: int) -> None:
         task = loop.create_task(
             send_message_mailing(video_data=video_data, image_data=image_data, mailing_id=mailing_id,
                                  client_list=clients,
-                                 commercial_offer=commercial_offer, admin_username='Razzakov_Timur', ))
+                                 commercial_offer=commercial_offer, admin_username=user, ))
         loop.run_until_complete(task)
         logger.info('data sent successfully')
     except Exception as e:
@@ -111,12 +112,16 @@ def check_birthday_task():
 
 @shared_task
 def send_congratulation_task():
+    # получаем user_name администратора, для отправки результата
+    superuser = MyUser.objects.filter(is_admin=True).first()
+    if superuser:
+        username = superuser.user_name
     """Вызываем функцию, для проверки модели и рассылки по тг поздравлений"""
     try:
         loop = asyncio.get_event_loop()
         asyncio.set_event_loop(loop)
         task = loop.create_task(
-            send_message_holiday(admin_username='Razzakov_Timur', client_data=get_data_from_result()))
+            send_message_holiday(admin_username=username, client_data=get_data_from_result()))
         loop.run_until_complete(task)
         logger.info(f'data sent out')
     except Exception as e:

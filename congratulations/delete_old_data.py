@@ -2,12 +2,12 @@
 Функция для удаления старых записей
 """
 
+import logging
 import os
 import sys
-import time
-import logging
-import django
 from datetime import datetime, timedelta
+
+import django
 from django.core.management.base import BaseCommand
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))

@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 def show_all_client_view(request):
     """Поиск клиентов"""
+
     form = SearchClientForm()
     return render(request, 'home.html', {'form': form})
 

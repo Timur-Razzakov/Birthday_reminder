@@ -1,16 +1,15 @@
 import asyncio
 import datetime
+import logging
 import os
 import sys
 
 import django
 import dotenv
+from pyrogram import Client
 from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
-
-from pyrogram import Client
 from pyrogram.types import InputPhoneContact, InputMediaPhoto, InputMediaVideo
-import logging
 
 dotenv.load_dotenv('.env')
 
@@ -25,8 +24,6 @@ logger = logging.getLogger(__name__)
 from reminder.models import Result, MailingCommerceOffer, Holiday
 
 today = datetime.datetime.today()
-
-from accounts.models import Client as cl
 
 
 async def get_string_session():
@@ -134,7 +131,6 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
 
                         for item in video_data:
                             media.append(InputMediaVideo(f'media/{item}'))
-                        print(media)
                         await app.send_media_group(user_id,
                                                    media=media)
                         await asyncio.sleep(3)
@@ -143,7 +139,6 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
                     await asyncio.sleep(3)
                 else:
                     error_list.append(client.phone_number)
-
                 if len(error_list) != 0:
                     await app.send_message(admin_username,
                                            f"К сожалению, пользователи с этими номерами телефона: "

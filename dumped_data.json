@@ -897,6 +897,617 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2023-04-06T08:31:20.481Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Коммерческое предложение, Все ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Templates_for_massage\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2023-04-06T08:32:53.945Z",
+        "user": 1,
+        "content_type": 14,
+        "object_id": "3",
+        "object_repr": "Коммерческое предложение, Все ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Templates_for_massage\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2023-04-06T08:45:11.018Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "3",
+        "object_repr": "3",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2023-04-06T08:45:11.026Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "2",
+        "object_repr": "2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2023-04-06T13:00:25.596Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "8",
+        "object_repr": "8",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2023-04-06T13:00:25.603Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "7",
+        "object_repr": "7",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2023-04-06T13:00:25.607Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "6",
+        "object_repr": "6",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2023-04-06T13:00:25.611Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "5",
+        "object_repr": "5",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2023-04-06T13:00:25.615Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "4",
+        "object_repr": "4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2023-04-06T13:03:38.334Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "9",
+        "object_repr": "9",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2023-04-06T13:04:26.641Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "16",
+        "object_repr": "media/2023/04/06/20221001-BridalVeilFalls_ROW4621961303_UHD_AxxAm73.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2023-04-06T13:04:26.643Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "15",
+        "object_repr": "media/2023/04/06/20220930-EubalaenaAustralis_ROW4193357269_UHD_IxCudvD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2023-04-06T13:04:26.645Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "14",
+        "object_repr": "media/2023/04/06/20220307-NZTekapo_ROW4001737494_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2023-04-06T13:04:43.725Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "10",
+        "object_repr": "10",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2023-04-06T13:10:44.958Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "13",
+        "object_repr": "13",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2023-04-06T13:10:44.963Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "12",
+        "object_repr": "12",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2023-04-06T13:10:44.966Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "11",
+        "object_repr": "11",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2023-04-06T13:16:10.938Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "14",
+        "object_repr": "14",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2023-04-06T13:17:19.100Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "16",
+        "object_repr": "16",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2023-04-06T13:17:19.105Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "15",
+        "object_repr": "15",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2023-04-06T13:19:57.076Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "17",
+        "object_repr": "17",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2023-04-06T13:21:32.537Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "18",
+        "object_repr": "18",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.126Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "25",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.129Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "24",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_M7p4hCn.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.130Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "23",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.133Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "22",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.137Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "21",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_uI4XOi3.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.140Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "20",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.143Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "19",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_ZWoNp2B.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.146Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "18",
+        "object_repr": "",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.148Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "17",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_P3LD4Jm.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.150Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "13",
+        "object_repr": "media/2023/04/06/20221001-BridalVeilFalls_ROW4621961303_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.153Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "12",
+        "object_repr": "media/2023/04/06/20220930-EubalaenaAustralis_ROW4193357269_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.154Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "11",
+        "object_repr": "media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_CQVpnnY.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.156Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "10",
+        "object_repr": "media/2023/04/06/doc_2023-04-06_15-01-50.mp4",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.158Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "9",
+        "object_repr": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.159Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "8",
+        "object_repr": "media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_MxUbXbO.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.161Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "7",
+        "object_repr": "media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.163Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "6",
+        "object_repr": "media/2023/04/06/20220927-YellowstoneUGB_ROW3329155344_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.165Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "5",
+        "object_repr": "media/2023/04/06/2023-04-06-133700_IIW6Bze.webm",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.167Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "4",
+        "object_repr": "media/2023/04/06/2023-04-06-133700.webm",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.168Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "3",
+        "object_repr": "media/2023/04/06/20230326-WildAnza_ROW9424619205_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.170Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "2",
+        "object_repr": "media/2023/04/06/20230327-NYCClouds_ROW9479364107_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2023-04-06T13:21:57.172Z",
+        "user": 1,
+        "content_type": 13,
+        "object_id": "1",
+        "object_repr": "media/2023/04/06/20230329-NuzzleManatee_ROW5271300722_UHD.jpg",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2023-04-06T13:22:09.959Z",
+        "user": 1,
+        "content_type": 16,
+        "object_id": "19",
+        "object_repr": "19",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2023-04-06T16:51:27.254Z",
+        "user": 1,
+        "content_type": 11,
+        "object_id": "2",
+        "object_repr": "+998993284668",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0440\\u043e\\u0436\\u0434\\u0435\\u043d\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2023-04-06T16:52:34.309Z",
+        "user": 1,
+        "content_type": 15,
+        "object_id": "46",
+        "object_repr": "False",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -1473,6 +2084,42 @@
     }
 },
 {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add multiple video",
+        "content_type": 17,
+        "codename": "add_multiplevideo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change multiple video",
+        "content_type": 17,
+        "codename": "change_multiplevideo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete multiple video",
+        "content_type": 17,
+        "codename": "delete_multiplevideo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view multiple video",
+        "content_type": 17,
+        "codename": "view_multiplevideo"
+    }
+},
+{
     "model": "contenttypes.contenttype",
     "pk": 1,
     "fields": {
@@ -1601,11 +2248,19 @@
     }
 },
 {
-    "model": "sessions.session",
-    "pk": "3xgmwobcgo01gw12ewnavhnppkxchbbu",
+    "model": "contenttypes.contenttype",
+    "pk": 17,
     "fields": {
-        "session_data": ".eJxVjEEOwiAQRe_C2hCn4MC4dO8ZGmYAqRpISrsy3l2bdKHb_977LzWGdSnj2tM8TlGdFajD78ZBHqluIN5DvTUtrS7zxHpT9E67vraYnpfd_TsooZdvLQaQBiYP1oIxPkqko8VsIKNYhiFRTNZ5RAYWxzazT5nQoTkFyqTeH8eSN5M:1pk5pd:zGa1HVBAWxU4sYn76Q01Yidl0Aqqaei0C1wtaW1mqxw",
-        "expire_date": "2023-04-19T16:17:57.955Z"
+        "app_label": "reminder",
+        "model": "multiplevideo"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "y5942rm72zc44s5s6ux48b91e0hqtu3j",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCn4MC4dO8ZGmYAqRpISrsy3l2bdKHb_977LzWGdSnj2tM8TlGdFajD78ZBHqluIN5DvTUtrS7zxHpT9E67vraYnpfd_TsooZdvLQaQBiYP1oIxPkqko8VsIKNYhiFRTNZ5RAYWxzazT5nQoTkFyqTeH8eSN5M:1pkHjL:jqxQyel_sluM_eYp15WqXxb4-Q7cjvulTSWYy9L9_4Q",
+        "expire_date": "2023-04-20T05:00:15.005Z"
     }
 },
 {
@@ -1672,6 +2327,19 @@
     }
 },
 {
+    "model": "accounts.companydetail",
+    "pk": 1,
+    "fields": {
+        "name": "TravelTR",
+        "address": "Uzbekistan street",
+        "phone_number": "+998999951509",
+        "email": "alisherovich98@gmail.com",
+        "web_site": "http://127.0.0.1:8080/admin/accounts34534",
+        "company_motto": "Всегда вместе, всегда За",
+        "logo": ""
+    }
+},
+{
     "model": "accounts.client",
     "pk": 1,
     "fields": {
@@ -1701,7 +2369,7 @@
         "father_name": "Игоревич",
         "email": "alisherovich998@gmail.com",
         "phone_number": "+998993284668",
-        "date_of_birth": "2023-04-05",
+        "date_of_birth": "2023-04-06",
         "inter_passport": "AB9989988",
         "passport": "AB9989777",
         "gender": 1,
@@ -1776,7 +2444,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$390000$hkFQC4JeVDzGf5m0krQZZ8$fzWcS2vDxaejNsVAcLMKODdZhXLMkiaX5vZn6xWYK0M=",
-        "last_login": "2023-04-05T16:17:57.905Z",
+        "last_login": "2023-04-06T05:00:14.953Z",
         "email": "razzakov334@gmail.com",
         "user_name": "Razzakov_Timur",
         "is_active": true,
@@ -1821,7 +2489,7 @@
     "fields": {
         "name": "Коммерческое предложение",
         "channel": 1,
-        "templates_for_massage": "<image href=\"{{ photo }}\"></>\r\n{{message}}\r\n{{name}} {{link}} {{address}}\r\n{{phone_number}}\r\n{{email}}\r\n{{web_site}}\r\n{{company_motto}}",
+        "templates_for_massage": "<image href=\"{{ photo }}\"></>\r\n{{message}}\r\n{{name}} \r\n{{link}} \r\n{{address}}\r\n{{phone_number}}\r\n{{email}}\r\n{{web_site}}",
         "gender": 3
     }
 },
@@ -1889,6 +2557,149 @@
     }
 },
 {
+    "model": "reminder.mailingcommerceoffer",
+    "pk": 1,
+    "fields": {
+        "message": "<p>Тур в Сары-Челек 02-03 июля&nbsp;</p>\r\n\r\n<p>Направление тура: Фергана - Сары-Челек - Фергана.</p>\r\n\r\n<p>Продолжительность:2 дня/1 ночь&nbsp;</p>\r\n\r\n<p>Приглашаем вас отправиться в путешествие к одному из самых красивых озер в Средней Азии &mdash; Сары-Челек. Озеро расположено на территории одноименного национального парка на высоте 1940 метров. Это место с первозданной природой и удивительно красивыми пейзажами. Горная тайга, альпийские луга, цветущие долины и пестрые скалы производят незабываемое впечатление.</p>\r\n\r\n<p>День 1. Суббота. 02 июля.</p>\r\n\r\n<p>05.00.- Сбор на стоянке ТРЦ &quot;Фестиваль&quot;<br />\r\n05.30.- Выезд на границу с Кыргызстаном. Касансай-Баймак, Наманганская область.<br />\r\n08.00.- Прибытие на границу. Переход узбекско-кыргызской границы через КПП &quot;Касансай&quot;.<br />\r\n12.00.- Прибытие в Сары-Челекский биосферный заповедник. На территории почти 24 тысяч гектар раскинулись массивы реликтовых лесов грецкого ореха, арчи и цветные луга.<br />\r\n12:30.- Размещение в отеле на территории заповедника.&nbsp;<br />\r\n13.00.- Обед.<br />\r\n14:30.- Выезд на озеро Сары-Челек. Название озера переводится как &laquo;желтая чаша&raquo; из-за того, что осенью деревья вокруг приобретают желто-оранжевый цвет и отражаясь от водной глади, как бы &laquo;окрашивают&raquo; и само озеро. Длина озера около 7,5 км, а максимальная глубина 246 метров.<br />\r\nСвободное время для прогулок, купания и катания на катере.<br />\r\n18.00.- Возвращение в гостиницу. Ужин.</p>\r\n\r\n<p>День 2. Воскресенье. 03 июля.</p>\r\n\r\n<p>08.30.- Завтрак.&nbsp;<br />\r\n09.30.- Прогулка на лошадях или пешком до верхних озер.<br />\r\n12.30.- Обед и отдых на природе.<br />\r\n14.00.- Отправление на границу с Узбекистаном.<br />\r\n18.00.- Прибытие на границу с Узбекистаном. Переход кыргызско-узбекской границы через КПП &quot;Касансай&quot;.&nbsp;<br />\r\n19.00.- Выезд в Фергану&nbsp;<br />\r\n21.30.-Прибытие в Фергану.</p>\r\n\r\n<p>Окончание экскурсионной программы.</p>\r\n\r\n<p>Стоимость туристической программы на 1 человека - 1 225 000 сум. При группе не менее 20-ти человек.</p>\r\n\r\n<p>В стоимость программы включено:<br />\r\n- Транспорт по всему маршруту (автобус Исузу, микроавтобусы);<br />\r\n- Проживание в гостевых домах (2х-3х местное размещение);<br />\r\n- Питание (2 обеда, 1 завтрак, 1 ужин);&nbsp;<br />\r\n- Услуги сопровождающего гида;<br />\r\n- Входные билеты в заповедник;<br />\r\n- Медицинская страховка;<br />\r\n- Минеральная вода.</p>\r\n\r\n<p>Катание на лошадях и прогулка на катере оплачиваются дополнительно. Катание на катере только с разрешения администрации заповедника.</p>\r\n\r\n<p>Примечание:<br />\r\nДля совершения турпоездки в Сары-Челек нужно при себе иметь загранпаспорт.</p>\r\n\r\n<p>Во время экскурсионной программы будет проведён конкурс, победителя которого ждёт приз от компании &laquo;KadRus VIP Travel W&raquo;.</p>\r\n\r\n<p>Контактное лицо: Мадгазиева Гульнара +998902743505 ; +998973063505</p>",
+        "link": "https://mediastp.com/pG7jdymM",
+        "company_detail": 1,
+        "created_at": "2023-04-06T05:07:54.743Z",
+        "city": null,
+        "sending_status": "True",
+        "image": [],
+        "video": []
+    }
+},
+{
+    "model": "reminder.mailingcommerceoffer",
+    "pk": 20,
+    "fields": {
+        "message": "<p>test-test</p>",
+        "link": "https://mediastp.com/pG7jdymM789gdfsgfadsf",
+        "company_detail": 1,
+        "created_at": "2023-04-06T13:22:21.314Z",
+        "city": 1,
+        "sending_status": "True",
+        "image": [
+            32,
+            33
+        ],
+        "video": [
+            5
+        ]
+    }
+},
+{
+    "model": "reminder.mailingcommerceoffer",
+    "pk": 21,
+    "fields": {
+        "message": "<p>test-test</p>",
+        "link": "https://mediastp.com/pG7jdymM789gdfsgfadsf345",
+        "company_detail": 1,
+        "created_at": "2023-04-06T13:27:35.248Z",
+        "city": 1,
+        "sending_status": "False",
+        "image": [
+            31
+        ],
+        "video": [
+            1,
+            3
+        ]
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 26,
+    "fields": {
+        "image": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_0zeBzOZ.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 27,
+    "fields": {
+        "image": ""
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 28,
+    "fields": {
+        "image": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_tGB3Gs6.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 29,
+    "fields": {
+        "image": "media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 30,
+    "fields": {
+        "image": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_OI7RFZk.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 31,
+    "fields": {
+        "image": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_Sa7LkJT.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 32,
+    "fields": {
+        "image": "media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg"
+    }
+},
+{
+    "model": "reminder.multipleimage",
+    "pk": 33,
+    "fields": {
+        "image": "media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_PxoI9MV.jpg"
+    }
+},
+{
+    "model": "reminder.multiplevideo",
+    "pk": 1,
+    "fields": {
+        "video": "video/doc_2023-04-06_15-01-50_yodHZgi.mp4"
+    }
+},
+{
+    "model": "reminder.multiplevideo",
+    "pk": 2,
+    "fields": {
+        "video": "video/doc_2023-04-06_15-01-50_yHIjyR3.mp4"
+    }
+},
+{
+    "model": "reminder.multiplevideo",
+    "pk": 3,
+    "fields": {
+        "video": "video/video_2023-04-06_19-35-45.mp4"
+    }
+},
+{
+    "model": "reminder.multiplevideo",
+    "pk": 4,
+    "fields": {
+        "video": "video/video_2023-04-06_19-35-45_EbxqvQy.mp4"
+    }
+},
+{
+    "model": "reminder.multiplevideo",
+    "pk": 5,
+    "fields": {
+        "video": "video/video_2023-04-06_19-35-45_Zzowpti.mp4"
+    }
+},
+{
     "model": "reminder.result",
     "pk": 34,
     "fields": {
@@ -1935,20 +2746,80 @@
 },
 {
     "model": "reminder.result",
-    "pk": 46,
+    "pk": 47,
     "fields": {
         "process_date": null,
-        "created_at": "2023-04-05T19:07:00.094Z",
+        "created_at": "2023-04-06T16:53:05.399Z",
+        "channels": 1,
+        "image": 1,
+        "message": "\nУважаемый Тимур Алишерович\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
+        "sending_status": "False",
+        "client": [
+            1
+        ]
+    }
+},
+{
+    "model": "reminder.result",
+    "pk": 48,
+    "fields": {
+        "process_date": null,
+        "created_at": "2023-04-06T16:53:05.400Z",
+        "channels": null,
+        "image": 2,
+        "message": "<p>&nbsp;</p>\r\n\r\n<p>Пусть весна подарит счастье,<br />\r\nНастроение и успех.<br />\r\nПусть обходят вас ненастья,<br />\r\nИ звучит почаще смех!<br />\r\n<br />\r\nНаслаждайтесь, улыбайтесь.<br />\r\nОптимизма и добра.<br />\r\nС праздником 8 Марта!<br />\r\nВы прекрасны, как всегда!</p>",
+        "sending_status": "False",
+        "client": [
+            5
+        ]
+    }
+},
+{
+    "model": "reminder.result",
+    "pk": 49,
+    "fields": {
+        "process_date": null,
+        "created_at": "2023-04-06T16:53:05.413Z",
         "channels": null,
         "image": 3,
         "message": "<p>&nbsp;</p>\r\n\r\n<p>Пусть весна подарит счастье,<br />\r\nНастроение и успех.<br />\r\nПусть обходят вас ненастья,<br />\r\nИ звучит почаще смех!<br />\r\n<br />\r\nНаслаждайтесь, улыбайтесь.<br />\r\nОптимизма и добра.<br />\r\nС праздником 8 Марта!<br />\r\nВы прекрасны, как всегда!</p>",
         "sending_status": "False",
         "client": [
             1,
-            2,
             3,
             4,
-            5
+            5,
+            2
+        ]
+    }
+},
+{
+    "model": "reminder.result",
+    "pk": 50,
+    "fields": {
+        "process_date": null,
+        "created_at": "2023-04-06T16:53:05.415Z",
+        "channels": 1,
+        "image": 1,
+        "message": "\nУважаемый Константин Владиславович\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
+        "sending_status": "False",
+        "client": [
+            4
+        ]
+    }
+},
+{
+    "model": "reminder.result",
+    "pk": 51,
+    "fields": {
+        "process_date": null,
+        "created_at": "2023-04-06T16:53:05.424Z",
+        "channels": 1,
+        "image": 1,
+        "message": "\nУважаемый Никита Игоревич\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
+        "sending_status": "False",
+        "client": [
+            2
         ]
     }
 }
