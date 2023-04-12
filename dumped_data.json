@@ -2257,6 +2257,14 @@
 },
 {
     "model": "sessions.session",
+    "pk": "m8lh6l8v6z728l77rc39vqhsokmz571y",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hCn4MC4dO8ZGmYAqRpISrsy3l2bdKHb_977LzWGdSnj2tM8TlGdFajD78ZBHqluIN5DvTUtrS7zxHpT9E67vraYnpfd_TsooZdvLQaQBiYP1oIxPkqko8VsIKNYhiFRTNZ5RAYWxzazT5nQoTkFyqTeH8eSN5M:1pmbhM:PQPVYudL24DlmamploOeDU69_OTrBLcbQIc0ztgJnvE",
+        "expire_date": "2023-04-26T14:43:48.157Z"
+    }
+},
+{
+    "model": "sessions.session",
     "pk": "y5942rm72zc44s5s6ux48b91e0hqtu3j",
     "fields": {
         "session_data": ".eJxVjEEOwiAQRe_C2hCn4MC4dO8ZGmYAqRpISrsy3l2bdKHb_977LzWGdSnj2tM8TlGdFajD78ZBHqluIN5DvTUtrS7zxHpT9E67vraYnpfd_TsooZdvLQaQBiYP1oIxPkqko8VsIKNYhiFRTNZ5RAYWxzazT5nQoTkFyqTeH8eSN5M:1pkHjL:jqxQyel_sluM_eYp15WqXxb4-Q7cjvulTSWYy9L9_4Q",
@@ -2444,7 +2452,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$390000$hkFQC4JeVDzGf5m0krQZZ8$fzWcS2vDxaejNsVAcLMKODdZhXLMkiaX5vZn6xWYK0M=",
-        "last_login": "2023-04-06T05:00:14.953Z",
+        "last_login": "2023-04-12T14:43:48.070Z",
         "email": "razzakov334@gmail.com",
         "user_name": "Razzakov_Timur",
         "is_active": true,
@@ -2733,12 +2741,12 @@
     "model": "reminder.result",
     "pk": 45,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-05T19:07:00.081Z",
         "channels": null,
         "image": 2,
         "message": "<p>&nbsp;</p>\r\n\r\n<p>Пусть весна подарит счастье,<br />\r\nНастроение и успех.<br />\r\nПусть обходят вас ненастья,<br />\r\nИ звучит почаще смех!<br />\r\n<br />\r\nНаслаждайтесь, улыбайтесь.<br />\r\nОптимизма и добра.<br />\r\nС праздником 8 Марта!<br />\r\nВы прекрасны, как всегда!</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             5
         ]
@@ -2748,12 +2756,12 @@
     "model": "reminder.result",
     "pk": 47,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-06T16:53:05.399Z",
         "channels": 1,
         "image": 1,
         "message": "\nУважаемый Тимур Алишерович\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             1
         ]
@@ -2763,12 +2771,12 @@
     "model": "reminder.result",
     "pk": 48,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-06T16:53:05.400Z",
         "channels": null,
         "image": 2,
         "message": "<p>&nbsp;</p>\r\n\r\n<p>Пусть весна подарит счастье,<br />\r\nНастроение и успех.<br />\r\nПусть обходят вас ненастья,<br />\r\nИ звучит почаще смех!<br />\r\n<br />\r\nНаслаждайтесь, улыбайтесь.<br />\r\nОптимизма и добра.<br />\r\nС праздником 8 Марта!<br />\r\nВы прекрасны, как всегда!</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             5
         ]
@@ -2778,12 +2786,12 @@
     "model": "reminder.result",
     "pk": 49,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-06T16:53:05.413Z",
         "channels": null,
         "image": 3,
         "message": "<p>&nbsp;</p>\r\n\r\n<p>Пусть весна подарит счастье,<br />\r\nНастроение и успех.<br />\r\nПусть обходят вас ненастья,<br />\r\nИ звучит почаще смех!<br />\r\n<br />\r\nНаслаждайтесь, улыбайтесь.<br />\r\nОптимизма и добра.<br />\r\nС праздником 8 Марта!<br />\r\nВы прекрасны, как всегда!</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             1,
             3,
@@ -2797,12 +2805,12 @@
     "model": "reminder.result",
     "pk": 50,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-06T16:53:05.415Z",
         "channels": 1,
         "image": 1,
         "message": "\nУважаемый Константин Владиславович\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             4
         ]
@@ -2812,12 +2820,12 @@
     "model": "reminder.result",
     "pk": 51,
     "fields": {
-        "process_date": null,
+        "process_date": "2023-04-12T14:41:22.085Z",
         "created_at": "2023-04-06T16:53:05.424Z",
         "channels": 1,
         "image": 1,
         "message": "\nУважаемый Никита Игоревич\n<p>&nbsp;</p>\r\n\r\n<p>Поздравляю с&nbsp;днем рождения! Желаю, чтобы здоровье было крепким, благополучие&nbsp;&mdash; вечным, удача&nbsp;&mdash; неизменной, а&nbsp;успех&nbsp;&mdash; постоянным! Пусть твой дом будет полон достатка, счастья, уюта, тепла, радости и&nbsp;смеха. Желаю, чтобы верные друзья всегда были рядом, а&nbsp;близкие люди наполняли жизнь любовью, заботой и&nbsp;спокойствием.</p>",
-        "sending_status": "False",
+        "sending_status": "True",
         "client": [
             2
         ]

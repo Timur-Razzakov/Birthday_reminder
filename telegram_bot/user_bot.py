@@ -55,11 +55,12 @@ async def send_message_holiday(client_data: list, admin_username):
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
     async with Client('account', api_id, api_hash, string_session) as app:
-        client_count = len(client_data)
+        client_count = set()
         client_name = []
         error_list = []
         try:
             for client in client_data:
+                client_count.add(client['phone_number'])
                 get_image = Holiday.objects.get(id=client['images'])
                 client_name.append(client['name'])
                 # сохраняем пользователей и получаем chat_id, если даже он есть, сохраняем (без циклов)
@@ -78,13 +79,13 @@ async def send_message_holiday(client_data: list, admin_username):
                                        f"К сожалению, пользователи с этими номерами телефона: "
                                        f"\n{error_list}\n "
                                        f"пока не пользуется Telegram или он скрыл свой номер телефона")
-            if client_count < 10:
+            if len(client_count) < 10:
                 await app.send_message(admin_username,
                                        f"<b>Сегодня мы поздравили:</b>\n{client_name} ")
                 await asyncio.sleep(5)
             else:
                 await app.send_message(admin_username,
-                                       f"<b>Сегодня мы поздравили:</b> {client_count} пользователей!!")
+                                       f"<b>Сегодня мы поздравили:</b> {len(client_count)} пользователей!!")
         except FloodWait as e:
             logger.exception("FloodWait", e.value)
             await asyncio.sleep(e.value)
@@ -113,9 +114,10 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
     error_list = []  # список номеров, которым не смогли отправить сообщение
 
     async with Client('account', api_id, api_hash, session_string=string_session) as app:
-        client_count = len(client_list)
+        client_count = set()
         try:
             for client in client_list:
+                client_count.add(client.phone_number)
                 # сохраняем пользователей и получаем chat_id, если даже он есть, сохраняем (без циклов)
                 contact: ImportedContacts = await app.import_contacts(
                     [InputPhoneContact(phone=client.phone_number, first_name=client.first_name)]
@@ -145,6 +147,6 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
                                            f"\n{error_list}\n "
                                            f"пока не пользуется Telegram или они скрыли свой номер телефона")
             await app.send_message(admin_username,
-                                   f"<b>Было отправлено:</b> {client_count} пользователям!!")
+                                   f"<b>Было отправлено:</b> {len(client_count)} пользователям!!")
         except FloodWait as e:
             await asyncio.sleep(e.value)
