@@ -3,24 +3,25 @@ RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autocl
 
 # create work dir
 RUN mkdir /app
-# Define work dir
+# устанавливаем рабочую директорию
 WORKDIR /app
 
-# set environment variables
+
+# устанавливаем переменную окружения для проекта
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# Copy reqs
+
+# копируем зависимости из файла requirements.txt
 COPY ./requirements.txt .
-# Install reqs
+
+# устанавливаем зависимости
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
 
+RUN pip install --no-cache-dir -r requirements.txt
 
+# копируем статические файлы
+COPY staticfiles /app/static
 # Copy all stuff
-COPY . /app
+COPY . /app/
 
-
-# run redis
-#CMD docker run -d -p 6379:6379 redis
