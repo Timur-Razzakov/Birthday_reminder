@@ -78,3 +78,14 @@
 2023-04-14 19:40:38 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
 2023-04-14 19:40:41 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
 2023-04-14 19:40:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-14 20:43:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 20:43:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-14 20:44:00 - WARNING  log.log_response:241 - Not Found: /static/ckeditor/ckeditor/ckeditor.js
+2023-04-14 20:44:02 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220929-JohnstonWater_ROW9826697684_UHD_Sa7LkJT.jpg
+2023-04-14 20:44:02 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-14 21:01:27 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-14 21:01:32 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 21:01:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-14 21:02:12 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-14 21:02:13 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 21:02:13 - INFO  aes.<module>:26 - Using TgCrypto

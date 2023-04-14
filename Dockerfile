@@ -20,8 +20,8 @@ RUN pip install --upgrade pip
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# копируем статические файлы
-COPY staticfiles /app/static
-# Copy all stuff
+# Копирование файлов проекта в образ
 COPY . /app/
 
+# Сборка статических файлов
+RUN python manage.py collectstatic --noinput

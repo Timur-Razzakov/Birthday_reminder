@@ -152,16 +152,20 @@ DATE_INPUT_FORMATS = ('%Y.%m.%d', '%d.%m.%Y')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'reminder_service/static'), ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'), ]
+
+STATIC_ROOT = "/static/"
+STATIC_URL = "/static/"
 
 MEDIA_URL = '/media/'
 # исп это при работе без докера
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # при использовании докера!!
-# MEDIA_ROOT = '/code/media/'
+MEDIA_ROOT = '/code/media/'
 
 # ckeditor upload path
 CKEDITOR_UPLOAD_PATH = "uploads/"
