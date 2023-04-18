@@ -89,3 +89,8 @@
 2023-04-14 21:02:12 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/settings.py changed, reloading.
 2023-04-14 21:02:13 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
 2023-04-14 21:02:13 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-14 23:27:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 23:28:14 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/Birthday_reminder/reminder_service/urls.py changed, reloading.
+2023-04-14 23:28:15 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 23:28:19 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-14 23:28:19 - INFO  aes.<module>:26 - Using TgCrypto

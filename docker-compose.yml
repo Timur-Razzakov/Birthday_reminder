@@ -4,14 +4,16 @@ services:
   reminder_service:
     build: ./
     restart: always
+    env_file:
+      - .env
     ports:
-      - "80:8000"
-    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+      - "8000:8000"
     depends_on:
       - db
       - redis
     volumes:
       - /media:/code/media
+      - static_data:/static
   redis:
     image: redis
     ports:
@@ -45,7 +47,15 @@ services:
       - .env
     volumes:
       - data:/var/lib/postgresql/data
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - static_data:/static
+    depends_on:
+      - reminder_service
 volumes:
   data:
   media:
-
+  static_data:
