@@ -1,4 +1,4 @@
-import asyncio
+﻿import asyncio
 import os
 import sys
 
@@ -13,16 +13,18 @@ sys.path.append(proj)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "reminder_service.settings")
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 django.setup()
-
-
 # # -----------------------------------------------------
-def get_session():
-    """Входим в аккаунт телеграмма """
+
+
+async def get_string_session():
+    """Получаем string_session, чтобы отправлять сообщение без задержек,
+    так как pyrogram исп sqlite """
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
-    app = Client('account', api_id, api_hash)
-    return app
+    async with Client('account', api_id, api_hash) as app:
+        string_session = await app.export_session_string()
+    return string_session
 
+# asyncio.run(get_string_session())
 
-app = get_session()
-app.run()
+#workdir=os.environ.get('TG_SESSION')

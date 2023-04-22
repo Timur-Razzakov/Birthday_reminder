@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 
 from celery import shared_task
 from django.core.exceptions import ObjectDoesNotExist
@@ -87,6 +88,12 @@ def send_messages_task(user: str, mailing_id: int) -> None:
         logger.info('data sent successfully')
     except Exception as e:
         # Логирование ошибки
+        print(os.environ.get('TG_SESSION'))
+
+        if os.path.exists(os.environ.get('TG_SESSION')):
+            print("File exists")
+        else:
+            print("File not found")
         logger.error(f'data collected and sent to the bot: {str(e)}')
 
 

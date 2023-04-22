@@ -55,7 +55,8 @@ class MailingCommerceOfferFrom(forms.ModelForm):
         label='Место для вашего предложения',
     )
 
-    images_and_video = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False, )
+    images_and_video = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}),
+                                       required=False, )
 
     class Meta:
         model = MailingCommerceOffer

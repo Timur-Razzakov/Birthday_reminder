@@ -1,0 +1,151 @@
+2023-04-22 12:24:22 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:24:44 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:24:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:25:17 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:25:17 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:25:29 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-22 12:25:29 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-22 12:25:30 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-22 12:25:37 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-22 12:25:40 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-22 12:25:43 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-22 12:25:49 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-22 12:25:59 - INFO  views.login_view:30 - User alisherovich998@gmail.com logged in successfully
+2023-04-22 12:26:05 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:26:05 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:26:05 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:26:10 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:26:10 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:26:10 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:26:25 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:26:26 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:26:26 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:26:26 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:29:04 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/get_session.py changed, reloading.
+2023-04-22 12:29:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:29:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:29:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:29:18 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:29:19 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:29:19 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:29:19 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:29:35 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/tasks.py changed, reloading.
+2023-04-22 12:29:36 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:29:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:29:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:29:54 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:29:55 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:29:55 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:29:55 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:30:24 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:30:28 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:30:29 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:30:29 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:30:29 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:31:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:31:23 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:31:24 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:31:24 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:31:24 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:31:52 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:31:57 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:31:57 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:31:57 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:31:57 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:44:48 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-22 12:44:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:44:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:44:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:45:03 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:45:03 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:45:03 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:45:05 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 12:45:06 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 12:45:06 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 12:45:06 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 12:45:29 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-22 12:45:30 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:45:30 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:46:18 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/get_session.py changed, reloading.
+2023-04-22 12:46:19 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 12:46:19 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 12:59:08 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-22 12:59:08 - INFO  connection.connect:47 - Connecting...
+2023-04-22 12:59:08 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 12:59:10 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-22 12:59:10 - INFO  connection.close:66 - Disconnected
+2023-04-22 12:59:10 - INFO  connection.connect:47 - Connecting...
+2023-04-22 12:59:20 - WARNING  connection.connect:50 - Unable to connect due to network issues: Connection timed out
+2023-04-22 12:59:21 - INFO  connection.connect:47 - Connecting...
+2023-04-22 12:59:21 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 12:59:21 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-22 12:59:22 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-22 12:59:22 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-22 12:59:22 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-22 12:59:22 - INFO  session.start:155 - Session started
+2023-04-22 12:59:22 - INFO  session.ping_worker:272 - PingTask started
+2023-04-22 12:59:44 - INFO  connection.connect:47 - Connecting...
+2023-04-22 12:59:44 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 12:59:44 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-22 12:59:45 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-22 12:59:45 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-22 12:59:45 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-22 12:59:45 - INFO  session.start:155 - Session started
+2023-04-22 12:59:45 - INFO  session.ping_worker:272 - PingTask started
+2023-04-22 12:59:45 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-22 12:59:45 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-22 12:59:45 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-22 12:59:45 - INFO  connection.close:66 - Disconnected
+2023-04-22 12:59:45 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-22 12:59:45 - INFO  session.stop:180 - Session stopped
+2023-04-22 13:00:30 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 13:00:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 13:00:35 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-22 13:00:35 - INFO  connection.connect:47 - Connecting...
+2023-04-22 13:00:35 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 13:00:36 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-22 13:00:36 - INFO  connection.close:66 - Disconnected
+2023-04-22 13:00:38 - INFO  connection.connect:47 - Connecting...
+2023-04-22 13:00:38 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 13:00:38 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-22 13:00:39 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-22 13:00:39 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-22 13:00:39 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-22 13:00:39 - INFO  session.start:155 - Session started
+2023-04-22 13:00:39 - INFO  session.ping_worker:272 - PingTask started
+2023-04-22 13:01:05 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-22 13:01:07 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-22 13:01:07 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-22 13:01:07 - INFO  connection.close:66 - Disconnected
+2023-04-22 13:01:07 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-22 13:01:07 - INFO  session.stop:180 - Session stopped
+2023-04-22 13:01:33 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 13:01:35 - INFO  connection.connect:47 - Connecting...
+2023-04-22 13:01:35 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-22 13:01:35 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-22 13:01:36 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-22 13:01:36 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-22 13:01:36 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-22 13:01:36 - INFO  session.start:155 - Session started
+2023-04-22 13:01:37 - INFO  session.ping_worker:272 - PingTask started
+2023-04-22 13:01:37 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-22 13:01:39 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-22 13:01:39 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-22 13:01:39 - INFO  connection.close:66 - Disconnected
+2023-04-22 13:01:39 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-22 13:01:39 - INFO  session.stop:180 - Session stopped
+2023-04-22 13:01:47 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 13:01:48 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 13:01:48 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 13:01:48 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 13:02:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/get_session.py changed, reloading.
+2023-04-22 13:02:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 13:02:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 13:02:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 13:02:16 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-22 13:02:17 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-22 13:02:17 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/2023-01-23-184304_0oLMCVw.jpg
+2023-04-22 13:02:17 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/20/20230320-PurpleCrocus_ROW6467551673_UHD.jpg
+2023-04-22 13:04:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-22 13:04:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-22 13:04:10 - INFO  aes.<module>:26 - Using TgCrypto

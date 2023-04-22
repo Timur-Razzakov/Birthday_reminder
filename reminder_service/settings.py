@@ -51,7 +51,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
 # Application definition
 
@@ -148,16 +148,17 @@ USE_TZ = True
 DATE_INPUT_FORMATS = ('%Y.%m.%d', '%d.%m.%Y')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
+DATA_UPLOAD_MAX_MEMORY_SIZE = 52428800  # установите максимальный размер в байтах (например, 50 МБ)
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "reminder_service/static")]
 
-MEDIA_URL = '/media/'
 # исп это при работе без докера
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 # при использовании докера!!
-MEDIA_ROOT = '/code/media/'
+# MEDIA_ROOT = 'media/'
 # ckeditor upload path
 CKEDITOR_UPLOAD_PATH = "uploads/"
 # Default primary key field type

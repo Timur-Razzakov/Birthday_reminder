@@ -3,26 +3,39 @@ version: "3"
 services:
   reminder_service:
     build: ./
-    restart: always
+    #gunicorn reminder_service.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - /media:/home/app/media
+      - static_volume:/home/app/staticfiles
     env_file:
       - .env
-    ports:
-      - "8000:8000"
+    expose:
+      - 8000
+    restart: always
     depends_on:
       - db
       - redis
+  nginx:
+    build: ./nginx
     volumes:
-      - /media:/code/media
-      - static_data:/static
+      - static_volume:/home/app/staticfiles
+      - ./nginx:/etc/nginx/conf.d
+      - /media:/home/app/media
+    ports:
+      - "80:80"
+    depends_on:
+      - reminder_service
   redis:
-    image: redis
+    image: redis:alpine
     ports:
       - "6379:6379"
   celery:
     build: .
-    command: celery -A reminder_service worker -l info
+    restart: always
     volumes:
-      - .:/code
+      - /media:/home/app/media
+    env_file:
+      - .env
     depends_on:
       - redis
       - db
@@ -31,9 +44,8 @@ services:
       - redis
   schedule:
     build: .
-    command: celery -A reminder_service beat -l info
     volumes:
-      - .:/code
+      - /media:/home/app/media
     depends_on:
       - db
       - redis
@@ -47,15 +59,8 @@ services:
       - .env
     volumes:
       - data:/var/lib/postgresql/data
-  nginx:
-    build: ./nginx
-    ports:
-      - "80:80"
-    volumes:
-      - static_data:/static
-    depends_on:
-      - reminder_service
 volumes:
   data:
   media:
-  static_data:
+  static_volume:
+

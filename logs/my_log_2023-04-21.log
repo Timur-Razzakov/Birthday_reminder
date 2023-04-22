@@ -1,0 +1,735 @@
+2023-04-21 14:49:46 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 14:49:55 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 14:49:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 14:50:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 14:50:11 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 14:50:16 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-21 14:50:19 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-21 14:50:27 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-21 14:50:31 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-21 14:50:35 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-21 14:50:38 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-21 14:50:51 - INFO  views.login_view:30 - User alisherovich998@gmail.com logged in successfully
+2023-04-21 14:50:57 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:51:07 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (0/20) now.
+2023-04-21 14:51:07 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-04-21 14:51:08 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2023-04-21 14:51:09 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2023-04-21 14:51:10 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2023-04-21 14:51:11 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2023-04-21 14:51:12 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2023-04-21 14:51:13 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2023-04-21 14:51:14 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2023-04-21 14:51:15 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2023-04-21 14:51:16 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2023-04-21 14:51:17 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2023-04-21 14:51:18 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2023-04-21 14:51:19 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2023-04-21 14:51:20 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2023-04-21 14:51:21 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2023-04-21 14:51:22 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2023-04-21 14:51:23 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2023-04-21 14:51:24 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2023-04-21 14:51:25 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2023-04-21 14:51:26 - CRITICAL  redis.reconnect_on_error:124 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2023-04-21 14:51:26 - ERROR  log.log_response:241 - Internal Server Error: /send_mailing/23/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 159, in send_mailing_view
+    send_messages_task.delay(user.user_name, id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2023-04-21 14:51:33 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:51:34 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:51:36 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (0/20) now.
+2023-04-21 14:51:36 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-04-21 14:51:37 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2023-04-21 14:51:38 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2023-04-21 14:51:39 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2023-04-21 14:51:40 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2023-04-21 14:51:41 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2023-04-21 14:51:42 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2023-04-21 14:51:43 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2023-04-21 14:51:44 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2023-04-21 14:51:45 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2023-04-21 14:51:46 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2023-04-21 14:51:47 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2023-04-21 14:51:48 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2023-04-21 14:51:49 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2023-04-21 14:51:50 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2023-04-21 14:51:51 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2023-04-21 14:51:52 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2023-04-21 14:51:53 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2023-04-21 14:51:54 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2023-04-21 14:51:55 - CRITICAL  redis.reconnect_on_error:124 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2023-04-21 14:51:55 - ERROR  log.log_response:241 - Internal Server Error: /send_mailing/23/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 159, in send_mailing_view
+    send_messages_task.delay(user.user_name, id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2023-04-21 14:53:47 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 14:53:48 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 14:53:51 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (0/20) now.
+2023-04-21 14:53:51 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-04-21 14:53:52 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2023-04-21 14:53:53 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2023-04-21 14:53:54 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2023-04-21 14:53:55 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2023-04-21 14:53:56 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2023-04-21 14:53:57 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2023-04-21 14:53:57 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:53:58 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2023-04-21 14:53:59 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (0/20) now.
+2023-04-21 14:53:59 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-04-21 14:53:59 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2023-04-21 14:54:00 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2023-04-21 14:54:00 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2023-04-21 14:54:01 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2023-04-21 14:54:01 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2023-04-21 14:54:02 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2023-04-21 14:54:02 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2023-04-21 14:54:03 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2023-04-21 14:54:03 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2023-04-21 14:54:04 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2023-04-21 14:54:04 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2023-04-21 14:54:05 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2023-04-21 14:54:05 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2023-04-21 14:54:06 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2023-04-21 14:54:06 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2023-04-21 14:54:07 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2023-04-21 14:54:07 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2023-04-21 14:54:08 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2023-04-21 14:54:08 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2023-04-21 14:54:09 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2023-04-21 14:54:09 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2023-04-21 14:54:10 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2023-04-21 14:54:10 - CRITICAL  redis.reconnect_on_error:124 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2023-04-21 14:54:10 - ERROR  log.log_response:241 - Internal Server Error: /send_mailing/23/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 159, in send_mailing_view
+    send_messages_task.delay(user.user_name, id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2023-04-21 14:54:11 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2023-04-21 14:54:12 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2023-04-21 14:54:13 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2023-04-21 14:54:14 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2023-04-21 14:54:15 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2023-04-21 14:54:16 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2023-04-21 14:54:17 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2023-04-21 14:54:18 - CRITICAL  redis.reconnect_on_error:124 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2023-04-21 14:54:18 - ERROR  log.log_response:241 - Internal Server Error: /send_mailing/23/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 159, in send_mailing_view
+    send_messages_task.delay(user.user_name, id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+2023-04-21 14:55:18 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 14:55:31 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:55:33 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 14:55:34 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 14:59:27 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 14:59:27 - INFO  connection.connect:47 - Connecting...
+2023-04-21 14:59:27 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 14:59:28 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 14:59:28 - INFO  connection.close:66 - Disconnected
+2023-04-21 14:59:28 - INFO  connection.connect:47 - Connecting...
+2023-04-21 14:59:29 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 14:59:29 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 14:59:30 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 14:59:30 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 14:59:30 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 14:59:30 - INFO  session.start:155 - Session started
+2023-04-21 14:59:30 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 14:59:54 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:00:26 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:00:28 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 15:00:28 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:00:44 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:00:53 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:01:36 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 15:01:37 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:02:17 - INFO  idle.signal_handler:75 - Stop signal received (SIGINT). Exiting...
+2023-04-21 15:02:20 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:02:20 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:02:20 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:02:20 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:02:20 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:05:11 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 15:05:11 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:05:11 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:05:13 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 15:05:13 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:05:15 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:05:15 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:05:15 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:05:16 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:05:16 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:05:16 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:05:16 - INFO  session.start:155 - Session started
+2023-04-21 15:05:16 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:05:44 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:05:44 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:05:44 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:05:44 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:05:44 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:05:44 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:06:03 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:06:03 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:06:03 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:06:04 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:06:04 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:06:04 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:06:04 - INFO  session.start:155 - Session started
+2023-04-21 15:06:04 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:06:04 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:06:04 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:06:04 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:06:04 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:06:04 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:06:04 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:06:33 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:06:33 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:06:33 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:06:34 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:06:34 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:06:34 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:06:34 - INFO  session.start:155 - Session started
+2023-04-21 15:06:34 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:06:34 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:06:35 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:06:35 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:06:35 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:06:35 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:06:35 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:08:54 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/user_bot.py changed, reloading.
+2023-04-21 15:08:54 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 15:08:55 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:08:56 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:08:57 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:08:57 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:08:57 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:08:57 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:08:57 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:08:57 - INFO  session.start:155 - Session started
+2023-04-21 15:08:57 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:08:58 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:08:59 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:08:59 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:08:59 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:08:59 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:08:59 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:09:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:09:37 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 15:09:37 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:09:37 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:09:39 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 15:09:39 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:09:40 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:09:40 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:09:40 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:09:41 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:09:41 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:09:41 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:09:41 - INFO  session.start:155 - Session started
+2023-04-21 15:09:41 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:10:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:10:08 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 15:10:08 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:10:09 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:10:10 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 15:10:10 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:10:11 - INFO  connection.connect:47 - Connecting...
+2023-04-21 15:10:11 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 15:10:11 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 15:10:12 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 15:10:12 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 15:10:12 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 15:10:12 - INFO  session.start:155 - Session started
+2023-04-21 15:10:12 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 15:10:31 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 15:10:32 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 15:10:32 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 15:10:32 - INFO  connection.close:66 - Disconnected
+2023-04-21 15:10:32 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 15:10:32 - INFO  session.stop:180 - Session stopped
+2023-04-21 15:11:16 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 15:11:16 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:11:41 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/get_session.py changed, reloading.
+2023-04-21 15:11:41 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 15:11:42 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:11:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:11:52 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 15:11:52 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:13:27 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 15:13:36 - INFO  views.send_mailing_view:160 - data passed to celery task
+2023-04-21 15:13:36 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-21 15:15:12 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 20:46:54 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 20:46:57 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 20:47:21 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-21 20:47:21 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-21 22:08:31 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 22:08:31 - INFO  connection.connect:47 - Connecting...
+2023-04-21 22:08:31 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 22:08:32 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 22:08:32 - INFO  connection.close:66 - Disconnected
+2023-04-21 22:08:32 - INFO  connection.connect:47 - Connecting...
+2023-04-21 22:08:32 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 22:08:32 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 22:08:33 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 22:08:33 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 22:08:33 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 22:08:33 - INFO  session.start:155 - Session started
+2023-04-21 22:08:33 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 22:08:58 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 22:08:58 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 22:08:58 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 22:08:58 - INFO  connection.close:66 - Disconnected
+2023-04-21 22:08:58 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 22:08:58 - INFO  session.stop:180 - Session stopped
+2023-04-21 22:15:30 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 22:15:30 - INFO  connection.connect:47 - Connecting...
+2023-04-21 22:15:30 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 22:15:32 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 22:15:32 - INFO  connection.close:66 - Disconnected
+2023-04-21 22:15:32 - INFO  connection.connect:47 - Connecting...
+2023-04-21 22:15:32 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 22:15:32 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 22:15:33 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 22:15:33 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 22:15:33 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 22:15:33 - INFO  session.start:155 - Session started
+2023-04-21 22:15:33 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 22:15:48 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 22:15:48 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 22:15:48 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 22:15:48 - INFO  connection.close:66 - Disconnected
+2023-04-21 22:15:48 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 22:15:48 - INFO  session.stop:180 - Session stopped
+2023-04-21 23:06:00 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 23:06:00 - INFO  connection.connect:47 - Connecting...
+2023-04-21 23:06:00 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 23:06:02 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 23:06:02 - INFO  connection.close:66 - Disconnected
+2023-04-21 23:06:02 - INFO  connection.connect:47 - Connecting...
+2023-04-21 23:06:02 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 23:06:02 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 23:06:03 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 23:06:03 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 23:06:03 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 23:06:03 - INFO  session.start:155 - Session started
+2023-04-21 23:06:03 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 23:06:24 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 23:06:24 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 23:06:24 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 23:06:24 - INFO  connection.close:66 - Disconnected
+2023-04-21 23:06:24 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 23:06:24 - INFO  session.stop:180 - Session stopped
+2023-04-21 23:06:55 - INFO  auth.create:82 - Start creating a new auth key on DC2
+2023-04-21 23:06:55 - INFO  connection.connect:47 - Connecting...
+2023-04-21 23:06:55 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 23:06:57 - INFO  auth.create:267 - Done auth key exchange: DhGenOk
+2023-04-21 23:06:57 - INFO  connection.close:66 - Disconnected
+2023-04-21 23:06:57 - INFO  connection.connect:47 - Connecting...
+2023-04-21 23:06:57 - INFO  connection.connect:54 - Connected! Production DC2 - IPv4
+2023-04-21 23:06:57 - INFO  session.recv_worker:294 - NetworkTask started
+2023-04-21 23:06:58 - INFO  session.start:139 - Session initialized: Layer 152
+2023-04-21 23:06:58 - INFO  session.start:140 - Device: CPython 3.8.10 - Pyrogram 2.0.102
+2023-04-21 23:06:58 - INFO  session.start:141 - System: Linux 5.15.0-69-generic (en)
+2023-04-21 23:06:58 - INFO  session.start:155 - Session started
+2023-04-21 23:06:58 - INFO  session.ping_worker:272 - PingTask started
+2023-04-21 23:07:14 - INFO  dispatcher.start:154 - Started 12 HandlerTasks
+2023-04-21 23:07:14 - INFO  dispatcher.stop:167 - Stopped 12 HandlerTasks
+2023-04-21 23:07:14 - INFO  session.ping_worker:291 - PingTask stopped
+2023-04-21 23:07:14 - INFO  connection.close:66 - Disconnected
+2023-04-21 23:07:14 - INFO  session.recv_worker:315 - NetworkTask stopped
+2023-04-21 23:07:14 - INFO  session.stop:180 - Session stopped

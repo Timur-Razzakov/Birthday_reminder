@@ -11,6 +11,8 @@ from pyrogram.errors import FloodWait
 from pyrogram.raw.base.contacts import ImportedContacts
 from pyrogram.types import InputPhoneContact, InputMediaPhoto, InputMediaVideo
 
+from telegram_bot.get_session import get_string_session
+
 dotenv.load_dotenv('.env')
 
 proj = os.path.dirname(os.path.abspath('../manage.py'))
@@ -26,19 +28,20 @@ from reminder.models import Result, MailingCommerceOffer, Holiday
 today = datetime.datetime.today()
 
 
-async def get_string_session():
-    """Получаем string_session, чтобы отправлять сообщение без задержек,
-    так как pyrogram исп sqlite """
-    api_id = os.environ.get('API_ID')
-    api_hash = os.environ.get('API_HASH')
-    async with Client('account', api_id, api_hash) as app:
-        string_session = await app.export_session_string()
-    return string_session
-
-
+#
+# async def get_string_session():
+#     """Получаем string_session, чтобы отправлять сообщение без задержек,
+#     так как pyrogram исп sqlite """
+#     api_id = os.environ.get('API_ID')
+#     api_hash = os.environ.get('API_HASH')
+#     async with Client('account', api_id, api_hash) as app:
+#         string_session = await app.export_session_string()
+#     return string_session
+#
 #
 # #
-# asyncio.run(get_string_session())
+# # #
+# # asyncio.run(get_string_session())
 
 
 def update_result(result_id):

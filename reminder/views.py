@@ -139,10 +139,10 @@ def update_mailing_view(request, id):
                         elif file.content_type.startswith('video'):
                             video = MultipleVideo.objects.create(video=file)
                             mailing.video.add(MultipleVideo.objects.get(video=video))
-                    mailing.save()
-                    logger.info('Commercial offer updated')
-                    messages.success(request, 'Данные изменены!!')
-                    return redirect('show_mailings')
+            mailing.save()
+            logger.info('Commercial offer updated')
+            messages.success(request, 'Данные изменены!!')
+            return redirect('show_mailings')
     else:
         form = MailingCommerceOfferFrom(instance=mailing)
     context = {'form': form}
