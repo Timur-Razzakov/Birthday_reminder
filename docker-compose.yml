@@ -34,6 +34,7 @@ services:
     restart: always
     volumes:
       - /media:/home/app/media
+    command: sh -c "python -m celery -A reminder_service worker "
     env_file:
       - .env
     depends_on:
@@ -46,6 +47,7 @@ services:
     build: .
     volumes:
       - /media:/home/app/media
+    command: sh -c "python -m celery -A reminder_service beat"
     depends_on:
       - db
       - redis

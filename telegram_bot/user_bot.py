@@ -138,10 +138,9 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
                             media.append(InputMediaVideo(f'media/{item}'))
                         await app.send_media_group(user_id,
                                                    media=media)
-                        await asyncio.sleep(3)
                     await app.send_message(user_id, commercial_offer)
                     update_mailing(mailing_id)
-                    await asyncio.sleep(3)
+                    await asyncio.sleep(5)
                 else:
                     error_list.append(client.phone_number)
                 if len(error_list) != 0:

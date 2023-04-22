@@ -149,3 +149,4 @@
 2023-04-22 13:04:09 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/telegram_bot/user_bot.py changed, reloading.
 2023-04-22 13:04:10 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
 2023-04-22 13:04:10 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-22 15:32:17 - INFO  aes.<module>:26 - Using TgCrypto
