@@ -1,10 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %} Job Finder {% endblock %}
+{% block title %} Holiday {% endblock %}
 
 {% block content %}
 <main role="main">
-    <!--Формируем список вакансий-->
     <h3 class="my-4 text-center">Список всех Праздников.</h3>
 
     {% if object_list %}
@@ -13,8 +12,10 @@
             <div class="row">
                 {% for obj in object_list %}
                 <div class="col-md-4">
+
                     <div class="card mb-4 shadow-sm">
-                        <div class="text-center"><h4>{{obj.name}}</h4></div>
+
+                        <h3 class="my-1 text-center">{{obj.name}}</h3>
                         <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                              xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
                              preserveAspectRatio="xMidYMid slice" focusable="false">
@@ -34,7 +35,8 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <form action="{% url 'update_holiday' obj.id %}" method="get">
-                                        <button type="submit" class="btn btn-sm btn-outline-secondary">Редактировать
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                            Редактировать
                                         </button>
                                     </form>
                                 </div>
@@ -75,11 +77,9 @@
                 {% endif %}
             </ul>
         </nav>
-        {% else %}
-
-        <h3 class=" my-4 text-center">Праздники пока не добавлены!!</h3>
-
-        {% endif %}
     </div>
-    </main>
-    {% endblock %}
+    {% else %}
+    <h3 class=" my-4 text-center">Праздники пока не добавлены!!</h3>
+    {% endif %}
+</main>
+{% endblock %}

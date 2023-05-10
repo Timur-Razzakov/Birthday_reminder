@@ -156,7 +156,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "reminder_service/static")]
 
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # ckeditor upload path
 CKEDITOR_UPLOAD_PATH = "uploads/"

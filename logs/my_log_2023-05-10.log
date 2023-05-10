@@ -1,0 +1,114 @@
+2023-05-10 14:05:11 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 14:19:50 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 14:19:51 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 14:20:00 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-05-10 14:20:07 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzakov334@gmail.com
+2023-05-10 14:20:11 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzakov334@gmail.com
+2023-05-10 14:20:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 14:20:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 14:20:45 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzakov334@gmail.com
+2023-05-10 14:20:55 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-05-10 14:50:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 14:50:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 14:50:51 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-05-10 14:59:00 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-05-10 14:59:04 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-05-10 14:59:11 - INFO  views.login_view:30 - User alisherovich998@gmail.com logged in successfully
+2023-05-10 14:59:20 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 14:59:20 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 14:59:20 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 14:59:23 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 14:59:23 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 14:59:23 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 14:59:24 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 14:59:24 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 14:59:24 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:00:28 - INFO  views.add_holiday_view:180 -  Тимур Алишерович Раззаков has been added
+2023-05-10 15:00:49 - INFO  views.add_holiday_view:180 -  telegram_botsdsd has been added
+2023-05-10 15:00:57 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:00:57 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:00:57 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:01:31 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:01:31 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:01:31 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:13 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:13 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:02:13 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:32 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:32 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:32 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:02:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:02:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:50 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:02:50 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:50 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:58 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:58 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:02:58 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:59 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:02:59 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:02:59 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:03:07 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:03:07 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:03:07 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:03:21 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-05-10 15:03:27 - INFO  views.login_view:30 - User alisherovich998@gmail.com logged in successfully
+2023-05-10 15:03:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:03:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:03:33 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:03:58 - INFO  views.add_holiday_view:180 -  sfsdafsdafdsafsad has been added
+2023-05-10 15:04:02 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:04:02 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:04:02 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg
+2023-05-10 15:04:29 - ERROR  log.log_response:241 - Internal Server Error: /update_holiday/1/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 202, in update_holiday_view
+    if form.is_valid():
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/forms/forms.py", line 205, in is_valid
+    return self.is_bound and not self.errors
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/forms/forms.py", line 200, in errors
+    self.full_clean()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/forms/forms.py", line 439, in full_clean
+    self._post_clean()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/forms/models.py", line 492, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1448, in full_clean
+    self.clean_fields(exclude=exclude)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1500, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 756, in clean
+    self.run_validators(value)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/__init__.py", line 708, in run_validators
+    v(value)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder_service/custom_validators.py", line 63, in validate_photo_size
+    filesize = photo.size
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 73, in size
+    return self.storage.size(self.name)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 390, in size
+    return os.path.getsize(self.path(name))
+  File "/usr/lib/python3.8/genericpath.py", line 50, in getsize
+    return os.stat(filename).st_size
+FileNotFoundError: [Errno 2] No such file or directory: '/home/timur/PycharmProjects/Univer/birthday_reminder/media/holiday/2023/04/05/20230321-ColourDay_ROW6649031679_UHD.jpg'
+2023-05-10 15:04:39 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:04:39 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:08:21 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:08:21 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:08:22 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:08:22 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:09:06 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-05-10 15:09:07 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 15:09:07 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 15:09:10 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20221006-BayofBiscay_ROW7713428720_UHD.jpg
+2023-05-10 15:09:10 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:11:05 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:13:39 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 15:13:40 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 15:14:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-05-10 15:14:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-05-10 15:14:10 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg
+2023-05-10 15:14:11 - WARNING  log.log_response:241 - Not Found: /media/holiday/2023/04/05/20220929-JohnstonWater_ROW9826697684_UHD.jpg

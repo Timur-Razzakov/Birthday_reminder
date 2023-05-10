@@ -47,7 +47,7 @@ def searchView(request):
         if phone_number:
             _filter['phone_number'] = phone_number
         qs = Client.objects.filter(**_filter).order_by('date_of_birth')
-        paginator = Paginator(qs, 5)
+        paginator = Paginator(qs, 6)
         page_number = request.GET.get('page')
         page_obj = paginator.get_page(page_number)
         context['object_list'] = page_obj
@@ -58,7 +58,7 @@ def show_all_clients_view(request):
     """Выводит все компании"""
     form = SearchClientForm()
     get_clients = Client.objects.all().order_by('first_name')
-    paginator = Paginator(get_clients, 5)
+    paginator = Paginator(get_clients, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'clients_list.html', {'object_list': page_obj, 'form': form})
@@ -103,7 +103,7 @@ def add_mailing_view(request):
 
 def show_mailings_view(request):
     get_mailings = MailingCommerceOffer.objects.all().order_by('sending_status')
-    paginator = Paginator(get_mailings, 5)
+    paginator = Paginator(get_mailings, 6)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'show_mailing.html', {'object_list': page_obj})
@@ -187,7 +187,7 @@ def add_holiday_view(request):
 
 
 def show_holiday_view(request):
-    get_holidays = Holiday.objects.all().order_by('date')
+    get_holidays = Holiday.objects.all()
     paginator = Paginator(get_holidays, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
