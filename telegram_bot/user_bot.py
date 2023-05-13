@@ -28,22 +28,6 @@ from reminder.models import Result, MailingCommerceOffer, Holiday
 today = datetime.datetime.today()
 
 
-#
-# async def get_string_session():
-#     """Получаем string_session, чтобы отправлять сообщение без задержек,
-#     так как pyrogram исп sqlite """
-#     api_id = os.environ.get('API_ID')
-#     api_hash = os.environ.get('API_HASH')
-#     async with Client('account', api_id, api_hash) as app:
-#         string_session = await app.export_session_string()
-#     return string_session
-#
-#
-# #
-# # #
-# # asyncio.run(get_string_session())
-
-
 def update_result(result_id):
     """Обновляем модель Result, Sending_status=True и process_date=today"""
     client = Result.objects.get(id=result_id)
@@ -52,12 +36,16 @@ def update_result(result_id):
     client.save()
 
 
+# место хранения сессий
+workdir = os.environ.get('SESSIONS_FOLDER')
+
+
 async def send_message_holiday(client_data: list, admin_username):
     """Получаем chart_id пользователя и рассылаем сообщения из модели Result"""
     string_session = await get_string_session()
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
-    async with Client('account', api_id, api_hash, string_session) as app:
+    async with Client(workdir, api_id, api_hash, string_session) as app:
         client_count = set()
         client_name = []
         error_list = []
@@ -116,7 +104,7 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
     """Получаем chart_id пользователя и рассылаем сообщения"""
     error_list = []  # список номеров, которым не смогли отправить сообщение
 
-    async with Client('account', api_id, api_hash, session_string=string_session) as app:
+    async with Client(workdir, api_id, api_hash, session_string=string_session) as app:
         client_count = set()
         try:
             for client in client_list:

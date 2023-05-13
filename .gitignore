@@ -6,4 +6,5 @@
 *.session
 /reminder/signals.py
 media/*
+logs/*.log
 staticfiles/

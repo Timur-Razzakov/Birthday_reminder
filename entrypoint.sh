@@ -11,6 +11,6 @@ python manage.py migrate --no-input
 gunicorn reminder_service.wsgi:application --bind 0.0.0.0:8000
 #python manage.py runserver 0.0.0.0:8000
 ## run celery worker
-#python -m celery -A reminder_service worker -l info
-## run schedule
-#python -m celery -A reminder_service beat -l info
+python -m celery -A reminder_service worker -l info
+# run schedule
+python -m celery -A reminder_service beat -l info

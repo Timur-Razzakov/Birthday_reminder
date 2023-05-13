@@ -52,8 +52,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
-
 # Application definition
+SESSIONS_DIR = os.path.join(BASE_DIR, 'sessions')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
