@@ -16,7 +16,6 @@ django.setup()
 
 # # -----------------------------------------------------
 
-
 workdir = os.environ.get('SESSIONS_FOLDER')
 
 
