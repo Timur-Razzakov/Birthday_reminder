@@ -18,16 +18,16 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 CELERY_BEAT_SCHEDULE = {
     'run-every-day-at-5': {
         'task': 'reminder.tasks.check_holiday_task',
-        'schedule': crontab(hour=5, minute=53),
+        'schedule': crontab(hour=6, minute=0),
     },
 
     'run-every-day-at-7': {
         'task': 'reminder.tasks.check_birthday_task',
-        'schedule': crontab(hour=7, minute=30),
+        'schedule': crontab(hour=7, minute=0),
     },
     'run-every-day-at-9': {
         'task': 'reminder.tasks.send_congratulation_task',
-        'schedule': crontab(hour=9, minute=0),
+        'schedule': crontab(hour=8, minute=30),
     },
     'run-every-week-at-9': {
         'task': 'reminder.tasks.delete_old_task',

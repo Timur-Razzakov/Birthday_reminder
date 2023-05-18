@@ -1,9 +1,10 @@
-version: "3"
+version: "3.7"
 
 services:
   reminder_service:
-    build: ./
-    #gunicorn reminder_service.wsgi:application --bind 0.0.0.0:8000
+    build:
+      context: ./
+      dockerfile: Dockerfile-reminder_service
     volumes:
       - /media:/home/app/media
       - static_volume:/home/app/staticfiles
@@ -34,10 +35,13 @@ services:
     env_file:
       - .env
   celery:
-    build: .
+    build:
+      context: ./
+      dockerfile: Dockerfile-celery
     restart: always
     volumes:
       - /media:/home/app/media
+    command: bash -c "python -m celery -A reminder_service worker --loglevel=info --logfile=file_celery.log"
     env_file:
       - .env
     depends_on:
@@ -47,9 +51,12 @@ services:
     links:
       - redis
   schedule:
-    build: .
+    build:
+      context: ./
+      dockerfile: Dockerfile-shedule
     volumes:
       - /media:/home/app/media
+    command: bash -c "python -m celery -A reminder_service beat --loglevel=info --logfile=file_shedule.log"
     depends_on:
       - db
       - redis

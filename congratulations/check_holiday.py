@@ -49,3 +49,5 @@ def holiday():
 
         logger.info("data to model 'Result' saved")
     logger.info("There are no holidays today")
+
+
