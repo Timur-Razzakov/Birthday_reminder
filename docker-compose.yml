@@ -41,7 +41,6 @@ services:
     restart: always
     volumes:
       - /media:/home/app/media
-    command: bash -c "python -m celery -A reminder_service worker --loglevel=info --logfile=file_celery.log"
     env_file:
       - .env
     depends_on:
@@ -56,7 +55,6 @@ services:
       dockerfile: Dockerfile-shedule
     volumes:
       - /media:/home/app/media
-    command: bash -c "python -m celery -A reminder_service beat --loglevel=info --logfile=file_shedule.log"
     depends_on:
       - db
       - redis

@@ -1,4 +1,5 @@
 import asyncio
+import datetime
 import logging
 import os
 
@@ -36,7 +37,6 @@ def get_data_from_result():
             client_phones.append(client)
     logger.info("received data from the model Result")
     return client_phones
-
 
 @shared_task
 def send_messages_task(user: str, mailing_id: int) -> None:
@@ -78,13 +78,12 @@ def send_messages_task(user: str, mailing_id: int) -> None:
     # перебираем информацию о компании для template
     # """Отправляем указанное коммерческое предложение"""
     try:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-        task = loop.create_task(
+        loop.run_until_complete(
             send_message_mailing(video_data=video_data, image_data=image_data, mailing_id=mailing_id,
                                  client_list=clients,
                                  commercial_offer=commercial_offer, admin_username=user, ))
-        loop.run_until_complete(task)
         logger.info('data sent successfully')
     except Exception as e:
         # Логирование ошибки
@@ -93,20 +92,24 @@ def send_messages_task(user: str, mailing_id: int) -> None:
 
 @shared_task
 def check_holiday_task():
+    today = datetime.date.today()
+
     """Вызываем функцию, для проверки праздников сегодня и сохраняем в модель Result"""
     try:
-        holiday()
-        logger.info(f'task completed')
+        holiday(today)
+        logger.info(f'task completed {today}')
     except Exception as e:
         logger.error('problem with tasks: %s', e)
 
 
 @shared_task
 def check_birthday_task():
+    today = datetime.date.today()
+
     """Вызываем функцию, для проверки дня рождения у клиентов и сохраняем в модель Result"""
     try:
-        birthday()
-        logger.info(f'task completed')
+        birthday(today)
+        logger.info(f'task completed {today}')
     except Exception as e:
         logger.error('problem with tasks: %s', e)
 
@@ -119,17 +122,17 @@ def send_congratulation_task():
         username = superuser.user_name
     """Вызываем функцию, для проверки модели и рассылки по тг поздравлений"""
     try:
-        loop = asyncio.get_event_loop()
+        loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
-        task = loop.create_task(
+        loop.run_until_complete(
             send_message_holiday(admin_username=username, client_data=get_data_from_result()))
-        loop.run_until_complete(task)
         logger.info(f'data sent out')
     except Exception as e:
         # Логирование ошибки
         logger.error(f'send_congratulation_task: {str(e)}')
 
 
+# There is no current event loop in thread MainThread
 @shared_task
 def delete_old_task():
     """Удаляем старые данные, которым больше 5-дней. Чистим Result и MailingCommerceOffer"""

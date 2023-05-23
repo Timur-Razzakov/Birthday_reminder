@@ -15,13 +15,11 @@ django.setup()
 from accounts.models import Client, Channel
 from reminder.models import Holiday, TemplateForChannel, Result
 
-today = datetime.date.today()
-times = datetime.time()
 logger = logging.getLogger(__name__)
+from datetime import date
 
-
-def birthday():
-    get_client = Client.objects.filter(date_of_birth=today).values(
+def birthday(date):
+    get_client = Client.objects.filter(date_of_birth=date).values(
         'phone_number',
         'first_name',
         'last_name',
@@ -45,7 +43,7 @@ def birthday():
                                                      father_name=item['father_name'],
                                                      message=message, )
                 res_for_send.message = finished_message
-                res_for_send.save()
+                # res_for_send.save()
                 logger.info("data to model 'Result' saved")
         else:
             logger.warning('holiday, with the name "День рождения" is missing')

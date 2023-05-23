@@ -16,12 +16,11 @@ from accounts.models import Client, Gender
 from reminder.models import Holiday, TemplateForChannel, Result
 
 logger = logging.getLogger(__name__)
-today = datetime.date.today()
 
 
-def holiday():
-    get_holiday = Holiday.objects.filter(date=today).values('id', 'congratulation',
-                                                            'name', 'gender')
+def holiday(date):
+    get_holiday = Holiday.objects.filter(date=date).values('id', 'congratulation',
+                                                           'name', 'gender')
     if get_holiday.exists():
         for item in get_holiday:
             gender = Gender.objects.get(id=item['gender'])
@@ -49,5 +48,3 @@ def holiday():
 
         logger.info("data to model 'Result' saved")
     logger.info("There are no holidays today")
-
-
