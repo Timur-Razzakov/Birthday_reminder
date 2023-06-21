@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model, logout
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.contrib.auth.decorators import login_required  # для запрета если не вошёл в систему
 from .forms import UserLoginForm, ClientForm, CompanyDetailForm
 from .models import Client, CompanyDetail
 
@@ -34,6 +34,7 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form': form})
 
 
+@login_required
 def add_client_view(request):
     """Сохраняем форму с данными о клиентах"""
     form = ClientForm(request.POST or None)
@@ -54,6 +55,7 @@ def add_client_view(request):
     return render(request, 'accounts/add_client.html', {'form': form})
 
 
+@login_required
 def update_client_view(request, id):
     """Обновление данных о клиенте"""
     get_client = get_object_or_404(Client, id=id)
@@ -75,6 +77,7 @@ def update_client_view(request, id):
                   {'form': form})
 
 
+@login_required
 def add_company_info_view(request):
     """Сохраняем информацию о компании"""
     form = CompanyDetailForm
@@ -97,6 +100,7 @@ def add_company_info_view(request):
     return render(request, 'accounts/company_detail.html', {'form': form})
 
 
+@login_required
 def show_all_company_view(request):
     """Выводит все компании"""
     get_company = CompanyDetail.objects.all().order_by('id')
@@ -106,6 +110,7 @@ def show_all_company_view(request):
     return render(request, 'accounts/show_company_detail.html', {'object_list': page_obj})
 
 
+@login_required
 def update_company_detail_view(request, id):
     """Обновляем данные об указанных компаниях"""
     get_company = CompanyDetail.objects.get(id=id)

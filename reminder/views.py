@@ -3,6 +3,7 @@ import logging
 from django.contrib import messages
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from accounts.forms import SearchClientForm
 from accounts.models import Client
@@ -15,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
-
+@login_required
 def show_all_client_view(request):
     """Поиск клиентов"""
 
@@ -23,6 +24,7 @@ def show_all_client_view(request):
     return render(request, 'home.html', {'form': form})
 
 
+@login_required
 def searchView(request):
     """Выводит список клиентов"""
     form = SearchClientForm()
@@ -54,6 +56,7 @@ def searchView(request):
     return render(request, 'clients_list.html', context)
 
 
+@login_required
 def show_all_clients_view(request):
     """Выводит все компании"""
     form = SearchClientForm()
@@ -64,6 +67,7 @@ def show_all_clients_view(request):
     return render(request, 'clients_list.html', {'object_list': page_obj, 'form': form})
 
 
+@login_required
 def add_mailing_view(request):
     """Сохраняем рассылку новых предложений"""
     form = MailingCommerceOfferFrom
@@ -101,6 +105,7 @@ def add_mailing_view(request):
     return render(request, 'add_mailing.html', {'form': form})
 
 
+@login_required
 def show_mailings_view(request):
     get_mailings = MailingCommerceOffer.objects.all().order_by('sending_status')
     paginator = Paginator(get_mailings, 6)
@@ -150,6 +155,7 @@ def update_mailing_view(request, id):
                   context)
 
 
+@login_required
 def send_mailing_view(request, id):
     """Получаем id нужного предложения и передаём в очередь"""
     if request.user.is_authenticated:  # будет использоваться для выбора кому
@@ -162,6 +168,7 @@ def send_mailing_view(request, id):
     return redirect('show_mailings')
 
 
+@login_required
 def add_holiday_view(request):
     """Добавляем праздники"""
     form = HolidayFrom
@@ -186,14 +193,16 @@ def add_holiday_view(request):
     return render(request, 'add_holiday.html', {'form': form})
 
 
+@login_required
 def show_holiday_view(request):
-    get_holidays = Holiday.objects.all()
+    get_holidays = Holiday.objects.exclude(name__icontains='День Рождения')
     paginator = Paginator(get_holidays, 3)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'show_holiday.html', {'object_list': page_obj})
 
 
+@login_required
 def update_holiday_view(request, id):
     """Обновляем данные о празднике"""
     holiday = Holiday.objects.get(id=id)
