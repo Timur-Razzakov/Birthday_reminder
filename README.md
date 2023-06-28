@@ -73,7 +73,7 @@ docker-compose --version
       /home/app/telegram_bot/my_session/account"
       )
 
-## Для настройки сессии своего user_bot-a " перейдите в деррикторию telegram_bot"
+## Для настройки сессии user_bot-a " перейдите в директорию telegram_bot"
 
 откройте скрипт под названием **get_session** и в самом низу пропишите **# asyncio.run(get_string_session())**
 
