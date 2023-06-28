@@ -42,10 +42,10 @@ workdir = os.environ.get('SESSIONS_FOLDER')
 
 async def send_message_holiday(client_data: list, admin_username):
     """Получаем chart_id пользователя и рассылаем сообщения из модели Result"""
-    string_session = await get_string_session()
+    # string_session = await get_string_session()
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
-    async with Client(workdir, api_id, api_hash, string_session) as app:
+    async with Client(workdir, api_id, api_hash) as app:
         client_count = set()
         client_name = []
         error_list = []
@@ -100,11 +100,11 @@ async def send_message_mailing(video_data: list, image_data: list, mailing_id: i
                                admin_username: str):
     api_id = os.environ.get('API_ID')
     api_hash = os.environ.get('API_HASH')
-    string_session = await get_string_session()
+    # string_session = await get_string_session()
     """Получаем chart_id пользователя и рассылаем сообщения"""
     error_list = []  # список номеров, которым не смогли отправить сообщение
 
-    async with Client(workdir, api_id, api_hash, session_string=string_session) as app:
+    async with Client(workdir, api_id, api_hash) as app:
         client_count = set()
         try:
             for client in client_list:
