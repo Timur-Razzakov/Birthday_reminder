@@ -38,6 +38,7 @@ def get_data_from_result():
     logger.info("received data from the model Result")
     return client_phones
 
+
 @shared_task
 def send_messages_task(user: str, mailing_id: int) -> None:
     """Собираем сообщение в единое"""
@@ -96,7 +97,7 @@ def check_holiday_task():
 
     """Вызываем функцию, для проверки праздников сегодня и сохраняем в модель Result"""
     try:
-        holiday(today)
+        holiday(day=today.day, month=today.month)
         logger.info(f'task completed {today}')
     except Exception as e:
         logger.error('problem with tasks: %s', e)
@@ -108,7 +109,7 @@ def check_birthday_task():
 
     """Вызываем функцию, для проверки дня рождения у клиентов и сохраняем в модель Result"""
     try:
-        birthday(today)
+        birthday(day=today.day, month=today.month)
         logger.info(f'task completed {today}')
     except Exception as e:
         logger.error('problem with tasks: %s', e)
