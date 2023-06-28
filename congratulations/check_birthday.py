@@ -19,8 +19,8 @@ logger = logging.getLogger(__name__)
 from datetime import date
 
 
-def birthday(date):
-    get_client = Client.objects.filter(date_of_birth=date).values(
+def birthday(day, month):
+    get_client = Client.objects.filter(date_of_birth__day=day, date_of_birth__month=month).values(
         'phone_number',
         'first_name',
         'last_name',
@@ -28,7 +28,6 @@ def birthday(date):
         'gender',
         'channel',
         'pk')
-    print(get_client)
     if get_client.exists():
         get_congrats = Holiday.objects.get(name__icontains='День рождения')
         if get_congrats:
@@ -50,3 +49,6 @@ def birthday(date):
         else:
             logger.warning('holiday, with the name "День рождения" is missing')
         return 'Нет соответствующего праздника'
+
+
+#

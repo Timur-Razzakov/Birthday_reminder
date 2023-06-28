@@ -18,9 +18,9 @@ from reminder.models import Holiday, TemplateForChannel, Result
 logger = logging.getLogger(__name__)
 
 
-def holiday(date):
-    get_holiday = Holiday.objects.filter(date=date).values('id', 'congratulation',
-                                                           'name', 'gender')
+def holiday(day, month):
+    get_holiday = Holiday.objects.filter(date_month=month, date__day=day).values('id', 'congratulation',
+                                                                                 'name', 'gender')
     if get_holiday.exists():
         for item in get_holiday:
             gender = Gender.objects.get(id=item['gender'])
