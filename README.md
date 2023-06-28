@@ -8,7 +8,8 @@
 
 - Python
 - Django
-
+- - ---------------
+Bootstrap
 - ---------------
 
 - PostgresSQL
