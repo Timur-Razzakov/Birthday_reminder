@@ -1,0 +1,323 @@
+2023-04-20 20:20:05 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:20:08 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:20:14 - WARNING  log.log_response:241 - Not Found: /favicon.ico
+2023-04-20 20:20:17 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-20 20:20:25 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 20:20:35 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako443@gmail.com
+2023-04-20 20:20:41 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako443@gmail.com
+2023-04-20 20:20:45 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako443@gmail.com
+2023-04-20 20:20:50 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako443@gmail.com
+2023-04-20 20:20:59 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 20:21:04 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 20:21:08 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 20:21:12 - INFO  views.login_view:30 - User zadr9833@gmail.com logged in successfully
+2023-04-20 20:24:46 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:24:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:24:50 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:25:55 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:25:56 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:25:56 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:26:32 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/1/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 139, in update_mailing_view
+    image = MultipleImage.objects.create(image=file)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1659, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1583, in as_sql
+    value_rows = [
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1584, in <listcomp>
+    [
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1585, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1533, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 315, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 92, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 56, in save
+    name = self._save(name, content)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 309, in _save
+    file_move_safe(content.temporary_file_path(), full_path)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/move.py", line 64, in file_move_safe
+    fd = os.open(
+PermissionError: [Errno 13] Permission denied: '/home/timur/PycharmProjects/Univer/birthday_reminder/media/media/2023/04/20/20220927-YellowstoneUGB_ROW3329155344_UHD.jpg'
+2023-04-20 20:27:41 - ERROR  log.log_response:241 - Internal Server Error: /add_mailing/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 89, in add_mailing_view
+    image = MultipleImage.objects.create(image=file)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1659, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1583, in as_sql
+    value_rows = [
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1584, in <listcomp>
+    [
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1585, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1533, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 315, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/db/models/fields/files.py", line 92, in save
+    self.name = self.storage.save(name, content, max_length=self.field.max_length)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 56, in save
+    name = self._save(name, content)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/storage.py", line 309, in _save
+    file_move_safe(content.temporary_file_path(), full_path)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/files/move.py", line 64, in file_move_safe
+    fd = os.open(
+PermissionError: [Errno 13] Permission denied: '/home/timur/PycharmProjects/Univer/birthday_reminder/media/media/2023/04/20/20220928-FosterCoveredBridge_ROW3714660823_UHD_zl3tr9N.jpg'
+2023-04-20 20:32:15 - WARNING  log.log_response:241 - Forbidden (CSRF token from POST incorrect.): /add_mailing/
+2023-04-20 20:32:19 - WARNING  log.log_response:241 - Forbidden (CSRF token from POST incorrect.): /add_mailing/
+2023-04-20 20:33:24 - INFO  views.add_mailing_view:96 - Commercial offer saved
+2023-04-20 20:33:31 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:34:34 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/forms.py changed, reloading.
+2023-04-20 20:34:35 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:34:35 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:35:19 - INFO  views.update_mailing_view:145 - Commercial offer updated
+2023-04-20 20:35:20 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:39:29 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:39:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:39:30 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:40:44 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:40:45 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:40:46 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:41:05 - INFO  views.add_mailing_view:97 - Commercial offer saved
+2023-04-20 20:42:33 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:42:34 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:42:34 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:45:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder_service/settings.py changed, reloading.
+2023-04-20 20:45:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:45:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:45:20 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:46:05 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:46:06 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:46:06 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:46:28 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:46:29 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:46:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:46:35 - ERROR  log.log_response:241 - Internal Server Error: /update_mailing/24/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 119, in update_mailing_view
+    print('media',media.url)
+AttributeError: 'list' object has no attribute 'url'
+2023-04-20 20:46:42 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:46:43 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:46:43 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:49:47 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:49:48 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:49:49 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:51:15 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/models.py changed, reloading.
+2023-04-20 20:51:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:51:37 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:51:40 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:51:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:52:30 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:52:30 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:52:31 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 20:52:34 - INFO  views.update_mailing_view:144 - Commercial offer updated
+2023-04-20 20:52:36 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:52:46 - INFO  views.update_mailing_view:144 - Commercial offer updated
+2023-04-20 20:52:46 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:53:08 - INFO  views.update_mailing_view:144 - Commercial offer updated
+2023-04-20 20:53:09 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 20:54:08 - INFO  autoreload.trigger_reload:266 - /home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py changed, reloading.
+2023-04-20 20:54:09 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 20:54:09 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:03:51 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 21:03:52 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:04:35 - WARNING  views.login_view:33 - Unsuccessful login attempt for user None
+2023-04-20 21:04:42 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:04:49 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:04:53 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:04:56 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:05:02 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:05:06 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:05:09 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:05:16 - WARNING  views.login_view:33 - Unsuccessful login attempt for user razzako334@gmail.com
+2023-04-20 21:05:41 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:05:43 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:11 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:16 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:19 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:24 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:42 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:45 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:06:51 - WARNING  views.login_view:33 - Unsuccessful login attempt for user zadr9833@gmail.com
+2023-04-20 21:07:15 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:07:41 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:07:46 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:08:00 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:08:29 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:08:45 - INFO  autoreload.run_with_reloader:677 - Watching for file changes with StatReloader
+2023-04-20 21:08:45 - INFO  aes.<module>:26 - Using TgCrypto
+2023-04-20 21:08:56 - INFO  views.login_view:30 - User alisherovich998@gmail.com logged in successfully
+2023-04-20 21:10:10 - WARNING  log.log_response:241 - Not Found: /media/media/2023/04/06/20220928-FosterCoveredBridge_ROW3714660823_UHD_AKmSd7O.jpg
+2023-04-20 21:10:13 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (0/20) now.
+2023-04-20 21:10:13 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (1/20) in 1.00 second.
+2023-04-20 21:10:14 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (2/20) in 1.00 second.
+2023-04-20 21:10:15 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (3/20) in 1.00 second.
+2023-04-20 21:10:16 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (4/20) in 1.00 second.
+2023-04-20 21:10:17 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (5/20) in 1.00 second.
+2023-04-20 21:10:18 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (6/20) in 1.00 second.
+2023-04-20 21:10:19 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (7/20) in 1.00 second.
+2023-04-20 21:10:20 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (8/20) in 1.00 second.
+2023-04-20 21:10:21 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (9/20) in 1.00 second.
+2023-04-20 21:10:22 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (10/20) in 1.00 second.
+2023-04-20 21:10:23 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (11/20) in 1.00 second.
+2023-04-20 21:10:24 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (12/20) in 1.00 second.
+2023-04-20 21:10:25 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (13/20) in 1.00 second.
+2023-04-20 21:10:26 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (14/20) in 1.00 second.
+2023-04-20 21:10:27 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (15/20) in 1.00 second.
+2023-04-20 21:10:28 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (16/20) in 1.00 second.
+2023-04-20 21:10:29 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (17/20) in 1.00 second.
+2023-04-20 21:10:30 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (18/20) in 1.00 second.
+2023-04-20 21:10:31 - ERROR  redis.on_connection_error:383 - Connection to Redis lost: Retry (19/20) in 1.00 second.
+2023-04-20 21:10:32 - CRITICAL  redis.reconnect_on_error:124 - 
+Retry limit exceeded while trying to reconnect to the Celery redis result store backend. The Celery application must be restarted.
+
+2023-04-20 21:10:32 - ERROR  log.log_response:241 - Internal Server Error: /send_mailing/24/
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 119, in reconnect_on_error
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1623, in subscribe
+    ret_val = self.execute_command("SUBSCRIBE", *new_channels.keys())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1458, in execute_command
+    self.connection = self.connection_pool.get_connection(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 715, in connect
+    sock = self.retry.call_with_retry(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 716, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 781, in _connect
+    raise err
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 769, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 787, in send_task
+    self.backend.on_task_call(P, task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 365, in on_task_call
+    self.result_consumer.consume_from(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 161, in consume_from
+    return self.start(task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 139, in start
+    self._consume_from(initial_task_id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 169, in _consume_from
+    self._pubsub.subscribe(key)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 122, in reconnect_on_error
+    self._ensure(self._reconnect_pubsub, ())
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 376, in ensure
+    return retry_over_time(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/utils/functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/backends/redis.py", line 106, in _reconnect_pubsub
+    metas = self.backend.client.mget(self.subscribed_to)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/commands/core.py", line 1976, in mget
+    return self.execute_command("MGET", *args, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/client.py", line 1255, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 1481, in get_connection
+    connection.connect()
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/redis/connection.py", line 721, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/timur/PycharmProjects/Univer/birthday_reminder/reminder/views.py", line 159, in send_mailing_view
+    send_messages_task.delay(user.user_name, id)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/task.py", line 575, in apply_async
+    return app.send_task(
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/celery/app/base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/timur/PycharmProjects/Univer/Birthday_reminder/venv/lib/python3.8/site-packages/kombu/connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:6379. Connection refused.

@@ -1,0 +1,77 @@
+version: "3.7"
+
+services:
+  reminder_service:
+    build:
+      context: ./
+      dockerfile: Dockerfile-reminder_service
+    volumes:
+      - /media:/home/app/media
+      - static_volume:/home/app/staticfiles
+    env_file:
+      - .env
+    expose:
+      - 8000
+    restart: always
+    depends_on:
+      - db
+      - redis
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/home/app/staticfiles
+      - ./nginx:/etc/nginx/conf.d
+      - /media:/home/app/media
+    ports:
+      - "80:80"
+    depends_on:
+      - reminder_service
+    env_file:
+      - .env
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    env_file:
+      - .env
+  celery:
+    build:
+      context: ./
+      dockerfile: Dockerfile-celery
+    restart: always
+    volumes:
+      - /media:/home/app/media
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - db
+      - reminder_service
+    links:
+      - redis
+  schedule:
+    build:
+      context: ./
+      dockerfile: Dockerfile-shedule
+    volumes:
+      - /media:/home/app/media
+    depends_on:
+      - db
+      - redis
+      - reminder_service
+    links:
+      - redis
+    env_file:
+      - .env
+  db:
+    image: postgres:latest # указывать точную версию
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - data:/var/lib/postgresql/data
+volumes:
+  data:
+  media:
+  static_volume:
+

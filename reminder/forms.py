@@ -1,40 +1,71 @@
-from .models import MailingCommerceOffer
+from ckeditor.widgets import CKEditorWidget
 from django import forms
+from django.core.exceptions import ValidationError
+from django.forms import NumberInput
 
-"""Форма для объединения страны и ссылки"""
+from accounts.models import CompanyDetail, City, Gender
+from .models import MailingCommerceOffer, Holiday
 
 
-# class GeneralForm(forms.ModelForm):
-#
+class HolidayFrom(forms.ModelForm):
+    name = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
+        label='Наименование праздника',
+    )
+    date = forms.DateField(label='Дата праздника',
+                           required=True,
+                           widget=NumberInput(attrs={'type': 'date', 'class': 'form-control'})
+                           )
+    gender = forms.ModelChoiceField(
+        queryset=Gender.objects.all(),
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите нужный пол'
+    )
+    congratulation = forms.CharField(widget=CKEditorWidget(),
+                                     label='Поздравление')  # max_file_size=1024 * 1024 * 5
+
+    class Meta:
+        model = Holiday
+        fields = ('image', 'name', 'date', 'gender', 'congratulation')
+
 
 class MailingCommerceOfferFrom(forms.ModelForm):
-    phone_number = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control'}),
-        label='Номер телефона',
-    )
-    address = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control'}),
-        label='Адрес',
-    )
-    email = forms.CharField(
-        widget=forms.TextInput(attrs={'class': 'form-control'}),
-        label='Электронный адрес',
-    )
-    photo = forms.ImageField(
-        widget=forms.FileInput(attrs={'class': 'form-control'}),
-        label='Текст',
-    )
-
     link = forms.URLField(
         widget=forms.URLInput(attrs={'class': 'form-control'}),
-        label='Ссылки',
+        label='Ссылки ( Если их несколько, то введите через запятую)',
+        required=False
     )
-    text = forms.CharField(
-        widget=forms.Textarea(attrs={'class': 'form-control'}),
-        label='Текст',
+
+    company_detail = forms.ModelChoiceField(
+        queryset=CompanyDetail.objects.all(),
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите реквизиты вашей компании'
     )
+    city = forms.ModelChoiceField(
+        queryset=City.objects.all(),
+        widget=forms.Select(attrs={'class': 'form-control'}),
+        label='Выберите город',
+        required=False,
+        help_text='Если хотите разослать всем городам, то оставьте поле пустым (-----)',
+    )
+    message = forms.CharField(
+        widget=CKEditorWidget(),
+        label='Место для вашего предложения',
+    )
+
+    images_and_video = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}),
+                                       required=False, )
 
     class Meta:
         model = MailingCommerceOffer
-        fields = ('phone_number', 'address',
-                  'email', 'link', 'photo', 'text',)
+        fields = ['images_and_video', 'city', 'link', 'company_detail', 'message']
+
+    # для отображения изображений (ManyToMany)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if self.instance.pk:
+            # получаем список ID изображений, связанных с текущей моделью
+            self.fields['images_and_video'].initial = self.instance.image.values_list('id',
+                                                                            flat=True)

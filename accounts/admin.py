@@ -4,17 +4,19 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.contrib.auth.models import Group
 
-from .models import MyUser, Client, CompanyDetail
+from .forms import ClientForm, CompanyDetailForm
+from .models import MyUser, Client, CompanyDetail, Channel, City, Gender
 
 
 class UserCreationForm(forms.ModelForm):
     """Форма для заполнения пароля и создание пользователя"""
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
+    user_name = forms.CharField(label='User name (telegram_nickname) ', widget=forms.TextInput)
 
     class Meta:
         model = MyUser
-        fields = ('email',)
+        fields = ('email', 'user_name')
 
     def clean_password2(self):
         """Проверяет пароли на совпадение между собой"""
@@ -38,7 +40,7 @@ class UserChangeForm(forms.ModelForm):
 
     class Meta:
         model = MyUser
-        fields = ('email', 'password', 'is_active', 'is_admin')
+        fields = ('email', 'password', 'user_name', 'is_active', 'is_admin')
 
     def clean_password(self):
         # Независимо от того, что предоставил пользователь, вернуть начальное значение.
@@ -56,7 +58,7 @@ class UserAdmin(BaseUserAdmin):
     list_filter = ('is_admin',)
     fieldsets = (
         # Поля для Отображения в админке
-        (None, {'fields': ('email', 'password')}),
+        (None, {'fields': ('email', 'password', 'user_name')}),
 
         ('Permissions', {'fields': ('is_admin',)}),
     )
@@ -65,7 +67,7 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('email', 'password1', 'password2'),
+            'fields': ('email', 'user_name', 'password1', 'password2'),
         }),
     )
     search_fields = ('email',)
@@ -73,8 +75,33 @@ class UserAdmin(BaseUserAdmin):
     filter_horizontal = ()
 
 
+class ClientAdmin(admin.ModelAdmin):
+    form = ClientForm
+    list_display = ('first_name', 'father_name', 'date_of_birth', 'phone_number', 'pk',)
+
+
+class CompanyDetailAdmin(admin.ModelAdmin):
+    form = CompanyDetailForm
+    list_display = ('name', 'email', 'phone_number', 'pk',)
+
+
+class CityAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
+class ChannelAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
+class GenderAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
 admin.site.register(MyUser, UserAdmin)
-admin.site.register(Client)
-admin.site.register(CompanyDetail)
+admin.site.register(Client, ClientAdmin)
+admin.site.register(CompanyDetail, CompanyDetailAdmin)
+admin.site.register(Channel, ChannelAdmin)
+admin.site.register(City, CityAdmin)
+admin.site.register(Gender, GenderAdmin)
 """ отмена регистрацию модели группы от администратора"""
 admin.site.unregister(Group)

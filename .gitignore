@@ -1,8 +1,10 @@
-../.idea/
+.idea/
 ../venv
 *.env
 /__pycache__/
 *.pyc
-../configurations
-templates_tag.txt
-old_update.html
+*.session
+/reminder/signals.py
+media/*
+logs/*.log
+staticfiles/

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block title %} Список праздников {% endblock %}
+
+{% block content %}
+<main role="main">
+    <h3 class="my-4 text-center">Список всех праздников.</h3>
+
+    {% if object_list %}
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                {% for obj in object_list %}
+                <div class="col-md-4">
+
+                    <div class="card mb-4 shadow-sm">
+
+                        <h3 class="my-1 text-center">{{obj.name}}</h3>
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                             preserveAspectRatio="xMidYMid slice" focusable="false">
+                            <rect width="100%" height="100%" fill="#55595c"/>
+                            {% if obj.image %}
+                            <image href="{{ obj.image.url }}"
+                                   width="115%" height="225"/>
+                            {% else %}
+                            <image href="#"
+                                   width="115%" height="225"/>
+                            {% endif %}
+                        </svg>
+                        <div class="card-body">
+                            {% autoescape off %}
+                            <p class="card-text">{{obj.congratulation|slice:100}}...</p>
+                            {% endautoescape %}
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <form action="{% url 'update_holiday' obj.id %}" method="get">
+                                        <button type="submit" class="btn btn-sm btn-outline-secondary">
+                                            Редактировать
+                                        </button>
+                                    </form>
+                                </div>
+                                <small class="text-muted">{{obj.date}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+                {% if object_list.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{ object_list.previous_page_number }}"
+                       aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+                {% for page in object_list.paginator.page_range %}
+                <li class="page-item {% if page == object_list.number %} active {% endif %}">
+                    <a class="page-link"
+                       href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{page}}">{{page}}</a>
+                </li>
+                {% endfor %}
+                {% if object_list.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{ object_list.next_page_number }}"
+                       aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    {% else %}
+    <h3 class=" my-4 text-center">Праздники пока не добавлены!!</h3>
+    {% endif %}
+</main>
+{% endblock %}

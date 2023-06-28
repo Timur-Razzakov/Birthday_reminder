@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+
+{% block title %} Праздники {% endblock %}
+
+
+{% block content %}
+<div class="col-md-8 mx-auto my-2">
+    <div class="container px-4">
+        <div class="row ">
+            <div class="col-md-8 mx-auto">
+                <h4 class="my-4">Праздники</h4>
+                <form method="POST" enctype="multipart/form-data" action="">{% csrf_token %}
+                    <div class="form-outline">
+                        {{ form.as_p }}
+                        {{ form.media }}
+                    </div>
+                    <div class="container-buttons">
+                        <button type="submit" class="btn btn-primary">Сохранить</button>
+                        <a href="{% url 'show_holiday' %}" class="badge badge-info">Список Праздников</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %} Результаты{% endblock %}
+
+{% block content %}
+
+<!--Формируем список вакансий-->
+{% if object_list %}
+<h3 class="my-4 text-center">Результаты поиска согласно Вашему запросу.</h3>
+{% for obj in  object_list %}
+<!--Проверяем экраниронивае текста-->
+<!--{% autoescape on %}-->
+<!--{{ obj.description}}-->
+<!--{% endautoescape %}-->
+<div class="row ">
+    <div class="col-md-8 mx-auto">
+        <div class="card my-3">
+
+            <h5 class="card-header"><a href="{% url 'update_client' obj.id %}"> {{ obj.last_name}}
+                {{ obj.first_name}} {{ obj.father_name }}</a></h5>
+            <div class="card-body">
+                <p><strong> Почта:</strong> {{ obj.email }}</p>
+                <p><strong>Номер телефона:</strong> {{ obj.phone_number }}</p>
+                <p><strong>Дата рождения:</strong> {{ obj.date_of_birth }}</p>
+                <p><strong>Город проживания | Адрес :</strong> {{obj.city }} | {{obj.address }}
+                <p><strong>Загранпаспорт :</strong> {{obj.inter_passport }} | <strong>Местный :</strong>:
+                    {{obj.passport }}
+                <p><strong>Места, где мы были:</strong> {{obj.traveled }}
+                    <!---->
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        {% if object_list.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{ object_list.previous_page_number }}"
+               aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+        {% for page in object_list.paginator.page_range %}
+        <li class="page-item {% if page == object_list.number %} active {% endif %}">
+            <a class="page-link"
+               href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{page}}">{{page}}</a>
+        </li>
+        {% endfor %}
+        {% if object_list.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?full_name={{ full_name }}&date_of_birth={{date_of_birth}}&email={{email}}&city={{city}}
+               &phone_number={{phone_number}}&page={{ object_list.next_page_number }}"
+               aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% else %}
+
+<h3 class=" my-4 text-center">Клиентов с такими данными не найдены
+    <br>Попробуйте повторить запрос с другой
+    формулировкой</h3>
+
+{% endif %}
+{{ page_obj }}
+<div class="col-md-8 mx-auto my-2">
+    <div class="container px-4">
+        <div class="row ">
+            <div class="col-md-6 mx-auto my-3">
+                <h4 class="my-4 text-center">Новый поиск</h4>
+                <form method="GET" action="{% url 'search' %}">
+                    <div class="form-group">
+                        {{ form.as_p }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Найти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
