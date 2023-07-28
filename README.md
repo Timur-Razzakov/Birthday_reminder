@@ -12,7 +12,7 @@
 - Bootstrap
 - ---------------
 
-- PostgresSQL
+- PostgreSQL
 
 - - ---------------
 
