@@ -27,3 +27,6 @@ async def get_string_session():
     async with Client(workdir, api_id, api_hash) as app:
         string_session = await app.export_session_string()
     return string_session
+
+
+# asyncio.run(get_string_session())

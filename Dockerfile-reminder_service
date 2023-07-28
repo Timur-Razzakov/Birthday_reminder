@@ -5,7 +5,11 @@ WORKDIR /home/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean && apt-get install -y vim
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get autoremove && \
+    apt-get autoclean && \
+    apt-get install -y vim
 
 
 RUN pip install --upgrade pip
