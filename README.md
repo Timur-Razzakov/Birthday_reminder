@@ -9,7 +9,7 @@
 - Python
 - Django
 - - ---------------
-Bootstrap
+- Bootstrap
 - ---------------
 
 - PostgresSQL
