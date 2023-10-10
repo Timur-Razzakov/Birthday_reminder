@@ -21,7 +21,7 @@
 - - ---------------
 
 - Celery
-- Radis
+- Redis
 - Schedule
 
 - - ---------------
